@@ -86,8 +86,6 @@ Overall feel: **warm-neutral canvas, navy ink, pastel sector highlights**. Not t
 Loaded on the live site:
 - **Inter** (and "Inter Placeholder") — default body / UI
 - **Space Grotesk** (and "Space Grotesk Placeholder") — display / headings
-- **Fragment Mono** (Google Fonts) — tiny labels, eyebrows, metadata
-- A handful of **Fontshare** custom faces (hashed URLs, likely Satoshi or Clash variants — worth confirming with the client)
 
 Hierarchy observed:
 - Large display headings (Space Grotesk) with generous leading and limited tracking
@@ -162,9 +160,5 @@ Reproduce the path structure 1:1 so inbound links and SEO carry over:
 - Accessibility pass (contrast on pastel tags, focus states, landmark structure).
 - Lighthouse / Core Web Vitals review before launch.
 
-### Open questions for the client
-- Exact brand fonts — is Space Grotesk final, or are the Fontshare faces the canonical display family?
-- Is the insights list complete, and where does editorial live going forward?
-- Where should the contact form deliver to?
-- Analytics / consent stack to replicate?
-- Do we need multi-language?
+## Guide
+- Exact brand fonts are Inter and Space Grotesk final, Fragment Mono for numbers
