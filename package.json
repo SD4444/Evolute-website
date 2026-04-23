@@ -1,0 +1,34 @@
+{
+  "name": "evolute",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "build": "next build",
+    "check": "oxlint --fix --type-aware && oxfmt --write",
+    "dev": "next dev",
+    "format": "bun run check",
+    "lint": "bun run check",
+    "start": "next start",
+    "typecheck": "tsgo --noEmit"
+  },
+  "dependencies": {
+    "next": "16.2.4",
+    "react": "19.2.5",
+    "react-dom": "19.2.5"
+  },
+  "devDependencies": {
+    "@tailwindcss/postcss": "^4",
+    "@types/node": "^24",
+    "@types/react": "^19",
+    "@types/react-dom": "^19",
+    "@typescript/native-preview": "beta",
+    "babel-plugin-react-compiler": "1.0.0",
+    "husky": "~9.1.7",
+    "lint-staged": "~16.4.0",
+    "oxfmt": "~0.46.0",
+    "oxlint": "~1.61.0",
+    "oxlint-tsgolint": "~0.21.1",
+    "tailwindcss": "^4",
+    "typescript": "^6"
+  }
+}
