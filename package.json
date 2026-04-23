@@ -6,8 +6,8 @@
     "build": "next build",
     "check": "oxlint --fix --type-aware && oxfmt --write",
     "dev": "next dev",
-    "format": "bun run check",
-    "lint": "bun run check",
+    "format": "npm run check",
+    "lint": "npm run check",
     "start": "next start",
     "typecheck": "tsgo --noEmit"
   },
