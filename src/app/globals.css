@@ -1,26 +1,86 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  /* Brand neutrals */
+  --background: #fbfaf8;
+  --background-alt: #fffaf7;
+  --foreground: #192432;
+
+  /* Dark navy scale (primary brand dark) */
+  --navy-900: #160543;
+  --navy-800: #1d0756;
+  --navy-700: #192432;
+  --navy-600: #1f2c3d;
+  --navy-500: #243346;
+  --navy-400: #28394f;
+  --navy-300: #2c3e56;
+
+  /* Gray scale */
+  --gray-500: #6f7682;
+  --gray-400: #989ca3;
+  --gray-300: #b7babe;
+  --gray-200: #d2d3d6;
+  --gray-100: #eaeaeb;
+  --gray-50:  #f2f3f3;
+
+  /* Industry / accent tags (sector pastels + deeper tones) */
+  --accent-rose:    #e8a5a5;
+  --accent-rose-dk: #8f2c2c;
+  --accent-lime:    #dceaae;
+  --accent-olive:   #70891f;
+  --accent-sand:    #d2c4ab;
+  --accent-clay:    #725f3d;
+  --accent-lilac:   #cfcdf0;
+  --accent-violet:  #443c8f;
+  --accent-indigo:  #808cfc;
+  --accent-sage:    #acd8aa;
+  --accent-forest:  #3c7a38;
+  --accent-sky:     #a2d2ee;
+  --accent-ocean:   #1c6e9c;
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+  --color-navy-900: var(--navy-900);
+  --color-navy-800: var(--navy-800);
+  --color-navy-700: var(--navy-700);
+  --color-navy-600: var(--navy-600);
+  --color-navy-500: var(--navy-500);
+  --color-navy-400: var(--navy-400);
+  --color-navy-300: var(--navy-300);
+
+  --color-gray-500: var(--gray-500);
+  --color-gray-400: var(--gray-400);
+  --color-gray-300: var(--gray-300);
+  --color-gray-200: var(--gray-200);
+  --color-gray-100: var(--gray-100);
+  --color-gray-50:  var(--gray-50);
+
+  --color-accent-rose:    var(--accent-rose);
+  --color-accent-rose-dk: var(--accent-rose-dk);
+  --color-accent-lime:    var(--accent-lime);
+  --color-accent-olive:   var(--accent-olive);
+  --color-accent-sand:    var(--accent-sand);
+  --color-accent-clay:    var(--accent-clay);
+  --color-accent-lilac:   var(--accent-lilac);
+  --color-accent-violet:  var(--accent-violet);
+  --color-accent-indigo:  var(--accent-indigo);
+  --color-accent-sage:    var(--accent-sage);
+  --color-accent-forest:  var(--accent-forest);
+  --color-accent-sky:     var(--accent-sky);
+  --color-accent-ocean:   var(--accent-ocean);
+
+  --font-sans: var(--font-inter), Inter, ui-sans-serif, system-ui, sans-serif;
+  --font-display: var(--font-space-grotesk), "Space Grotesk", var(--font-inter), sans-serif;
+  --font-mono: var(--font-fragment-mono), "Fragment Mono", ui-monospace, monospace;
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
