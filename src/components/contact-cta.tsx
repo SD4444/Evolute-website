@@ -20,7 +20,7 @@ export function ContactCTA({
 }) {
   return (
     <section className="bg-navy-800 text-white">
-      <div className="mx-auto flex w-full max-w-6xl flex-col gap-8 px-6 py-20 md:flex-row md:items-end md:justify-between">
+      <div className="mx-auto flex w-full max-w-[1400px] flex-col gap-8 px-6 py-20 md:flex-row md:items-end md:justify-between md:px-10">
         <div className="flex max-w-2xl flex-col gap-4">
           <Eyebrow className="text-gray-300">{eyebrow}</Eyebrow>
           <h2 className="font-heading text-3xl leading-tight font-medium tracking-tight md:text-4xl">

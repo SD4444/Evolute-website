@@ -72,8 +72,8 @@ export default async function IndustryPage(
     <>
       <Hero variant="light" eyebrow={industry.title} title={industry.subtitle} />
 
-      <section className="px-6 md:px-10">
-        <div className="mx-auto flex w-full max-w-[1400px] flex-col gap-8 py-16 md:py-24">
+      <section>
+        <div className="mx-auto flex w-full max-w-[1400px] flex-col gap-8 px-6 py-16 md:px-10 md:py-24">
           <p
             className="max-w-4xl font-heading text-[clamp(1.5rem,3vw,2rem)] leading-tight font-medium"
             style={{ color: deeperColor }}
@@ -88,14 +88,16 @@ export default async function IndustryPage(
       </section>
 
       {industry.image ? (
-        <section className="px-6 md:px-10">
-          <div className="mx-auto aspect-[16/7] w-full max-w-[1400px] overflow-hidden rounded-3xl bg-gray-200">
-            {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img
-              alt=""
-              className="h-full w-full object-cover"
-              src={industry.image}
-            />
+        <section>
+          <div className="mx-auto w-full max-w-[1400px] px-6 md:px-10">
+            <div className="aspect-[16/7] w-full overflow-hidden rounded-3xl bg-gray-200">
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img
+                alt=""
+                className="h-full w-full object-cover"
+                src={industry.image}
+              />
+            </div>
           </div>
         </section>
       ) : null}

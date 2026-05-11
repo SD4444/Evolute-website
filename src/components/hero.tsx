@@ -27,7 +27,7 @@ export function Hero({
         className,
       )}
     >
-      <div className="mx-auto flex w-full max-w-6xl flex-col gap-8 px-6 pt-28 pb-20 md:pt-36 md:pb-28">
+      <div className="mx-auto flex w-full max-w-[1400px] flex-col gap-8 px-6 pt-28 pb-20 md:px-10 md:pt-36 md:pb-28">
         {eyebrow ? (
           <Eyebrow
             className={variant === "dark" ? "text-gray-300" : undefined}

@@ -15,8 +15,8 @@ export function AskRobCard({
   cta?: string;
 }) {
   return (
-    <section className="px-6 md:px-10">
-      <div className="mx-auto w-full max-w-[1400px] py-16 md:py-24">
+    <section>
+      <div className="mx-auto w-full max-w-[1400px] px-6 py-16 md:px-10 md:py-24">
         <div className="overflow-hidden rounded-3xl bg-navy-700 text-white">
           <div className="flex flex-col gap-8 md:flex-row md:items-stretch">
             <div className="relative aspect-square w-full shrink-0 overflow-hidden md:w-[40%] md:max-w-md">

@@ -39,12 +39,13 @@ export function HomeIndustries() {
   const active = industries[index];
 
   return (
-    <section className="px-6 pb-24 md:px-10 md:pb-32">
-      <div
-        className={cn(
-          "mx-auto w-full max-w-[1400px] overflow-hidden rounded-3xl px-8 py-16 transition-colors duration-500 md:px-16 md:py-24",
-          toneBg[active.tone],
-        )}
+    <section className="pb-24 md:pb-32">
+      <div className="mx-auto w-full max-w-[1400px] px-6 md:px-10">
+        <div
+          className={cn(
+            "overflow-hidden rounded-3xl px-8 py-16 transition-colors duration-500 md:px-16 md:py-24",
+            toneBg[active.tone],
+          )}
         onMouseLeave={() => setPaused(false)}
       >
         <p
@@ -104,6 +105,7 @@ export function HomeIndustries() {
           >
             Explore {active.title} →
           </Link>
+        </div>
         </div>
       </div>
     </section>

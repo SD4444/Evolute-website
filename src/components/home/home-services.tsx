@@ -77,8 +77,8 @@ export function HomeServices() {
   const items = services[audience];
 
   return (
-    <section className="px-6 py-24 md:px-10 md:py-32">
-      <div className="mx-auto flex w-full max-w-[1400px] flex-col gap-16">
+    <section className="py-24 md:py-32">
+      <div className="mx-auto flex w-full max-w-[1400px] flex-col gap-16 px-6 md:px-10">
         <div className="flex flex-col items-start justify-between gap-6 md:flex-row md:items-end">
           <h2 className="font-heading text-[clamp(2.25rem,5vw,4.5rem)] leading-[1.02] font-medium tracking-tight text-navy-700">
             Our services

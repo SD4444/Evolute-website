@@ -42,14 +42,16 @@ export default function ContactPage() {
         subtitle="Want to get in touch? Fill out the form below and we'll get back to you as soon as possible."
       />
 
-      <section className="px-6 md:px-10">
-        <div className="mx-auto aspect-[16/7] w-full max-w-[1400px] overflow-hidden rounded-3xl bg-gray-200">
-          {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img
-            alt=""
-            className="h-full w-full object-cover"
-            src="/images/contact/office.jpg"
-          />
+      <section>
+        <div className="mx-auto w-full max-w-[1400px] px-6 md:px-10">
+          <div className="aspect-[16/7] w-full overflow-hidden rounded-3xl bg-gray-200">
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img
+              alt=""
+              className="h-full w-full object-cover"
+              src="/images/contact/office.jpg"
+            />
+          </div>
         </div>
       </section>
 

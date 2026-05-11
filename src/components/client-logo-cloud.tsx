@@ -21,8 +21,8 @@ export function ClientLogoCloud({
   title?: string;
 }) {
   return (
-    <section className="px-6 py-24 md:px-10 md:py-32">
-      <div className="mx-auto flex w-full max-w-[1400px] flex-col gap-12">
+    <section className="py-24 md:py-32">
+      <div className="mx-auto flex w-full max-w-[1400px] flex-col gap-12 px-6 md:px-10">
         <div className="flex flex-col gap-4">
           <span className="font-mono text-[0.6875rem] tracking-widest text-gray-500 uppercase">
             {eyebrow}

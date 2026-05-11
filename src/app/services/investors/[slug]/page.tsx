@@ -58,14 +58,16 @@ export default async function InvestorServicePage(
         </div>
       </PageSection>
 
-      <section className="px-6 md:px-10">
-        <div className="mx-auto aspect-[16/9] w-full max-w-[1400px] overflow-hidden rounded-3xl bg-gray-200">
-          {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img
-            alt=""
-            className="h-full w-full object-cover"
-            src="/images/services/photo-break.jpg"
-          />
+      <section>
+        <div className="mx-auto w-full max-w-[1400px] px-6 md:px-10">
+          <div className="aspect-[16/9] w-full overflow-hidden rounded-3xl bg-gray-200">
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img
+              alt=""
+              className="h-full w-full object-cover"
+              src="/images/services/photo-break.jpg"
+            />
+          </div>
         </div>
       </section>
 

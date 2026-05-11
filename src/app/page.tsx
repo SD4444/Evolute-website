@@ -34,8 +34,8 @@ export default async function Page() {
     <>
       <HomeHero />
 
-      <section className="px-6 py-24 md:px-10 md:py-32">
-        <div className="mx-auto grid w-full max-w-[1400px] gap-12 md:grid-cols-[1fr_1fr] md:gap-24">
+      <section className="py-24 md:py-32">
+        <div className="mx-auto grid w-full max-w-[1400px] gap-12 px-6 md:grid-cols-[1fr_1fr] md:gap-24 md:px-10">
           <h2 className="font-heading text-[clamp(2rem,4vw,3.5rem)] leading-[1.02] font-medium tracking-tight text-navy-700">
             Bridging capital gaps for tech.
           </h2>
@@ -58,21 +58,24 @@ export default async function Page() {
         </div>
       </section>
 
-      <section className="px-6 md:px-10">
-        <div className="mx-auto aspect-[16/7] w-full max-w-[1400px] overflow-hidden rounded-3xl bg-gray-200">
-          {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img
-            alt=""
-            className="h-full w-full object-cover"
-            src="/images/home/photo-break.jpg"
-          />
+      <section>
+        <div className="mx-auto w-full max-w-[1400px] px-6 md:px-10">
+          <div className="aspect-[16/7] w-full overflow-hidden rounded-3xl bg-gray-200">
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img
+              alt=""
+              className="h-full w-full object-cover"
+              src="/images/home/photo-break.jpg"
+            />
+          </div>
         </div>
       </section>
 
       <HomeServices />
 
-      <section className="px-6 pb-24 md:px-10 md:pb-32">
-        <div className="mx-auto w-full max-w-[1400px] rounded-3xl bg-navy-700 px-8 py-20 text-white md:px-16 md:py-28">
+      <section className="pb-24 md:pb-32">
+        <div className="mx-auto w-full max-w-[1400px] px-6 md:px-10">
+          <div className="rounded-3xl bg-navy-700 px-8 py-20 text-white md:px-16 md:py-28">
           <div className="grid gap-16 md:grid-cols-[1fr_1.2fr] md:gap-20">
             <h2 className="font-heading text-[clamp(2.5rem,5.5vw,4.5rem)] leading-[0.98] font-medium tracking-tight">
               Our
@@ -90,11 +93,12 @@ export default async function Page() {
               ))}
             </dl>
           </div>
+          </div>
         </div>
       </section>
 
-      <section className="px-6 pb-24 md:px-10 md:pb-32">
-        <div className="mx-auto grid w-full max-w-[1400px] gap-12 md:grid-cols-2 md:gap-20">
+      <section className="pb-24 md:pb-32">
+        <div className="mx-auto grid w-full max-w-[1400px] gap-12 px-6 md:grid-cols-2 md:gap-20 md:px-10">
           <div className="overflow-hidden rounded-3xl bg-gray-200">
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img
@@ -133,8 +137,8 @@ export default async function Page() {
 
       <HomeIndustries />
 
-      <section className="px-6 pb-24 md:px-10 md:pb-32">
-        <div className="mx-auto flex w-full max-w-[1400px] flex-col gap-12">
+      <section className="pb-24 md:pb-32">
+        <div className="mx-auto flex w-full max-w-[1400px] flex-col gap-12 px-6 md:px-10">
           <div className="flex flex-col items-start justify-between gap-4 md:flex-row md:items-end">
             <h2 className="font-heading text-[clamp(2rem,4vw,3rem)] leading-[1.02] font-medium tracking-tight text-navy-700">
               Venture capital news
