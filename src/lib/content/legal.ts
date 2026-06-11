@@ -1,4 +1,4 @@
-import type { LegalPage } from "./types";
+import { type LegalPage } from "./types";
 
 export const legalPages: LegalPage[] = [
   {

@@ -60,6 +60,23 @@ export type Insight = {
   legacyPath?: string;
 };
 
+export type CaseStudyPerson = {
+  image: string;
+  name: string;
+  role: string;
+  quote?: string;
+};
+
+export type CaseStudyAboutItem = {
+  label: string;
+  value: string;
+};
+
+export type CaseStudy = {
+  about: CaseStudyAboutItem[];
+  person: CaseStudyPerson;
+};
+
 export type LegalPage = {
   slug: string;
   title: string;

@@ -73,6 +73,7 @@ export function SiteNav() {
             className={
               onDarkHero ? "bg-white text-navy-700 hover:bg-white/90" : undefined
             }
+            nativeButton={false}
             render={<Link href="/contact" />}
             size="lg"
           >

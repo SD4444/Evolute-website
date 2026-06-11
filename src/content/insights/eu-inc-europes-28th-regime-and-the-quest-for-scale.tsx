@@ -1,4 +1,4 @@
-import type { Insight } from "@/lib/content/types";
+import { type Insight } from "@/lib/content/types";
 
 export const meta: Insight = {
   category: "Blog",
@@ -13,7 +13,7 @@ export const meta: Insight = {
 
 export default function Body() {
   return (
-    <div className="mx-auto flex max-w-3xl flex-col gap-6">
+    <div className="flex flex-col gap-6">
       <h2 className="mt-8 font-heading text-2xl font-medium text-navy-700">
         Executive summary
       </h2>

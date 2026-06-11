@@ -1,6 +1,6 @@
 import Link from "next/link";
 
-import type { Insight } from "@/lib/content/types";
+import { type Insight } from "@/lib/content/types";
 
 export function InsightCard({ insight }: { insight: Insight }) {
   return (

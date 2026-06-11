@@ -1,6 +1,6 @@
-import type { ComponentType } from "react";
+import { type ComponentType } from "react";
 
-import type { Insight } from "@/lib/content/types";
+import { type CaseStudy, type Insight } from "@/lib/content/types";
 
 import * as advancedMaterials from "./advanced-materials-manufacturing-sector-deep-dive";
 import * as collie from "./providing-collie-with-end-to-end-fundraising-support";
@@ -16,9 +16,14 @@ import * as scisports from "./facilitating-scisports-growth-through-acquisition"
 export type InsightEntry = {
   meta: Insight;
   Body: ComponentType;
+  caseStudy?: CaseStudy;
 };
 
-const modules: { meta: Insight; default: ComponentType }[] = [
+const modules: {
+  caseStudy?: CaseStudy;
+  meta: Insight;
+  default: ComponentType;
+}[] = [
   euInc,
   collie,
   scisports,
@@ -32,6 +37,7 @@ const modules: { meta: Insight; default: ComponentType }[] = [
 ];
 
 export const insightEntries: InsightEntry[] = modules.map((mod) => ({
-  meta: mod.meta,
   Body: mod.default,
+  caseStudy: mod.caseStudy,
+  meta: mod.meta,
 }));

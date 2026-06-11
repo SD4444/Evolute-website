@@ -1,5 +1,5 @@
 import Link from "next/link";
-import type { Metadata } from "next";
+import { type Metadata } from "next";
 
 import { LogoMark } from "@/components/brand/logo";
 import { ClientLogoCloud } from "@/components/client-logo-cloud";

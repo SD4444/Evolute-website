@@ -1,14 +1,14 @@
 import Link from "next/link";
 
-import type { AccentTone } from "@/lib/content/types";
+import { type AccentTone } from "@/lib/content/types";
 import { cn } from "@/lib/utils";
 
 const toneClasses: Record<AccentTone, string> = {
-  rose: "bg-accent-rose/50 text-accent-rose-dk",
-  lime: "bg-accent-lime text-accent-olive",
-  sand: "bg-accent-sand/60 text-accent-clay",
   lilac: "bg-accent-lilac text-accent-violet",
+  lime: "bg-accent-lime text-accent-olive",
+  rose: "bg-accent-rose/50 text-accent-rose-dk",
   sage: "bg-accent-sage/70 text-accent-forest",
+  sand: "bg-accent-sand/60 text-accent-clay",
   sky: "bg-accent-sky/60 text-accent-ocean",
 };
 

@@ -32,7 +32,12 @@ export function ContactCTA({
             </p>
           ) : null}
         </div>
-        <Button size="lg" variant="secondary" render={<Link href={href} />}>
+        <Button
+          size="lg"
+          variant="secondary"
+          nativeButton={false}
+          render={<Link href={href} />}
+        >
           Get in touch
         </Button>
       </div>

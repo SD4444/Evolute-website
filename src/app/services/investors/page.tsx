@@ -1,29 +1,29 @@
-import type { Metadata } from "next";
+import { type Metadata } from "next";
 import Link from "next/link";
 import {
   RiRadarLine,
   RiScalesLine,
   RiSearchEyeLine,
 } from "@remixicon/react";
-import type { RemixiconComponentType } from "@remixicon/react";
+import { type RemixiconComponentType } from "@remixicon/react";
 
 import { AskRobCard } from "@/components/ask-rob-card";
 import { Eyebrow } from "@/components/eyebrow";
 import { Hero } from "@/components/hero";
 import { MethodologyStep } from "@/components/methodology-step";
-import { PageSection } from "@/components/page-container";
+import { ContentRail, PageSection } from "@/components/page-container";
 import { services } from "@/lib/content/services";
 
 export const metadata: Metadata = {
-  title: "Services for investors — Evolute Partners",
   description:
     "Origination, evaluation, and commercial due diligence for funds and family offices investing in deep tech.",
+  title: "Services for investors — Evolute Partners",
 };
 
 const icons: Record<string, RemixiconComponentType> = {
-  "deal-origination": RiRadarLine,
-  "deal-evaluation": RiScalesLine,
   "commercial-due-diligence": RiSearchEyeLine,
+  "deal-evaluation": RiScalesLine,
+  "deal-origination": RiRadarLine,
 };
 
 export default function InvestorsServicesPage() {
@@ -70,16 +70,18 @@ export default function InvestorsServicesPage() {
       {methodology.length > 0 ? (
         <PageSection className="bg-[var(--background-alt)]">
           <div className="flex flex-col gap-12">
-            <div className="flex flex-col gap-4">
-              <Eyebrow>How we work</Eyebrow>
-              <h3 className="font-heading text-[clamp(2rem,4vw,3rem)] leading-tight font-normal tracking-tight text-navy-700">
-                Our methodology
-              </h3>
-              <p className="max-w-2xl text-base text-gray-500 md:text-lg">
-                Discovery, Design, Build, Execute — a disciplined path from
-                first conversation to closing.
-              </p>
-            </div>
+            <ContentRail>
+              <div className="flex flex-col gap-4">
+                <Eyebrow>How we work</Eyebrow>
+                <h3 className="font-heading text-[clamp(2rem,4vw,3rem)] leading-tight font-normal tracking-tight text-navy-700">
+                  Our methodology
+                </h3>
+                <p className="max-w-2xl text-base text-gray-500 md:text-lg">
+                  Discovery, Design, Build, Execute — a disciplined path from
+                  first conversation to closing.
+                </p>
+              </div>
+            </ContentRail>
             <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-4">
               {methodology.map((step, index) => (
                 <MethodologyStep

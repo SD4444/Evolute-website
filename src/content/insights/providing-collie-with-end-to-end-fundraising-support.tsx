@@ -1,4 +1,4 @@
-import type { Insight } from "@/lib/content/types";
+import { type CaseStudy, type Insight } from "@/lib/content/types";
 
 export const meta: Insight = {
   category: "Case study",
@@ -10,9 +10,30 @@ export const meta: Insight = {
   title: "Providing Collie with end-to-end fundraising support",
 };
 
+export const caseStudy: CaseStudy = {
+  about: [
+    {
+      label: "Industry",
+      value: "Agritech, farming tech, food tech, sustainable farming",
+    },
+    { label: "Stage", value: "Seed" },
+    { label: "Year founded", value: "2023" },
+    { label: "Location", value: "Netherlands" },
+    {
+      label: "Focus",
+      value: "Fundraising preparation, asset creation, investor sourcing",
+    },
+  ],
+  person: {
+    image: "/images/insights/collie-daniel-reisman.webp",
+    name: "Daniel Reisman",
+    role: "Founder and CEO of Collie",
+  },
+};
+
 export default function Body() {
   return (
-    <div className="mx-auto flex max-w-3xl flex-col gap-6">
+    <div className="flex flex-col gap-6">
       <h2 className="mt-8 font-heading text-2xl font-medium text-navy-700">
         Introduction to Collie
       </h2>

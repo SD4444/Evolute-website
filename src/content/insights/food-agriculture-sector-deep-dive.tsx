@@ -1,4 +1,4 @@
-import type { Insight } from "@/lib/content/types";
+import { type Insight } from "@/lib/content/types";
 
 export const meta: Insight = {
   category: "News",
@@ -12,7 +12,7 @@ export const meta: Insight = {
 
 export default function Body() {
   return (
-    <div className="mx-auto flex max-w-3xl flex-col gap-6">
+    <div className="flex flex-col gap-6">
       <p className="text-base leading-relaxed text-gray-500 md:text-lg">
         In our last blog post, we dove into the advanced materials and
         manufacturing sector as part of our continuing series introducing each

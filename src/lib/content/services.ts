@@ -1,4 +1,4 @@
-import type { MethodologyStep, Service } from "./types";
+import { type MethodologyStep, type Service } from "./types";
 
 const methodology: MethodologyStep[] = [
   {

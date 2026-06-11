@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import { type Metadata } from "next";
 import Link from "next/link";
 
 import { AskRobCard } from "@/components/ask-rob-card";
@@ -7,13 +7,13 @@ import { Hero } from "@/components/hero";
 import { LogoMark } from "@/components/brand/logo";
 import { PageSection } from "@/components/page-container";
 import { industries } from "@/lib/content/industries";
-import type { AccentTone } from "@/lib/content/types";
+import { type AccentTone } from "@/lib/content/types";
 import { cn } from "@/lib/utils";
 
 export const metadata: Metadata = {
-  title: "Industries — Evolute Partners",
   description:
     "Where Evolute deploys capital and expertise: digital technology, energy, food, mobility, materials, and life sciences.",
+  title: "Industries — Evolute Partners",
 };
 
 const toneBg: Record<AccentTone, string> = {

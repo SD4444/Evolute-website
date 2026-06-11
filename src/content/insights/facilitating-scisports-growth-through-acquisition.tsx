@@ -1,4 +1,4 @@
-import type { Insight } from "@/lib/content/types";
+import { type CaseStudy, type Insight } from "@/lib/content/types";
 
 export const meta: Insight = {
   category: "Case study",
@@ -10,9 +10,33 @@ export const meta: Insight = {
   title: "Facilitating SciSports' Growth Through Acquisition",
 };
 
+export const caseStudy: CaseStudy = {
+  about: [
+    {
+      label: "Industry",
+      value:
+        "Digital technology, artificial intelligence, machine learning, vision AI, sports tech",
+    },
+    { label: "Stage", value: "Acquisition" },
+    { label: "Year founded", value: "2012" },
+    { label: "Location", value: "Netherlands" },
+    {
+      label: "Focus",
+      value: "Acquisition preparation, asset creation",
+    },
+  ],
+  person: {
+    image: "/images/insights/scisports-vincent-van-renesse.jpeg",
+    name: "Vincent van Renesse van Duivenbode",
+    quote:
+      "Evolute provided a highly professional service, efficiently addressing the key aspects of our process. Their structured approach and clear communication made collaboration seamless. They delivered a top-tier investor deck that truly reflected our vision and needs. Thanks to their expertise, we secured a new investor within just three months.",
+    role: "Founder and CEO of SciSports",
+  },
+};
+
 export default function Body() {
   return (
-    <div className="mx-auto flex max-w-3xl flex-col gap-6">
+    <div className="flex flex-col gap-6">
       <h2 className="mt-8 font-heading text-2xl font-medium text-navy-700">
         Introduction to SciSports
       </h2>
@@ -116,14 +140,6 @@ export default function Body() {
           Ability to get in front of 12 potential investors within 2 weeks
         </li>
       </ul>
-
-      <blockquote className="border-l-2 border-navy-700 pl-4 italic text-navy-700">
-        &ldquo;Evolute provided a highly professional service, efficiently
-        addressing the key aspects of our process.&rdquo;
-        <footer className="mt-2 text-sm not-italic text-gray-500">
-          Vincent van Renesse van Duivenbode — Founder and CEO of SciSports
-        </footer>
-      </blockquote>
     </div>
   );
 }

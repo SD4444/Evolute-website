@@ -21,8 +21,8 @@ export async function generateMetadata(
     return {};
   }
   return {
-    title: service.title,
     description: service.subtitle,
+    title: service.title,
   };
 }
 

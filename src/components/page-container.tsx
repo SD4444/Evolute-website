@@ -27,3 +27,57 @@ export function PageSection({
     </section>
   );
 }
+
+export function ContentRail({
+  children,
+  className,
+}: {
+  children: React.ReactNode;
+  className?: string;
+}) {
+  return (
+    <div
+      className={cn(
+        "grid grid-cols-1 lg:grid-cols-[minmax(0,1fr)_minmax(0,46rem)_minmax(0,1fr)]",
+        className,
+      )}
+    >
+      <div className="lg:col-start-2">{children}</div>
+    </div>
+  );
+}
+
+export function EditorialRail({
+  children,
+  className,
+}: {
+  children: React.ReactNode;
+  className?: string;
+}) {
+  return (
+    <div
+      className={cn(
+        "grid grid-cols-1 2xl:grid-cols-[minmax(0,1fr)_minmax(0,46rem)_minmax(0,1fr)]",
+        className,
+      )}
+    >
+      <div className="2xl:col-start-2">{children}</div>
+    </div>
+  );
+}
+
+export function EditorialContainer({
+  children,
+  className,
+}: {
+  children: React.ReactNode;
+  className?: string;
+}) {
+  return (
+    <div
+      className={cn("mx-auto w-full max-w-[1120px] px-6 md:px-10", className)}
+    >
+      {children}
+    </div>
+  );
+}

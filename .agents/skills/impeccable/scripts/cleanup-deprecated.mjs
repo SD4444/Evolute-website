@@ -53,7 +53,7 @@ export function findProjectRoot(startDir = process.cwd()) {
       return dir;
     }
     const parent = resolve(dir, '..');
-    if (parent === dir) break;
+    if (parent === dir) {break;}
     dir = parent;
   }
   return resolve(startDir);
@@ -66,7 +66,7 @@ export function findProjectRoot(startDir = process.cwd()) {
  */
 export function isImpeccableSkill(skillDir) {
   const skillMd = join(skillDir, 'SKILL.md');
-  if (!existsSync(skillMd)) return false;
+  if (!existsSync(skillMd)) {return false;}
   try {
     const content = readFileSync(skillMd, 'utf-8');
     return /impeccable/i.test(content);
@@ -139,7 +139,7 @@ export function removeDeprecatedSkills(projectRoot) {
 
       // Regular directory -- verify it belongs to impeccable
       if (isImpeccableSkill(skillPath)) {
-        rmSync(skillPath, { recursive: true, force: true });
+        rmSync(skillPath, { force: true, recursive: true });
         deleted.push(skillPath);
       }
     }
@@ -155,7 +155,7 @@ export function removeDeprecatedSkills(projectRoot) {
  */
 export function cleanSkillsLock(projectRoot) {
   const lockPath = join(projectRoot, 'skills-lock.json');
-  if (!existsSync(lockPath)) return [];
+  if (!existsSync(lockPath)) {return [];}
 
   let lock;
   try {
@@ -164,14 +164,14 @@ export function cleanSkillsLock(projectRoot) {
     return [];
   }
 
-  if (!lock.skills || typeof lock.skills !== 'object') return [];
+  if (!lock.skills || typeof lock.skills !== 'object') {return [];}
 
   const targets = buildTargetNames();
   const removed = [];
 
   for (const name of targets) {
     const entry = lock.skills[name];
-    if (!entry) continue;
+    if (!entry) {continue;}
     // Only remove if it belongs to impeccable
     if (entry.source === 'pbakaus/impeccable') {
       delete lock.skills[name];
@@ -193,7 +193,7 @@ export function cleanup(projectRoot) {
   const root = projectRoot || findProjectRoot();
   const deletedPaths = removeDeprecatedSkills(root);
   const removedLockEntries = cleanSkillsLock(root);
-  return { deletedPaths, removedLockEntries, projectRoot: root };
+  return { deletedPaths, projectRoot: root, removedLockEntries };
 }
 
 // CLI entry point
@@ -204,11 +204,11 @@ if (process.argv[1] && resolve(process.argv[1]) === resolve(new URL(import.meta.
   } else {
     if (result.deletedPaths.length > 0) {
       console.log(`Removed ${result.deletedPaths.length} deprecated skill(s):`);
-      for (const p of result.deletedPaths) console.log(`  - ${p}`);
+      for (const p of result.deletedPaths) {console.log(`  - ${p}`);}
     }
     if (result.removedLockEntries.length > 0) {
       console.log(`Cleaned ${result.removedLockEntries.length} entry/entries from skills-lock.json:`);
-      for (const name of result.removedLockEntries) console.log(`  - ${name}`);
+      for (const name of result.removedLockEntries) {console.log(`  - ${name}`);}
     }
   }
 }

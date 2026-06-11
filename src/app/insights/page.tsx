@@ -5,9 +5,9 @@ import { insights } from "@/lib/content/insights";
 import { InsightsFilter } from "./insights-filter";
 
 export const metadata = {
-  title: "Insights",
   description:
     "Research, case studies, and news from the Evolute team on the companies, capital, and sectors shaping deep tech.",
+  title: "Insights",
 };
 
 export default function InsightsPage() {

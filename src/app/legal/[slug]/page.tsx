@@ -1,9 +1,9 @@
 import { notFound } from "next/navigation";
 
 import { Hero } from "@/components/hero";
-import { PageSection } from "@/components/page-container";
+import { EditorialRail, PageSection } from "@/components/page-container";
 import { findLegalPage, legalPages } from "@/lib/content/legal";
-import type { LegalBlock } from "@/lib/content/types";
+import { type LegalBlock } from "@/lib/content/types";
 
 export function generateStaticParams() {
   return legalPages.map((page) => ({ slug: page.slug }));
@@ -82,10 +82,12 @@ export default async function LegalPageRoute(
         eyebrow={"Updated " + page.updatedAt}
         title={page.title}
       />
-      <PageSection>
-        <div className="mx-auto max-w-3xl flex flex-col gap-5 text-navy-700">
-          {page.body.map((block, index) => renderBlock(block, index))}
-        </div>
+      <PageSection className="pt-10 md:pt-14">
+        <EditorialRail>
+          <div className="flex flex-col gap-5 text-navy-700">
+            {page.body.map((block, index) => renderBlock(block, index))}
+          </div>
+        </EditorialRail>
       </PageSection>
     </>
   );

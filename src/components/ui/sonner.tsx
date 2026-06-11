@@ -12,28 +12,28 @@ const Toaster = ({ ...props }: ToasterProps) => {
       theme={theme as ToasterProps["theme"]}
       className="toaster group"
       icons={{
-        success: (
-          <RiCheckboxCircleLine className="size-4" />
+        error: (
+          <RiCloseCircleLine className="size-4" />
         ),
         info: (
           <RiInformationLine className="size-4" />
         ),
-        warning: (
-          <RiErrorWarningLine className="size-4" />
-        ),
-        error: (
-          <RiCloseCircleLine className="size-4" />
-        ),
         loading: (
           <RiLoaderLine className="size-4 animate-spin" />
+        ),
+        success: (
+          <RiCheckboxCircleLine className="size-4" />
+        ),
+        warning: (
+          <RiErrorWarningLine className="size-4" />
         ),
       }}
       style={
         {
-          "--normal-bg": "var(--popover)",
-          "--normal-text": "var(--popover-foreground)",
-          "--normal-border": "var(--border)",
           "--border-radius": "var(--radius)",
+          "--normal-bg": "var(--popover)",
+          "--normal-border": "var(--border)",
+          "--normal-text": "var(--popover-foreground)",
         } as React.CSSProperties
       }
       toastOptions={{

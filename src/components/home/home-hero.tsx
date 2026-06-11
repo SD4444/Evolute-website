@@ -4,15 +4,15 @@ import Link from "next/link";
 import { useEffect, useState } from "react";
 
 import { cn } from "@/lib/utils";
-import type { AccentTone } from "@/lib/content/types";
+import { type AccentTone } from "@/lib/content/types";
 
 const cycle: { title: string; tone: AccentTone; slug: string }[] = [
-  { title: "digital technology", tone: "lilac", slug: "digital-technology" },
-  { title: "energy & sustainability", tone: "sage", slug: "energy-and-sustainability" },
-  { title: "food & agri", tone: "lime", slug: "food-and-agri" },
-  { title: "mobility & aerospace", tone: "sky", slug: "mobility-and-aerospace" },
-  { title: "advanced materials & manufacturing", tone: "sand", slug: "advanced-materials-and-manufacturing" },
-  { title: "health & life sciences", tone: "rose", slug: "health-and-life-sciences" },
+  { slug: "digital-technology", title: "digital technology", tone: "lilac" },
+  { slug: "energy-and-sustainability", title: "energy & sustainability", tone: "sage" },
+  { slug: "food-and-agri", title: "food & agri", tone: "lime" },
+  { slug: "mobility-and-aerospace", title: "mobility & aerospace", tone: "sky" },
+  { slug: "advanced-materials-and-manufacturing", title: "advanced materials & manufacturing", tone: "sand" },
+  { slug: "health-and-life-sciences", title: "health & life sciences", tone: "rose" },
 ];
 
 const toneColor: Record<AccentTone, string> = {
@@ -40,7 +40,7 @@ export function HomeHero() {
   }, []);
 
   useEffect(() => {
-    if (paused || reduced) return;
+    if (paused || reduced) {return;}
     const id = setInterval(() => setIndex((i) => (i + 1) % cycle.length), ROTATE_MS);
     return () => clearInterval(id);
   }, [paused, reduced]);
@@ -80,7 +80,7 @@ export function HomeHero() {
               aria-live="polite"
               className={cn(
                 "block text-[clamp(2.5rem,5vw,3.75rem)] underline decoration-[0.08em] underline-offset-[0.12em] transition-colors duration-500",
-                !reduced && "animate-[heroWord_700ms_ease-out]",
+                !reduced && "animate-hero-word",
               )}
               style={{ color: tone, textDecorationColor: tone }}
             >
@@ -159,21 +159,6 @@ export function HomeHero() {
           </div>
         </div>
       </div>
-
-      <style jsx>{`
-        @keyframes heroWord {
-          0% {
-            opacity: 0;
-            transform: translateY(0.3em);
-            filter: blur(6px);
-          }
-          100% {
-            opacity: 1;
-            transform: translateY(0);
-            filter: blur(0);
-          }
-        }
-      `}</style>
     </section>
   );
 }
