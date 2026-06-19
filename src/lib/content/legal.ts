@@ -201,7 +201,7 @@ export const legalPages: LegalPage[] = [
         type: "heading",
       },
       {
-        text: "Evolute B.V., Legal Department — Herengracht 450, 1017 CA, Amsterdam, Netherlands. Email: info@evolute.partners.",
+        text: "Evolute B.V., Legal Department: Herengracht 450, 1017 CA, Amsterdam, Netherlands. Email: info@evolute.partners.",
         type: "paragraph",
       },
       {
@@ -373,5 +373,4 @@ export const legalPages: LegalPage[] = [
   },
 ];
 
-export const findLegalPage = (slug: string) =>
-  legalPages.find((page) => page.slug === slug);
+export const findLegalPage = (slug: string) => legalPages.find((page) => page.slug === slug);

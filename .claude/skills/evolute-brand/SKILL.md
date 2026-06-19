@@ -21,6 +21,7 @@ Apply every section below when producing UI, marketing assets, copy, or illustra
 The logo is composed of a **logo mark** (checkmark glyph — represents thoroughness and attention to detail) and a **word mark** (`evolute`, lowercase). Use the full logo by default; the mark alone is acceptable in tight or favicon-like contexts.
 
 **Rules**
+
 - Minimum height: **20px**.
 - Always preserve clear space around the logo proportional to the mark height.
 - Preferred ad placement: bottom-left or bottom-right corner.
@@ -30,6 +31,7 @@ The logo is composed of a **logo mark** (checkmark glyph — represents thorough
 - Combined / industry logos exist (logo paired with industry colour) — only use these in the matching industry context.
 
 **Never**
+
 - Squash, tilt, rotate, skew, or distort.
 - Add drop shadows, outlines, or text effects.
 - Mirror the logo.
@@ -41,23 +43,24 @@ The logo is composed of a **logo mark** (checkmark glyph — represents thorough
 
 ### Primary palette
 
-| Name | Hex | Role |
-|---|---|---|
-| Frosted Almond | `#FBFAF8` | Primary light / page background |
-| Academic Blue | `#192432` | Primary dark / primary text |
-| Bombay | `#989CA3` | Neutral grey / secondary text, captions |
+| Name           | Hex       | Role                                    |
+| -------------- | --------- | --------------------------------------- |
+| Frosted Almond | `#FBFAF8` | Primary light / page background         |
+| Academic Blue  | `#192432` | Primary dark / primary text             |
+| Bombay         | `#989CA3` | Neutral grey / secondary text, captions |
 
 Academic Blue ranks from `25` (lightest) to `950` (darkest):
 
-| Step | Notes |
-|---|---|
+| Step                  | Notes                                                  |
+| --------------------- | ------------------------------------------------------ |
 | `25 / 50 / 100 / 200` | Backgrounds, surfaces, dividers (AAA contrast on dark) |
-| `300 / 400` | Subtle UI, hover states (AA contrast) |
-| `500 / 600 / 700` | Mid tones, secondary elements |
-| `800` | Body text on light, used in gradients |
-| `900 / 950` | Headlines, highest-emphasis text |
+| `300 / 400`           | Subtle UI, hover states (AA contrast)                  |
+| `500 / 600 / 700`     | Mid tones, secondary elements                          |
+| `800`                 | Body text on light, used in gradients                  |
+| `900 / 950`           | Headlines, highest-emphasis text                       |
 
 Specific named values from the guideline:
+
 - Academic Blue 950 — `#121923` (headlines on light)
 - Academic Blue 800 — `#1F2C3D` (body on light)
 - Academic Blue 100 — `#D2D3D6` (body on dark)
@@ -68,18 +71,19 @@ Specific named values from the guideline:
 
 These pair a soft tint with a saturated accent. **Only use within the matching industry context — never mix industries or use these as generic accents.**
 
-| Industry | Tint | Accent |
-|---|---|---|
-| Digital Technology | Akaroa `#D2C4AB` | `#725F3D` |
-| Energy & Sustainability | Spring Sun `#DCEAAE` | `#70891F` |
-| Food & Agri | Sprout `#ADD8AA` | `#3C7A38` |
-| Mobility & Aerospace | Glacier `#A2D3EE` | `#1C6E9C` |
+| Industry                           | Tint                 | Accent    |
+| ---------------------------------- | -------------------- | --------- |
+| Digital Technology                 | Akaroa `#D2C4AB`     | `#725F3D` |
+| Energy & Sustainability            | Spring Sun `#DCEAAE` | `#70891F` |
+| Food & Agri                        | Sprout `#ADD8AA`     | `#3C7A38` |
+| Mobility & Aerospace               | Glacier `#A2D3EE`    | `#1C6E9C` |
 | Advanced Materials & Manufacturing | Moon Raker `#D0CDF1` | `#443D8F` |
-| Health & Life Sciences | Orchid `#E8A5A5` | `#902C2C` |
+| Health & Life Sciences             | Orchid `#E8A5A5`     | `#902C2C` |
 
 ### Gradients
 
 Use Academic Blue gradients with a soft-light noise overlay for hero / feature sections:
+
 - Dark gradient: Academic Blue `950` → `800`, noise on soft light.
 - Light gradient: Academic Blue `25` → `100`, noise on soft light.
 
@@ -94,17 +98,18 @@ Use Academic Blue gradients with a soft-light noise overlay for hero / feature s
 
 ### Hierarchy
 
-| Style | Family | Line-height | Letter-spacing |
-|---|---|---|---|
-| Display | Space Grotesk | 100% | -4% |
-| Headline 1 | Space Grotesk | 100% | -4% |
-| Headline 2 | Space Grotesk | 100% | -2% |
-| Subheadline | Inter | 110% | -2% |
-| Body | Inter | 150% | 0% |
+| Style       | Family        | Line-height | Letter-spacing |
+| ----------- | ------------- | ----------- | -------------- |
+| Display     | Space Grotesk | 100%        | -4%            |
+| Headline 1  | Space Grotesk | 100%        | -4%            |
+| Headline 2  | Space Grotesk | 100%        | -2%            |
+| Subheadline | Inter         | 110%        | -2%            |
+| Body        | Inter         | 150%        | 0%             |
 
 Sizes can scale with context, but **never break the hierarchy**.
 
 ### Headline writing rules
+
 - Use **sentence case** (only the first letter capitalised).
 - Use punctuation **sparingly** — only to add rhythm or pose a question.
 - Examples from the guidelines: _"Capital partners in deep tech."_, _"Unlock true sustainable growth"_.
@@ -112,11 +117,13 @@ Sizes can scale with context, but **never break the hierarchy**.
 ### Type colour pairings
 
 On light backgrounds:
+
 - Offering / eyebrow: `Bombay #989CA3`
 - Headline: `Academic Blue 950 #121923`
 - Body: `Academic Blue 800 #1F2C3D`
 
 On dark backgrounds:
+
 - Offering / eyebrow: `Bombay #989CA3`
 - Headline: `Frosted Almond #FBFAF8`
 - Body: `Academic Blue 100 #D2D3D6`
@@ -141,6 +148,7 @@ Three approved categories:
 3. **Patterns** — subtle, calming patterns/textures; can be combined with people or environment shots.
 
 **Never**
+
 - Heavily Photoshopped or surreal imagery.
 - Stock-photo clichés that feel staged or unrealistic.
 - Imagery that doesn't reflect reality — visuals must remain believable and relatable.
@@ -156,6 +164,7 @@ Three approved categories:
 - **Mantra (sign-off):** _Never stop evolving._
 
 ### Service vocabulary
+
 - Fundraising services — capital raising advisory, investor relations & networking, capital structure optimization, performance benchmarking & KPIs.
 - Buy & sell advisory — capital structure optimization, due diligence support, exit strategy planning, acquisition scan / pre-due diligence.
 - Strategic consultancy — shareholder audit & governance, captable scenario analysis, valuation analysis, market positioning & investment strategy, business strategy & capital market alignment.

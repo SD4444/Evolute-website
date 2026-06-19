@@ -1,33 +1,17 @@
-import Link from "next/link";
 import { RiArrowRightLine } from "@remixicon/react";
+import Link from "next/link";
 
 import { LogoWordmark } from "@/components/brand/logo-wordmark";
-import {
-  companyServices,
-  industryLinks,
-  investorServices,
-  legalLinks,
-} from "@/lib/content/nav";
+import { companyServices, industryLinks, investorServices, legalLinks } from "@/lib/content/nav";
 
-function FooterList({
-  title,
-  links,
-}: {
-  title: string;
-  links: { href: string; title: string }[];
-}) {
+function FooterList({ title, links }: { title: string; links: { href: string; title: string }[] }) {
   return (
     <div className="flex flex-col gap-4">
-      <p className="font-mono text-[0.6875rem] tracking-widest text-gray-400 uppercase">
-        {title}
-      </p>
+      <p className="font-mono text-[0.6875rem] tracking-widest text-gray-400 uppercase">{title}</p>
       <ul className="flex flex-col gap-2.5">
         {links.map((link) => (
           <li key={link.href}>
-            <Link
-              className="text-sm text-white/80 hover:text-white"
-              href={link.href}
-            >
+            <Link className="text-sm text-white/80 hover:text-white" href={link.href}>
               {link.title}
             </Link>
           </li>
@@ -37,10 +21,8 @@ function FooterList({
   );
 }
 
-const withPrefix = (
-  items: { slug: string; title: string }[],
-  prefix: string,
-) => items.map((item) => ({ href: `${prefix}/${item.slug}`, title: item.title }));
+const withPrefix = (items: { slug: string; title: string }[], prefix: string) =>
+  items.map((item) => ({ href: `${prefix}/${item.slug}`, title: item.title }));
 
 export function SiteFooter() {
   return (
@@ -74,14 +56,12 @@ export function SiteFooter() {
           />
         </div>
         <div className="flex flex-col gap-10">
-          <FooterList
-            links={withPrefix(industryLinks, "/industries")}
-            title="Industries"
-          />
+          <FooterList links={withPrefix(industryLinks, "/industries")} title="Industries" />
           <FooterList
             links={[
               { href: "/insights", title: "Insights" },
               { href: "/about-us", title: "About us" },
+              { href: "/team", title: "Team" },
               { href: "/contact", title: "Contact" },
             ]}
             title="Company"

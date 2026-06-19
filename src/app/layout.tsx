@@ -35,8 +35,8 @@ export const metadata: Metadata = {
     images: ["/images/og-image.jpg"],
   },
   title: {
-    default: "Evolute — Capital partners for deep tech",
-    template: "%s — Evolute",
+    default: "Evolute | Capital partners for deep tech",
+    template: "%s | Evolute",
   },
   twitter: {
     card: "summary_large_image",

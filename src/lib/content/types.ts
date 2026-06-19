@@ -1,10 +1,4 @@
-export type AccentTone =
-  | "rose"
-  | "lime"
-  | "sand"
-  | "lilac"
-  | "sage"
-  | "sky";
+export type AccentTone = "rose" | "lime" | "sand" | "lilac" | "sage" | "sky";
 
 export type Capability = {
   title: string;
@@ -56,6 +50,8 @@ export type Insight = {
   publishedAt: string;
   /** Optional hero image (served from /public) */
   image?: string;
+  /** Preserve the complete artwork when the hero contains embedded branding or text. */
+  imageFit?: "contain" | "cover";
   /** Normalised slug → original Framer path for redirects */
   legacyPath?: string;
 };

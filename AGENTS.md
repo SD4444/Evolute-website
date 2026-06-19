@@ -12,3 +12,7 @@ Authoritative project documents live in `docs/`. Consult the relevant doc before
 
 - **Brand guidelines** — `docs/BRAND_GUIDELINES.pdf`
   Logo, colour system (primary + 6 industry palettes), typography (Space Grotesk + Inter), iconography (Material Symbols Sharp, weight 300), photography, voice, and tagline. Apply on any UI, marketing asset, copy, or visual that touches the Evolute brand. The `/evolute-brand` skill (`.claude/skills/evolute-brand/SKILL.md`) is a distilled, always-loadable summary of this PDF — invoke it instead of re-reading the PDF unless you need a detail the skill doesn't cover.
+
+# Writing style
+
+Do not use em dashes in user-facing copy. Rewrite with commas, colons, parentheses, or separate sentences.

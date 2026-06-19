@@ -4,7 +4,7 @@ import { useState } from "react";
 
 import { InsightCard } from "@/components/insight-card";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import type { Insight, InsightCategory } from "@/lib/content/types";
+import { type Insight, type InsightCategory } from "@/lib/content/types";
 
 type Filter = "All" | InsightCategory;
 
@@ -14,16 +14,11 @@ export function InsightsFilter({ insights }: { insights: Insight[] }) {
   const [filter, setFilter] = useState<Filter>("All");
 
   const visible =
-    filter === "All"
-      ? insights
-      : insights.filter((insight) => insight.category === filter);
+    filter === "All" ? insights : insights.filter((insight) => insight.category === filter);
 
   return (
-    <Tabs
-      value={filter}
-      onValueChange={(value) => setFilter(value as Filter)}
-    >
-      <TabsList className="mb-10">
+    <Tabs value={filter} onValueChange={(value) => setFilter(value as Filter)}>
+      <TabsList className="mb-10" variant="line">
         {FILTERS.map((item) => (
           <TabsTrigger key={item} value={item}>
             {item}

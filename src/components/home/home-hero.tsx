@@ -3,15 +3,19 @@
 import Link from "next/link";
 import { useEffect, useState } from "react";
 
-import { cn } from "@/lib/utils";
 import { type AccentTone } from "@/lib/content/types";
+import { cn } from "@/lib/utils";
 
 const cycle: { title: string; tone: AccentTone; slug: string }[] = [
   { slug: "digital-technology", title: "digital technology", tone: "lilac" },
   { slug: "energy-and-sustainability", title: "energy & sustainability", tone: "sage" },
   { slug: "food-and-agri", title: "food & agri", tone: "lime" },
   { slug: "mobility-and-aerospace", title: "mobility & aerospace", tone: "sky" },
-  { slug: "advanced-materials-and-manufacturing", title: "advanced materials & manufacturing", tone: "sand" },
+  {
+    slug: "advanced-materials-and-manufacturing",
+    title: "advanced materials & manufacturing",
+    tone: "sand",
+  },
   { slug: "health-and-life-sciences", title: "health & life sciences", tone: "rose" },
 ];
 
@@ -40,7 +44,9 @@ export function HomeHero() {
   }, []);
 
   useEffect(() => {
-    if (paused || reduced) {return;}
+    if (paused || reduced) {
+      return;
+    }
     const id = setInterval(() => setIndex((i) => (i + 1) % cycle.length), ROTATE_MS);
     return () => clearInterval(id);
   }, [paused, reduced]);
@@ -59,27 +65,26 @@ export function HomeHero() {
         aria-hidden
         className="pointer-events-none absolute inset-0 opacity-[0.04]"
         style={{
-          backgroundImage:
-            "radial-gradient(currentColor 1px, transparent 1px)",
+          backgroundImage: "radial-gradient(currentColor 1px, transparent 1px)",
           backgroundSize: "24px 24px",
         }}
       />
 
-      <div className="relative mx-auto flex min-h-screen w-full max-w-[1400px] flex-col justify-between gap-16 px-6 pt-32 pb-12 md:px-10 md:pt-40 md:pb-16">
+      <div className="relative mx-auto flex min-h-screen w-full max-w-[1760px] flex-col gap-8 px-6 pt-28 pb-4 md:px-10 md:pt-28 md:pb-5">
         <div
-          className="flex flex-col gap-10"
+          className="flex flex-1 flex-col justify-center gap-8 pb-6"
           onMouseEnter={() => setPaused(true)}
           onMouseLeave={() => setPaused(false)}
         >
           <h1 className="font-heading leading-[1.02] font-medium tracking-tight">
-            <span className="block text-white text-[clamp(2.5rem,5vw,3.75rem)]">
+            <span className="block text-[clamp(2.25rem,3.5vw,3rem)] text-white">
               Corporate finance for
             </span>
             <span
               key={current.slug}
               aria-live="polite"
               className={cn(
-                "block text-[clamp(2.5rem,5vw,3.75rem)] underline decoration-[0.08em] underline-offset-[0.12em] transition-colors duration-500",
+                "block text-[clamp(2.25rem,3.5vw,3rem)] underline decoration-[0.07em] underline-offset-[0.1em] transition-colors duration-500",
                 !reduced && "animate-hero-word",
               )}
               style={{ color: tone, textDecorationColor: tone }}
@@ -89,22 +94,27 @@ export function HomeHero() {
             </span>
           </h1>
 
-          <p className="max-w-2xl text-base leading-relaxed text-gray-200 md:text-lg">
-            Evolute is a data-driven corporate finance partner for deep tech
-            pioneers. We work alongside founders and investors on fundraising,
-            M&amp;A, and strategic capital decisions — embedded as an extension
-            of your team.
-          </p>
+          <div className="flex max-w-2xl flex-col gap-4 text-base leading-[1.65] text-gray-200">
+            <p>
+              Evolute specialises in corporate finance for tech pioneers; visionary founders who
+              push boundaries and see their companies as catalysts for the future.
+            </p>
+            <p>
+              We focus on growth capital and exit advisory services. Not by following traditional
+              paths. Our mission is to empower founders with the richest data and world-class
+              resources to navigate complex capital markets and achieve exits they can be proud of.
+            </p>
+          </div>
 
           <div className="flex flex-col gap-3 sm:flex-row sm:items-center sm:gap-4">
             <Link
-              className="inline-flex h-12 items-center justify-center rounded-full bg-white px-7 text-sm font-medium text-navy-700 transition-colors hover:bg-gray-100"
+              className="inline-flex h-11 items-center justify-center rounded-md bg-white px-6 text-sm font-medium text-navy-700 transition-colors hover:bg-gray-100"
               href="/contact"
             >
               Start a conversation
             </Link>
             <Link
-              className="inline-flex h-12 items-center justify-center rounded-full border border-white/30 px-7 text-sm font-medium text-white transition-colors hover:bg-white/10"
+              className="inline-flex h-11 items-center justify-center rounded-md border border-white/30 px-6 text-sm font-medium text-white transition-colors hover:bg-white/10"
               href="/services"
             >
               Explore our services
@@ -112,51 +122,38 @@ export function HomeHero() {
           </div>
         </div>
 
-        <div className="flex flex-col gap-4 border-t border-white/10 pt-6">
-          <div className="flex items-center justify-between gap-6">
-            <ul className="flex flex-wrap items-center gap-2">
-              {cycle.map((item, i) => {
-                const isActive = i === index;
-                return (
-                  <li key={item.slug}>
-                    <button
-                      aria-label={`Show ${item.title}`}
-                      aria-pressed={isActive}
-                      className={cn(
-                        "group flex items-center gap-2 rounded-full border border-white/10 px-3 py-1.5 text-xs transition-colors",
-                        isActive
-                          ? "border-white/40 text-white"
-                          : "text-gray-300 hover:border-white/30 hover:text-white",
-                      )}
-                      onClick={() => {
-                        setIndex(i);
-                        setPaused(true);
-                      }}
-                      type="button"
+        <div className="flex flex-col gap-5 border-t border-white/10">
+          <ul className="grid grid-cols-2 gap-x-5 md:grid-cols-3 md:gap-x-8 xl:grid-cols-6">
+            {cycle.map((item, i) => {
+              const isActive = i === index;
+              return (
+                <li key={item.slug}>
+                  <button
+                    aria-label={`Show ${item.title}`}
+                    aria-pressed={isActive}
+                    className={cn(
+                      "grid min-h-16 w-full grid-cols-[1.5rem_minmax(0,1fr)] items-center gap-2 border-b text-left text-xs transition-colors focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-white md:min-h-20 md:grid-cols-[1.75rem_minmax(0,1fr)] md:text-sm",
+                      isActive ? "text-white" : "border-transparent text-gray-300 hover:text-white",
+                    )}
+                    onClick={() => {
+                      setIndex(i);
+                      setPaused(true);
+                    }}
+                    style={{ borderBottomColor: isActive ? toneColor[item.tone] : undefined }}
+                    type="button"
+                  >
+                    <span
+                      className="font-mono text-[0.625rem] tracking-[0.1em] md:text-[0.6875rem]"
+                      style={{ color: isActive ? toneColor[item.tone] : undefined }}
                     >
-                      <span
-                        aria-hidden
-                        className="size-1.5 rounded-full transition-colors"
-                        style={{
-                          backgroundColor: isActive
-                            ? toneColor[item.tone]
-                            : "rgba(255,255,255,0.25)",
-                        }}
-                      />
-                      <span className="hidden md:inline">{item.title}</span>
-                    </button>
-                  </li>
-                );
-              })}
-            </ul>
-            <Link
-              className="hidden shrink-0 items-center gap-2 text-sm transition-colors md:inline-flex"
-              href={`/industries/${current.slug}`}
-              style={{ color: tone }}
-            >
-              Explore {current.title} →
-            </Link>
-          </div>
+                      {String(i + 1).padStart(2, "0")}
+                    </span>
+                    <span className="leading-tight">{item.title}</span>
+                  </button>
+                </li>
+              );
+            })}
+          </ul>
         </div>
       </div>
     </section>

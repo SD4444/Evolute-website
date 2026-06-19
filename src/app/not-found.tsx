@@ -37,20 +37,18 @@ export default function NotFound() {
       />
 
       <PageSection>
-        <div className="grid gap-6 md:grid-cols-2">
+        <div className="border-b border-navy-700/20">
           {links.map((link) => (
             <Link
-              className="rounded-3xl bg-[var(--background-alt)] p-8 transition-colors hover:bg-gray-100 md:p-10"
+              className="group grid gap-3 border-t border-navy-700/20 py-6 transition-colors hover:text-navy-900 md:grid-cols-[minmax(0,0.7fr)_minmax(0,1fr)_auto] md:items-center md:gap-8 md:py-8"
               href={link.href}
               key={link.href}
             >
-              <h2 className="font-heading text-2xl font-medium text-navy-700 md:text-3xl">
+              <h2 className="font-heading text-2xl font-medium text-navy-700 transition-colors group-hover:text-navy-900 md:text-3xl">
                 {link.title}
               </h2>
-              <p className="mt-3 max-w-md text-base text-gray-500">
-                {link.description}
-              </p>
-              <span className="mt-6 inline-flex text-sm text-navy-700">
+              <p className="max-w-md text-base text-navy-600">{link.description}</p>
+              <span className="text-sm text-navy-700 transition-transform group-hover:translate-x-1">
                 Go to {link.title} →
               </span>
             </Link>

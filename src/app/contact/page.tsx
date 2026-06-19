@@ -3,17 +3,9 @@ import { type Metadata } from "next";
 import { Hero } from "@/components/hero";
 import { PageSection } from "@/components/page-container";
 import { Alert, AlertDescription, AlertTitle } from "@/components/ui/alert";
-import {
-  Field,
-  FieldDescription,
-  FieldGroup,
-  FieldLabel,
-} from "@/components/ui/field";
+import { Field, FieldDescription, FieldGroup, FieldLabel } from "@/components/ui/field";
 import { Input } from "@/components/ui/input";
-import {
-  NativeSelect,
-  NativeSelectOption,
-} from "@/components/ui/native-select";
+import { NativeSelect, NativeSelectOption } from "@/components/ui/native-select";
 import { Textarea } from "@/components/ui/textarea";
 
 import { submitContactForm } from "./actions";
@@ -21,14 +13,14 @@ import { SubmitButton } from "./submit-button";
 
 export const metadata: Metadata = {
   description:
-    "Get in touch with Evolute Partners. Capital partners for deep tech — talk to us about M&A, fundraising, and corporate finance.",
+    "Get in touch with Evolute Partners. Talk to our capital partners for deep tech about M&A, fundraising, and corporate finance.",
   openGraph: {
     description:
-      "Get in touch with Evolute Partners. Capital partners for deep tech — talk to us about M&A, fundraising, and corporate finance.",
-    title: "Contact — Evolute Partners",
+      "Get in touch with Evolute Partners. Talk to our capital partners for deep tech about M&A, fundraising, and corporate finance.",
+    title: "Contact | Evolute Partners",
     type: "website",
   },
-  title: "Contact — Evolute Partners",
+  title: "Contact | Evolute Partners",
 };
 
 const statusCopy = {
@@ -54,12 +46,9 @@ const statusCopy = {
 
 export default async function ContactPage(props: PageProps<"/contact">) {
   const searchParams = await props.searchParams;
-  const status =
-    typeof searchParams.status === "string" ? searchParams.status : undefined;
+  const status = typeof searchParams.status === "string" ? searchParams.status : undefined;
   const statusMessage =
-    status && status in statusCopy
-      ? statusCopy[status as keyof typeof statusCopy]
-      : null;
+    status && status in statusCopy ? statusCopy[status as keyof typeof statusCopy] : null;
 
   return (
     <>
@@ -74,11 +63,7 @@ export default async function ContactPage(props: PageProps<"/contact">) {
         <div className="mx-auto w-full max-w-[1400px] px-6 md:px-10">
           <div className="aspect-[16/7] w-full overflow-hidden rounded-3xl bg-gray-200">
             {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img
-              alt=""
-              className="h-full w-full object-cover"
-              src="/images/contact/office.jpg"
-            />
+            <img alt="" className="h-full w-full object-cover" src="/images/contact/office.jpg" />
           </div>
         </div>
       </section>
@@ -116,10 +101,7 @@ export default async function ContactPage(props: PageProps<"/contact">) {
 
           <div className="flex flex-col gap-6">
             {statusMessage ? (
-              <Alert
-                className="border-navy-700/10 bg-white"
-                variant={statusMessage.variant}
-              >
+              <Alert className="border-navy-700/10 bg-white" variant={statusMessage.variant}>
                 <AlertTitle>{statusMessage.title}</AlertTitle>
                 <AlertDescription>{statusMessage.description}</AlertDescription>
               </Alert>
@@ -176,9 +158,7 @@ export default async function ContactPage(props: PageProps<"/contact">) {
                     <NativeSelectOption value="" disabled>
                       Select a topic
                     </NativeSelectOption>
-                    <NativeSelectOption value="fundraising">
-                      Fundraising
-                    </NativeSelectOption>
+                    <NativeSelectOption value="fundraising">Fundraising</NativeSelectOption>
                     <NativeSelectOption value="m-a">M&amp;A</NativeSelectOption>
                     <NativeSelectOption value="corporate-finance">
                       Corporate finance
@@ -201,8 +181,8 @@ export default async function ContactPage(props: PageProps<"/contact">) {
                     className="rounded-none border-0 border-b border-navy-700/30 bg-transparent px-0 focus-visible:border-navy-700 focus-visible:ring-0"
                   />
                   <FieldDescription>
-                    We treat every message as confidential. Please include a
-                    few details so we can route it quickly.
+                    We treat every message as confidential. Please include a few details so we can
+                    route it quickly.
                   </FieldDescription>
                 </Field>
 
@@ -219,10 +199,7 @@ export default async function ContactPage(props: PageProps<"/contact">) {
               <div className="flex items-center justify-between gap-4 pt-2">
                 <p className="text-xs text-gray-500">
                   By submitting, you agree to our{" "}
-                  <a
-                    href="/legal/privacy-statement"
-                    className="underline underline-offset-4"
-                  >
+                  <a href="/legal/privacy-statement" className="underline underline-offset-4">
                     privacy statement
                   </a>
                   .

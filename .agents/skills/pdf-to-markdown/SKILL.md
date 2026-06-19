@@ -59,6 +59,7 @@ Images are saved to `{output}_resources/` alongside the output file and referenc
 Free for processing up to 1,000 documents per calendar month.
 
 Commercial license required for:
+
 - processing over 1,000 documents/month
 - redistributing the binary
 - OEM/white-label use

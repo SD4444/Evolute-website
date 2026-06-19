@@ -8,7 +8,7 @@ export function LogoWordmark({
   height = 24,
 }: {
   className?: string;
-  /** Use on dark backgrounds — flips to white via CSS filter. */
+  /** Use on dark backgrounds; flips to white via CSS filter. */
   invert?: boolean;
   /** Rendered height in px. Width auto-scales via SVG aspect ratio (711:131). */
   height?: number;

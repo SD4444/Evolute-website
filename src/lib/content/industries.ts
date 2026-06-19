@@ -2,9 +2,9 @@ import { type Industry } from "./types";
 
 export const industries: Industry[] = [
   {
-    image: "/images/home/photo-break.jpg",
+    image: "/images/industries/digital-technology.jpg",
     intro:
-      "Digital technology covers a broad range of innovations, often integrating with hardware and finding applications in numerous end markets. From artificial intelligence and quantum computing to cloud infrastructure, cybersecurity, photonics, sensors, and smart infrastructure — the sector underpins modern value creation across industries.",
+      "Digital technology covers a broad range of innovations, often integrating with hardware and finding applications in numerous end markets. From artificial intelligence and quantum computing to cloud infrastructure, cybersecurity, photonics, sensors, and smart infrastructure, the sector underpins modern value creation across industries.",
     slug: "digital-technology",
     subtitle:
       "We support ventures building the next generation of digital and software-based solutions.",
@@ -34,12 +34,11 @@ export const industries: Industry[] = [
     tone: "lilac",
   },
   {
-    image: "/images/industries/energy-and-sustainability.jpg",
+    image: "/images/industries/energy-and-sustainability-kitepower.png",
     intro:
-      "Energy and sustainability cover a wide range of technologies, from clean energy generation to predictive analytics. Examples include industrial energy management systems, energy hybridization, advanced decarbonization, predictive maintenance, and biopolymer production through carbon capture — spanning waste management, storage, eco-friendly manufacturing, and environmental restoration.",
+      "Energy and sustainability cover a wide range of technologies, from clean energy generation to predictive analytics. Examples include industrial energy management systems, energy hybridization, advanced decarbonization, predictive maintenance, and biopolymer production through carbon capture. These technologies span waste management, storage, eco-friendly manufacturing, and environmental restoration.",
     slug: "energy-and-sustainability",
-    subtitle:
-      "We support ventures driving the transition to a cleaner, greener world.",
+    subtitle: "We support ventures driving the transition to a cleaner, greener world.",
     themes: [
       {
         description:
@@ -68,10 +67,9 @@ export const industries: Industry[] = [
   {
     image: "/images/industries/food-and-agri.webp",
     intro:
-      "Food and agriculture span a broad range of technologies aimed at creating a more sustainable, efficient, and resilient global food system — from precision agriculture and cultured meat to autonomous farming equipment, plant-based proteins, smart irrigation, insect protein, cellular agriculture, and water conservation.",
+      "Food and agriculture span a broad range of technologies aimed at creating a more sustainable, efficient, and resilient global food system. These range from precision agriculture and cultured meat to autonomous farming equipment, plant-based proteins, smart irrigation, insect protein, cellular agriculture, and water conservation.",
     slug: "food-and-agri",
-    subtitle:
-      "We support ventures revolutionizing the food and agricultural systems.",
+    subtitle: "We support ventures revolutionizing the food and agricultural systems.",
     themes: [
       {
         description:
@@ -100,7 +98,7 @@ export const industries: Industry[] = [
   {
     image: "/images/industries/mobility-and-aerospace.jpg",
     intro:
-      "Mobility and aerospace cover a wide range of technologies facilitating a more efficient, interconnected, and sustainable landscape on Earth and beyond — autonomous and electric vehicles, V2X connectivity, advanced propulsion, drones, urban air mobility, high-speed rail, reusable rockets, and satellite-enabled connectivity.",
+      "Mobility and aerospace cover a wide range of technologies facilitating a more efficient, interconnected, and sustainable landscape on Earth and beyond. These include autonomous and electric vehicles, V2X connectivity, advanced propulsion, drones, urban air mobility, high-speed rail, reusable rockets, and satellite-enabled connectivity.",
     slug: "mobility-and-aerospace",
     subtitle:
       "We support ventures transforming movement and transportation, both on land and in the air.",
@@ -132,7 +130,7 @@ export const industries: Industry[] = [
   {
     image: "/images/industries/advanced-materials-and-manufacturing.jpg",
     intro:
-      "Advanced materials and manufacturing span a broad range of technologies driving innovations that enable a more efficient, sustainable, and automated future — 3D printing, nanomaterials for energy storage, advanced composites, photonics, robotics for warehouse automation, AI-driven process optimization, collaborative robotics, high-performance alloys, smart materials, and circular manufacturing.",
+      "Advanced materials and manufacturing span a broad range of technologies driving innovations that enable a more efficient, sustainable, and automated future. These include 3D printing, nanomaterials for energy storage, advanced composites, photonics, robotics for warehouse automation, AI-driven process optimization, collaborative robotics, high-performance alloys, smart materials, and circular manufacturing.",
     slug: "advanced-materials-and-manufacturing",
     subtitle:
       "We support ventures revolutionizing future industries through cutting-edge materials and processes.",
@@ -164,14 +162,14 @@ export const industries: Industry[] = [
   {
     image: "/images/industries/health-and-life-sciences.webp",
     intro:
-      "Health and life sciences span a broad range of technologies driving innovations that improve patient outcomes and healthcare delivery — gene editing, AI-driven drug discovery, wearable health monitors, lab-grown organs, targeted biologics, telemedicine, biosensors, bioinformatics, and synthetic biology.",
+      "Health and life sciences span a broad range of technologies driving innovations that improve patient outcomes and healthcare delivery. These include gene editing, AI-driven drug discovery, wearable health monitors, lab-grown organs, targeted biologics, telemedicine, biosensors, bioinformatics, and synthetic biology.",
     slug: "health-and-life-sciences",
     subtitle:
       "We support ventures driving advancements to create a healthier, more resilient future.",
     themes: [
       {
         description:
-          "Novel modalities — cell, gene, RNA, and targeted biologics — expanding the universe of treatable disease.",
+          "Novel modalities, including cell, gene, RNA, and targeted biologics, are expanding the universe of treatable disease.",
         title: "Therapeutics & biotech",
       },
       {
@@ -195,5 +193,4 @@ export const industries: Industry[] = [
   },
 ];
 
-export const findIndustry = (slug: string) =>
-  industries.find((industry) => industry.slug === slug);
+export const findIndustry = (slug: string) => industries.find((industry) => industry.slug === slug);

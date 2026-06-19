@@ -33,8 +33,7 @@ export const services: Service[] = [
         title: "Target identification",
       },
       {
-        description:
-          "Valuation and deal structuring to optimize price and management interests.",
+        description: "Valuation and deal structuring to optimize price and management interests.",
         title: "Valuation & deal structuring",
       },
       {
@@ -154,8 +153,7 @@ export const services: Service[] = [
         title: "Relationship management",
       },
     ],
-    intro:
-      "Generation of high-quality deal flow to execute your investment strategy.",
+    intro: "Generation of high-quality deal flow to execute your investment strategy.",
     methodology,
     slug: "deal-origination",
     subtitle: "Deals that deliver your investment targets.",
@@ -180,8 +178,7 @@ export const services: Service[] = [
         title: "Valuation",
       },
       {
-        description:
-          "Assistance in the integration of new investments into the portfolio.",
+        description: "Assistance in the integration of new investments into the portfolio.",
         title: "Post-deal integration",
       },
     ],
@@ -191,11 +188,10 @@ export const services: Service[] = [
       title: "An example of our deal evaluation services",
     },
     intro:
-      "We manage the end-to-end deal process, from analysis to closing — keeping investors aligned and execution tight.",
+      "We manage the end-to-end deal process from analysis to closing, keeping investors aligned and execution tight.",
     methodology,
     slug: "deal-evaluation",
-    subtitle:
-      "Management of the end-to-end deal process, from analysis to closing.",
+    subtitle: "Management of the end-to-end deal process, from analysis to closing.",
     title: "Deal evaluation",
   },
   {
@@ -226,8 +222,7 @@ export const services: Service[] = [
       "Validate your investment thesis. Evolute provides strategic commercial due diligence to assess market fit, scalability, and growth potential in innovative tech ventures.",
     methodology,
     slug: "commercial-due-diligence",
-    subtitle:
-      "Oversight and optimization of investments to enhance performance and drive growth.",
+    subtitle: "Oversight and optimization of investments to enhance performance and drive growth.",
     title: "Commercial due diligence",
   },
 ];
@@ -236,6 +231,4 @@ export const servicesByAudience = (audience: Service["audience"]) =>
   services.filter((service) => service.audience === audience);
 
 export const findService = (audience: Service["audience"], slug: string) =>
-  services.find(
-    (service) => service.audience === audience && service.slug === slug,
-  );
+  services.find((service) => service.audience === audience && service.slug === slug);

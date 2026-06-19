@@ -1,9 +1,6 @@
 import { cn } from "@/lib/utils";
 
-export function LogoMark({
-  className,
-  ...props
-}: React.SVGProps<SVGSVGElement>) {
+export function LogoMark({ className, ...props }: React.SVGProps<SVGSVGElement>) {
   return (
     <svg
       aria-hidden="true"

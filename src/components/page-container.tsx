@@ -8,9 +8,7 @@ export function PageContainer({
   className?: string;
 }) {
   return (
-    <div className={cn("mx-auto w-full max-w-[1400px] px-6 md:px-10", className)}>
-      {children}
-    </div>
+    <div className={cn("mx-auto w-full max-w-[1400px] px-6 md:px-10", className)}>{children}</div>
   );
 }
 
@@ -74,10 +72,6 @@ export function EditorialContainer({
   className?: string;
 }) {
   return (
-    <div
-      className={cn("mx-auto w-full max-w-[1120px] px-6 md:px-10", className)}
-    >
-      {children}
-    </div>
+    <div className={cn("mx-auto w-full max-w-[1120px] px-6 md:px-10", className)}>{children}</div>
   );
 }

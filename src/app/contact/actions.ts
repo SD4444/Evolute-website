@@ -1,9 +1,9 @@
 "use server";
 
+import { redirect } from "next/navigation";
 import { appendFile } from "node:fs/promises";
 import { tmpdir } from "node:os";
 import { join } from "node:path";
-import { redirect } from "next/navigation";
 
 const submissionLogFile = join(tmpdir(), "evolute-contact-submissions.jsonl");
 

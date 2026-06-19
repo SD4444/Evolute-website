@@ -2,10 +2,7 @@ import { notFound } from "next/navigation";
 
 import { Eyebrow } from "@/components/eyebrow";
 import { InsightCard } from "@/components/insight-card";
-import {
-  EditorialContainer,
-  PageSection,
-} from "@/components/page-container";
+import { EditorialContainer, PageSection } from "@/components/page-container";
 import { findInsightEntry, insights } from "@/lib/content/insights";
 
 export async function generateStaticParams() {
@@ -26,9 +23,7 @@ export async function generateMetadata(props: PageProps<"/insights/[slug]">) {
   };
 }
 
-export default async function InsightPage(
-  props: PageProps<"/insights/[slug]">,
-) {
+export default async function InsightPage(props: PageProps<"/insights/[slug]">) {
   const { slug } = await props.params;
   const entry = findInsightEntry(slug);
 
@@ -39,9 +34,7 @@ export default async function InsightPage(
   const { meta, Body } = entry;
   const caseStudy = entry.caseStudy;
 
-  const relatedPosts = insights
-    .filter((insight) => insight.slug !== slug)
-    .slice(0, 3);
+  const relatedPosts = insights.filter((insight) => insight.slug !== slug).slice(0, 3);
 
   return (
     <>
@@ -52,9 +45,7 @@ export default async function InsightPage(
             <h1 className="max-w-4xl font-heading text-4xl leading-[1.05] font-medium tracking-tight md:text-6xl">
               {meta.title}
             </h1>
-            <p className="max-w-3xl text-lg text-gray-500 md:text-xl">
-              {meta.excerpt}
-            </p>
+            <p className="max-w-3xl text-lg text-gray-500 md:text-xl">{meta.excerpt}</p>
           </div>
         </EditorialContainer>
       </section>
@@ -63,11 +54,7 @@ export default async function InsightPage(
           <EditorialContainer>
             <div className="aspect-[16/9] w-full overflow-hidden rounded-3xl bg-gray-200">
               {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img
-                alt=""
-                className="h-full w-full object-cover"
-                src={meta.image}
-              />
+              <img alt="" className="h-full w-full object-cover" src={meta.image} />
             </div>
           </EditorialContainer>
         </section>
@@ -100,20 +87,14 @@ export default async function InsightPage(
                     />
                   </div>
                   <div className="flex flex-col gap-1">
-                    <p className="font-heading text-xl text-white">
-                      {caseStudy.person.name}
-                    </p>
-                    <p className="text-sm text-gray-300">
-                      {caseStudy.person.role}
-                    </p>
+                    <p className="font-heading text-xl text-white">{caseStudy.person.name}</p>
+                    <p className="text-sm text-gray-300">{caseStudy.person.role}</p>
                   </div>
                 </div>
               </div>
 
               <div className="rounded-3xl border border-white/10 bg-white/5 p-8 md:p-10">
-                <h2 className="font-heading text-2xl font-medium text-white">
-                  About
-                </h2>
+                <h2 className="font-heading text-2xl font-medium text-white">About</h2>
                 <dl className="mt-8 flex flex-col gap-5">
                   {caseStudy.about.map((item) => (
                     <div
@@ -121,9 +102,7 @@ export default async function InsightPage(
                       key={item.label}
                     >
                       <dt className="text-sm text-gray-300">{item.label}:</dt>
-                      <dd className="mt-1 text-base leading-relaxed text-white">
-                        {item.value}
-                      </dd>
+                      <dd className="mt-1 text-base leading-relaxed text-white">{item.value}</dd>
                     </div>
                   ))}
                 </dl>

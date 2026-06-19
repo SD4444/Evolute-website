@@ -1,114 +1,40 @@
-"use client";
-
-import Link from "next/link";
-import { useEffect, useState } from "react";
-
-import { LogoMark } from "@/components/brand/logo";
+import { DisclosureList } from "@/components/disclosure-list";
 import { industries } from "@/lib/content/industries";
 import { type AccentTone } from "@/lib/content/types";
-import { cn } from "@/lib/utils";
-
-const toneBg: Record<AccentTone, string> = {
-  lilac: "bg-accent-lilac",
-  lime: "bg-accent-lime",
-  rose: "bg-accent-rose/70",
-  sage: "bg-accent-sage",
-  sand: "bg-accent-sand",
-  sky: "bg-accent-sky/80",
-};
 
 const toneInk: Record<AccentTone, string> = {
-  lilac: "text-accent-violet",
-  lime: "text-accent-olive",
-  rose: "text-accent-rose-dk",
-  sage: "text-accent-forest",
-  sand: "text-accent-clay",
-  sky: "text-accent-ocean",
+  lilac: "var(--accent-violet)",
+  lime: "var(--accent-olive)",
+  rose: "var(--accent-rose-dk)",
+  sage: "var(--accent-forest)",
+  sand: "var(--accent-clay)",
+  sky: "var(--accent-ocean)",
 };
 
 export function HomeIndustries() {
-  const [index, setIndex] = useState(0);
-  const [paused, setPaused] = useState(false);
-
-  useEffect(() => {
-    if (paused) {return;}
-    const id = setInterval(
-      () => setIndex((i) => (i + 1) % industries.length),
-      3500,
-    );
-    return () => clearInterval(id);
-  }, [paused]);
-
-  const active = industries[index];
-
   return (
-    <section className="pb-24 md:pb-32">
-      <div className="mx-auto w-full max-w-[1400px] px-6 md:px-10">
-        <div
-          className={cn(
-            "overflow-hidden rounded-3xl px-8 py-16 transition-colors duration-500 md:px-16 md:py-24",
-            toneBg[active.tone],
-          )}
-          onMouseLeave={() => setPaused(false)}
-        >
-          <p
-            className={cn(
-              "mb-6 text-sm tracking-wide transition-colors duration-500",
-              toneInk[active.tone],
-            )}
-          >
-            Capital partners for
+    <section className="py-24 md:py-32">
+      <div className="mx-auto grid w-full max-w-[1760px] gap-10 px-6 md:px-10 lg:grid-cols-[minmax(0,0.65fr)_minmax(0,1.35fr)] lg:gap-20">
+        <div className="flex flex-col gap-4">
+          <p className="font-mono text-[0.6875rem] tracking-[0.2em] text-gray-500 uppercase">
+            Our focus
           </p>
-          <ul className="flex flex-col gap-3 md:gap-4">
-            {industries.map((industry, i) => {
-              const isActive = i === index;
-              return (
-                <li key={industry.slug}>
-                  <button
-                    className="group flex w-full flex-col items-start gap-3 text-left"
-                    onClick={() => {
-                      setIndex(i);
-                      setPaused(true);
-                    }}
-                    onMouseEnter={() => {
-                      setIndex(i);
-                      setPaused(true);
-                    }}
-                    type="button"
-                  >
-                    <h3
-                      className={cn(
-                        "flex items-center gap-4 font-heading text-[clamp(1.75rem,3vw,2rem)] font-medium tracking-tight transition-colors duration-200",
-                        isActive
-                          ? "text-navy-700"
-                          : cn(toneInk[active.tone], "opacity-60"),
-                      )}
-                    >
-                      {isActive ? (
-                        <LogoMark className="size-[0.9em] shrink-0 text-navy-700" />
-                      ) : null}
-                      <span>{industry.title}</span>
-                    </h3>
-                    {isActive ? (
-                      <p className="max-w-3xl text-base text-navy-700 md:text-lg">
-                        {industry.subtitle}
-                      </p>
-                    ) : null}
-                  </button>
-                </li>
-              );
-            })}
-          </ul>
-
-          <div className="mt-12 flex justify-end">
-            <Link
-              className="text-sm text-navy-700 underline-offset-4 hover:underline"
-              href={`/industries/${active.slug}`}
-            >
-              Explore {active.title} →
-            </Link>
-          </div>
+          <h2 className="max-w-md font-heading text-[clamp(2rem,4vw,3rem)] leading-[1.02] font-medium tracking-tight text-navy-700">
+            Capital partners across deep tech
+          </h2>
+          <p className="max-w-md text-base leading-relaxed text-gray-500 md:text-lg">
+            Explore the sectors where technical nuance and capital timing matter most.
+          </p>
         </div>
+        <DisclosureList
+          items={industries.map((industry) => ({
+            accentColor: toneInk[industry.tone],
+            description: industry.subtitle,
+            href: `/industries/${industry.slug}`,
+            title: industry.title,
+          }))}
+          name="home-industries"
+        />
       </div>
     </section>
   );

@@ -28,9 +28,7 @@ export function SectionHeading({
         {title}
       </h2>
       {description ? (
-        <p className="max-w-2xl text-base text-gray-500 md:text-lg">
-          {description}
-        </p>
+        <p className="max-w-2xl text-base text-gray-500 md:text-lg">{description}</p>
       ) : null}
     </div>
   );

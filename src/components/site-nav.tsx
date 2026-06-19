@@ -1,23 +1,15 @@
 "use client";
 
+import { RiCloseLine, RiMenuLine } from "@remixicon/react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useState } from "react";
-import { RiCloseLine, RiMenuLine } from "@remixicon/react";
 
 import { LogoWordmark } from "@/components/brand/logo-wordmark";
 import { Button } from "@/components/ui/button";
-import {
-  Sheet,
-  SheetClose,
-  SheetContent,
-  SheetTrigger,
-} from "@/components/ui/sheet";
-import {
-  companyServices,
-  industryLinks,
-  investorServices,
-} from "@/lib/content/nav";
+import { Sheet, SheetClose, SheetContent, SheetTrigger } from "@/components/ui/sheet";
+import { companyServices, industryLinks, investorServices } from "@/lib/content/nav";
+import { cn } from "@/lib/utils";
 
 function NavColumn({
   title,
@@ -30,9 +22,7 @@ function NavColumn({
 }) {
   return (
     <div className="flex flex-col gap-4">
-      <p className="font-mono text-[0.6875rem] tracking-widest text-gray-500 uppercase">
-        {title}
-      </p>
+      <p className="font-mono text-[0.6875rem] tracking-widest text-gray-500 uppercase">{title}</p>
       <ul className="flex flex-col gap-3">
         {items.map((item) => (
           <li key={item.href}>
@@ -50,29 +40,34 @@ function NavColumn({
   );
 }
 
-const withPrefix = (
-  items: { slug: string; title: string }[],
-  prefix: string,
-) => items.map((item) => ({ href: `${prefix}/${item.slug}`, title: item.title }));
+const withPrefix = (items: { slug: string; title: string }[], prefix: string) =>
+  items.map((item) => ({ href: `${prefix}/${item.slug}`, title: item.title }));
 
 export function SiteNav() {
   const [open, setOpen] = useState(false);
   const close = () => setOpen(false);
   const pathname = usePathname();
-  const onDarkHero = pathname === "/" || pathname.startsWith("/services/");
+  const onHome = pathname === "/";
+  const onDarkHero = onHome || pathname.startsWith("/services/");
 
   return (
     <header className="absolute top-0 right-0 left-0 z-40">
-      <div className="mx-auto flex h-20 w-full max-w-[1400px] items-center justify-between px-6 md:px-10">
+      <div
+        className={cn(
+          "mx-auto flex h-24 w-full items-center justify-between px-6 md:px-10",
+          onHome ? "max-w-[1760px]" : "max-w-[1400px]",
+        )}
+      >
         <Link href="/" aria-label="Evolute" className="flex items-center">
-          <LogoWordmark height={20} invert={onDarkHero} />
+          <LogoWordmark height={26} invert={onDarkHero} />
         </Link>
 
         <div className="flex items-center gap-2">
           <Button
-            className={
-              onDarkHero ? "bg-white text-navy-700 hover:bg-white/90" : undefined
-            }
+            className={cn(
+              "h-11 px-4 text-sm",
+              onDarkHero ? "bg-white text-navy-700 hover:bg-white/90" : undefined,
+            )}
             nativeButton={false}
             render={<Link href="/contact" />}
             size="lg"
@@ -84,11 +79,10 @@ export function SiteNav() {
               render={
                 <Button
                   aria-label="Open menu"
-                  className={
-                    onDarkHero
-                      ? "border-white/30 text-white hover:bg-white/10"
-                      : undefined
-                  }
+                  className={cn(
+                    "h-11 gap-2 px-4 text-sm [&_svg:not([class*=size-])]:size-5",
+                    onDarkHero ? "border-white/30 text-white hover:bg-white/10" : undefined,
+                  )}
                   size="lg"
                   variant="outline"
                 >
@@ -103,12 +97,7 @@ export function SiteNav() {
               side="right"
             >
               <div className="flex items-center justify-between px-6 pt-6 md:px-10">
-                <Link
-                  aria-label="Evolute"
-                  className="flex items-center"
-                  href="/"
-                  onClick={close}
-                >
+                <Link aria-label="Evolute" className="flex items-center" href="/" onClick={close}>
                   <LogoWordmark height={20} />
                 </Link>
                 <SheetClose
@@ -143,6 +132,7 @@ export function SiteNav() {
                     items={[
                       { href: "/insights", title: "Insights" },
                       { href: "/about-us", title: "About us" },
+                      { href: "/team", title: "Team" },
                       { href: "/contact", title: "Contact" },
                     ]}
                     onItemClick={close}

@@ -1,36 +1,30 @@
 import { type Metadata } from "next";
-import Link from "next/link";
-import { RiArrowRightUpLine } from "@remixicon/react";
 
 import { AskRobCard } from "@/components/ask-rob-card";
+import { DisclosureList } from "@/components/disclosure-list";
 import { Eyebrow } from "@/components/eyebrow";
 import { Hero } from "@/components/hero";
-import { MethodologyStep } from "@/components/methodology-step";
-import { ContentRail, PageSection } from "@/components/page-container";
-import { companyServices, investorServices } from "@/lib/content/nav";
+import { PageSection } from "@/components/page-container";
 import { services } from "@/lib/content/services";
 
 export const metadata: Metadata = {
   description:
-    "Corporate finance services for both sides of the table — companies raising capital and investors deploying it.",
-  title: "Services — Evolute Partners",
+    "Corporate finance services for both sides of the table: companies raising capital and investors deploying it.",
+  title: "Services | Evolute Partners",
 };
 
 const audiences = [
   {
     description:
-      "M&A, fundraising, and corporate finance — embedded support from strategy to closing.",
+      "M&A, fundraising, and corporate finance, with embedded support from strategy to closing.",
     eyebrow: "For founders and operators",
     href: "/services/companies",
-    items: companyServices,
     title: "For companies",
   },
   {
-    description:
-      "Origination, evaluation, and commercial diligence to sharpen capital deployment.",
+    description: "Origination, evaluation, and commercial diligence to sharpen capital deployment.",
     eyebrow: "For funds and family offices",
     href: "/services/investors",
-    items: investorServices,
     title: "For investors",
   },
 ];
@@ -40,83 +34,59 @@ export default function ServicesPage() {
 
   return (
     <>
-      <Hero
-        variant="light"
-        eyebrow="Services"
-        title="Capital strategy for both sides of the table."
-        subtitle="Whether you're raising, exiting, originating, or evaluating — we work as an extension of your team across the deal lifecycle."
-      />
+      <div className="flex min-h-[100svh] flex-col">
+        <Hero
+          variant="light"
+          eyebrow="Services"
+          title="Capital strategy for both sides of the table."
+          subtitle="Whether you're raising, exiting, originating, or evaluating, we work as an extension of your team across the deal lifecycle."
+          className="shrink-0"
+          contentClassName="gap-6 pt-24 pb-6 md:pt-28 md:pb-8 [&_h1]:md:text-5xl"
+        />
 
-      <PageSection>
-        <div className="grid gap-6 md:grid-cols-2">
-          {audiences.map((audience) => (
-            <Link
-              className="group flex flex-col gap-8 rounded-3xl bg-[var(--background-alt)] p-8 transition-colors hover:bg-gray-100 md:p-12"
-              href={audience.href}
-              key={audience.href}
-            >
-              <div className="flex items-start justify-between gap-4">
-                <Eyebrow>{audience.eyebrow}</Eyebrow>
-                <RiArrowRightUpLine
-                  aria-hidden="true"
-                  className="size-5 text-gray-400 transition-transform group-hover:-translate-y-0.5 group-hover:translate-x-0.5 group-hover:text-navy-700"
-                />
-              </div>
-              <div className="flex flex-col gap-4">
-                <h2 className="font-heading text-[clamp(2rem,4vw,3rem)] leading-[1.05] font-medium tracking-tight text-navy-700">
-                  {audience.title}
-                </h2>
-                <p className="text-base text-gray-500 md:text-lg">
-                  {audience.description}
-                </p>
-              </div>
-              <ul className="mt-auto flex flex-col gap-3 border-t border-gray-200 pt-6">
-                {audience.items.map((item) => (
-                  <li
-                    className="flex items-center justify-between gap-4 text-sm text-navy-700"
-                    key={item.slug}
-                  >
-                    <span>{item.title}</span>
-                    <span className="text-gray-400">→</span>
-                  </li>
-                ))}
-              </ul>
-            </Link>
-          ))}
-        </div>
-      </PageSection>
+        <PageSection className="flex flex-1 items-end pt-2 pb-6 md:pt-3 md:pb-8">
+          <div className="grid gap-10 lg:grid-cols-[minmax(0,0.55fr)_minmax(0,1.45fr)] lg:gap-20">
+            <Eyebrow>Choose your perspective</Eyebrow>
+            <DisclosureList
+              items={audiences.map((audience) => ({
+                description: audience.description,
+                eyebrow: audience.eyebrow,
+                href: audience.href,
+                linkLabel: `View services ${audience.title.toLowerCase()}`,
+                title: audience.title,
+              }))}
+              className="md:[&_summary]:py-5"
+              name="service-audiences"
+            />
+          </div>
+        </PageSection>
+      </div>
 
       {methodology.length > 0 ? (
-        <PageSection className="bg-[var(--background-alt)]">
-          <div className="flex flex-col gap-12">
-            <ContentRail>
-              <div className="flex flex-col gap-4">
-                <Eyebrow>How we work</Eyebrow>
-                <h3 className="font-heading text-[clamp(2rem,4vw,3rem)] leading-tight font-normal tracking-tight text-navy-700">
-                  Our methodology
-                </h3>
-                <p className="max-w-2xl text-base text-gray-500 md:text-lg">
-                  Discovery, Design, Build, Execute — a disciplined path from
-                  first conversation to closing.
-                </p>
-              </div>
-            </ContentRail>
-            <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-4">
-              {methodology.map((step, index) => (
-                <MethodologyStep
-                  description={step.description}
-                  index={index + 1}
-                  key={step.label}
-                  label={step.label}
-                  title={step.title}
-                />
-              ))}
+        <PageSection className="border-t border-navy-700/10">
+          <div className="grid gap-10 lg:grid-cols-[minmax(0,0.55fr)_minmax(0,1.45fr)] lg:gap-20">
+            <div className="flex flex-col gap-4">
+              <Eyebrow>How we work</Eyebrow>
+              <h3 className="font-heading text-[clamp(2rem,4vw,3rem)] leading-tight font-medium tracking-tight text-navy-700">
+                Our methodology
+              </h3>
+              <p className="max-w-md text-base text-navy-600 md:text-lg">
+                Discovery, Design, Build, Execute: a disciplined path from first conversation to
+                closing.
+              </p>
             </div>
+            <DisclosureList
+              items={methodology.map((step) => ({
+                description: step.description,
+                title: step.title,
+              }))}
+              name="services-methodology"
+            />
           </div>
         </PageSection>
       ) : null}
 
-      <AskRobCard />
+      <AskRobCard person="simon" />
     </>
   );
 }

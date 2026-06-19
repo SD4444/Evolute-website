@@ -5,15 +5,20 @@ import { Eyebrow } from "./eyebrow";
 
 export function AskRobCard({
   eyebrow = "Questions?",
-  title = "Ask Rob about our services.",
+  title,
   href = "/contact",
   cta = "Book a meeting",
+  person = "rob",
 }: {
   eyebrow?: string;
   title?: string;
   href?: string;
   cta?: string;
+  person?: "rob" | "simon";
 }) {
+  const isSimon = person === "simon";
+  const resolvedTitle = title ?? `Ask ${isSimon ? "Simon" : "Rob"} about our services.`;
+
   return (
     <section>
       <div className="mx-auto w-full max-w-[1400px] px-6 py-16 md:px-10 md:py-24">
@@ -21,8 +26,8 @@ export function AskRobCard({
           <div className="flex flex-col gap-8 md:flex-row md:items-stretch">
             <div className="relative aspect-square w-full shrink-0 overflow-hidden md:w-[40%] md:max-w-md">
               <Image
-                alt="Rob"
-                src="/images/team/rob.jpg"
+                alt={isSimon ? "Simon" : "Rob"}
+                src={isSimon ? "/images/team/simon.png" : "/images/team/rob.jpg"}
                 fill
                 sizes="(min-width: 768px) 40vw, 100vw"
                 className="object-cover"
@@ -31,7 +36,7 @@ export function AskRobCard({
             <div className="flex flex-1 flex-col justify-center gap-6 px-8 pb-10 md:px-12 md:py-12">
               <Eyebrow className="text-gray-300">{eyebrow}</Eyebrow>
               <h2 className="max-w-xl font-heading text-[clamp(2rem,3.5vw,2.5rem)] leading-[1.1] font-medium tracking-tight">
-                {title}
+                {resolvedTitle}
               </h2>
               <div>
                 <Link

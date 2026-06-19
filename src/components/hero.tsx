@@ -9,6 +9,7 @@ export function Hero({
   children,
   variant = "light",
   className,
+  contentClassName,
 }: {
   eyebrow?: string;
   title: string;
@@ -16,24 +17,24 @@ export function Hero({
   children?: React.ReactNode;
   variant?: "light" | "dark";
   className?: string;
+  contentClassName?: string;
 }) {
   return (
     <section
       className={cn(
         "relative overflow-hidden",
-        variant === "dark"
-          ? "bg-navy-700 text-white"
-          : "bg-background text-navy-700",
+        variant === "dark" ? "bg-navy-700 text-white" : "bg-background text-navy-700",
         className,
       )}
     >
-      <div className="mx-auto flex w-full max-w-[1400px] flex-col gap-8 px-6 pt-28 pb-20 md:px-10 md:pt-36 md:pb-28">
+      <div
+        className={cn(
+          "mx-auto flex w-full max-w-[1400px] flex-col gap-8 px-6 pt-28 pb-20 md:px-10 md:pt-36 md:pb-28",
+          contentClassName,
+        )}
+      >
         {eyebrow ? (
-          <Eyebrow
-            className={variant === "dark" ? "text-gray-300" : undefined}
-          >
-            {eyebrow}
-          </Eyebrow>
+          <Eyebrow className={variant === "dark" ? "text-gray-300" : undefined}>{eyebrow}</Eyebrow>
         ) : null}
         <h1 className="max-w-4xl font-heading text-4xl leading-[1.05] font-medium tracking-tight md:text-6xl">
           {title}

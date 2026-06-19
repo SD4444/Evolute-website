@@ -3,12 +3,13 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 
 import { AskRobCard } from "@/components/ask-rob-card";
-import { ClientLogoCloud } from "@/components/client-logo-cloud";
 import { Hero } from "@/components/hero";
+import { IndustryProjectIndex } from "@/components/industry-project-index";
 import { InsightCard } from "@/components/insight-card";
 import { PageSection } from "@/components/page-container";
 import { findIndustry, industries } from "@/lib/content/industries";
 import { insights } from "@/lib/content/insights";
+import { projectsForIndustry } from "@/lib/content/projects";
 import { type AccentTone } from "@/lib/content/types";
 
 const toneDeeperColor: Record<AccentTone, string> = {
@@ -21,12 +22,8 @@ const toneDeeperColor: Record<AccentTone, string> = {
 };
 
 const additionalIndustryInsights: Record<string, string[]> = {
-  "digital-technology": [
-    "facilitating-scisports-growth-through-acquisition",
-  ],
-  "food-and-agri": [
-    "providing-collie-with-end-to-end-fundraising-support",
-  ],
+  "digital-technology": ["facilitating-scisports-growth-through-acquisition"],
+  "food-and-agri": ["providing-collie-with-end-to-end-fundraising-support"],
 };
 
 function industryStem(slug: string) {
@@ -35,11 +32,17 @@ function industryStem(slug: string) {
 
 function matchesIndustry(insightSlug: string, industrySlug: string) {
   const explicitMatches = additionalIndustryInsights[industrySlug];
-  if (explicitMatches?.includes(insightSlug)) {return true;}
+  if (explicitMatches?.includes(insightSlug)) {
+    return true;
+  }
 
   const stem = industryStem(industrySlug);
-  if (insightSlug.includes(industrySlug)) {return true;}
-  if (insightSlug.includes(stem)) {return true;}
+  if (insightSlug.includes(industrySlug)) {
+    return true;
+  }
+  if (insightSlug.includes(stem)) {
+    return true;
+  }
   const firstToken = stem.split("-")[0];
   return firstToken.length > 3 && insightSlug.includes(firstToken);
 }
@@ -48,15 +51,13 @@ export function generateStaticParams() {
   return industries.map((industry) => ({ slug: industry.slug }));
 }
 
-export async function generateMetadata(
-  props: PageProps<"/industries/[slug]">,
-): Promise<Metadata> {
+export async function generateMetadata(props: PageProps<"/industries/[slug]">): Promise<Metadata> {
   const { slug } = await props.params;
   const industry = findIndustry(slug);
   if (!industry) {
-    return { title: "Industry not found — Evolute Partners" };
+    return { title: "Industry not found | Evolute Partners" };
   }
-  const title = `${industry.title} — Evolute Partners`;
+  const title = `${industry.title} | Evolute Partners`;
   return {
     description: industry.subtitle,
     openGraph: {
@@ -68,60 +69,48 @@ export async function generateMetadata(
   };
 }
 
-export default async function IndustryPage(
-  props: PageProps<"/industries/[slug]">,
-) {
+export default async function IndustryPage(props: PageProps<"/industries/[slug]">) {
   const { slug } = await props.params;
   const industry = findIndustry(slug);
-  if (!industry) {notFound();}
+  if (!industry) {
+    notFound();
+  }
 
   const relatedInsights = insights
     .filter((insight) => matchesIndustry(insight.slug, industry.slug))
     .slice(0, 3);
-  const caseStudies = relatedInsights.filter(
-    (insight) => insight.category === "Case study",
-  );
-  const editorialInsights = relatedInsights.filter(
-    (insight) => insight.category !== "Case study",
-  );
+  const caseStudies = relatedInsights.filter((insight) => insight.category === "Case study");
+  const editorialInsights = relatedInsights.filter((insight) => insight.category !== "Case study");
 
   const deeperColor = toneDeeperColor[industry.tone];
+  const industryProjects = projectsForIndustry(industry.slug);
 
   return (
     <>
-      <Hero variant="light" eyebrow={industry.title} title={industry.subtitle} />
+      <Hero
+        variant="light"
+        eyebrow={industry.title}
+        title={industry.subtitle}
+        contentClassName="pb-12 md:pb-12 [&_h1]:max-w-6xl"
+      />
 
       <section>
-        <div className="mx-auto flex w-full max-w-[1400px] flex-col gap-8 px-6 py-16 md:px-10 md:py-24">
+        <div className="mx-auto grid w-full max-w-[1400px] gap-6 px-6 py-12 md:px-10 md:py-16 lg:grid-cols-[minmax(0,0.8fr)_minmax(0,1.2fr)] lg:gap-20">
           <p
-            className="max-w-4xl font-heading text-[clamp(1.5rem,3vw,2rem)] leading-tight font-medium"
+            className="max-w-xl font-heading text-[clamp(1.5rem,3vw,2rem)] leading-tight font-medium"
             style={{ color: deeperColor }}
           >
-            Some of the industries and applications that fall into{" "}
-            {industry.title}.
+            Some of the industries and applications that fall into {industry.title}.
           </p>
-          <p className="max-w-3xl text-lg leading-relaxed text-gray-500">
-            {industry.intro}
-          </p>
+          <p className="max-w-3xl text-lg leading-relaxed text-gray-500">{industry.intro}</p>
         </div>
       </section>
 
-      {industry.image ? (
-        <section>
-          <div className="mx-auto w-full max-w-[1400px] px-6 md:px-10">
-            <div className="aspect-[16/7] w-full overflow-hidden rounded-3xl bg-gray-200">
-              {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img
-                alt=""
-                className="h-full w-full object-cover"
-                src={industry.image}
-              />
-            </div>
-          </div>
-        </section>
-      ) : null}
-
-      <ClientLogoCloud />
+      <IndustryProjectIndex
+        accentColor={deeperColor}
+        industryTitle={industry.title}
+        projects={industryProjects}
+      />
 
       {caseStudies.length > 0 ? (
         <PageSection>
@@ -142,26 +131,29 @@ export default async function IndustryPage(
                 >
                   <div className="grid gap-0 md:grid-cols-[1.05fr_0.95fr]">
                     <Link
-                      className="aspect-[16/11] overflow-hidden bg-gray-100"
+                      className={`aspect-[16/11] overflow-hidden ${
+                        insight.imageFit === "contain" ? "bg-navy-700" : "bg-gray-100"
+                      }`}
                       href={`/insights/${insight.slug}`}
                     >
                       {insight.image ? (
                         // eslint-disable-next-line @next/next/no-img-element
                         <img
                           alt=""
-                          className="h-full w-full object-cover"
+                          className={`h-full w-full ${
+                            insight.imageFit === "contain" ? "object-contain" : "object-cover"
+                          }`}
                           src={insight.image}
                         />
                       ) : null}
                     </Link>
                     <div className="flex flex-col gap-6 p-8 md:p-10">
                       <div className="flex flex-wrap items-center gap-3 text-[0.6875rem] tracking-[0.2em] uppercase">
-                        <span className="rounded-full bg-white px-3 py-1 text-navy-700">
-                          {insight.category}
+                        <span className="text-navy-700">{insight.category}</span>
+                        <span aria-hidden="true" className="text-gray-300">
+                          /
                         </span>
-                        <span className="text-gray-500">
-                          {insight.publishedAt}
-                        </span>
+                        <span className="text-gray-500">{insight.publishedAt}</span>
                       </div>
                       <div className="flex flex-col gap-4">
                         <h3 className="font-heading text-[clamp(1.75rem,3vw,2.5rem)] leading-[1.08] font-medium tracking-tight text-navy-700">
@@ -203,7 +195,13 @@ export default async function IndustryPage(
         </PageSection>
       ) : null}
 
-      <AskRobCard />
+      <AskRobCard
+        person={
+          industry.slug === "digital-technology" || industry.slug === "food-and-agri"
+            ? "simon"
+            : "rob"
+        }
+      />
     </>
   );
 }

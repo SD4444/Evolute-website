@@ -1,29 +1,16 @@
 import { type Metadata } from "next";
-import Link from "next/link";
-import {
-  RiRadarLine,
-  RiScalesLine,
-  RiSearchEyeLine,
-} from "@remixicon/react";
-import { type RemixiconComponentType } from "@remixicon/react";
 
 import { AskRobCard } from "@/components/ask-rob-card";
+import { DisclosureList } from "@/components/disclosure-list";
 import { Eyebrow } from "@/components/eyebrow";
 import { Hero } from "@/components/hero";
-import { MethodologyStep } from "@/components/methodology-step";
-import { ContentRail, PageSection } from "@/components/page-container";
+import { PageSection } from "@/components/page-container";
 import { services } from "@/lib/content/services";
 
 export const metadata: Metadata = {
   description:
     "Origination, evaluation, and commercial due diligence for funds and family offices investing in deep tech.",
-  title: "Services for investors — Evolute Partners",
-};
-
-const icons: Record<string, RemixiconComponentType> = {
-  "commercial-due-diligence": RiSearchEyeLine,
-  "deal-evaluation": RiScalesLine,
-  "deal-origination": RiRadarLine,
+  title: "Services for investors | Evolute Partners",
 };
 
 export default function InvestorsServicesPage() {
@@ -36,68 +23,45 @@ export default function InvestorsServicesPage() {
         variant="dark"
         eyebrow="For investors"
         title="Sharper conviction, faster."
-        subtitle="From origination through diligence — proprietary insight and disciplined process for funds and family offices deploying into deep tech."
+        subtitle="From origination through diligence, we bring proprietary insight and a disciplined process to funds and family offices deploying into deep tech."
       />
 
       <PageSection>
-        <div className="grid gap-10 md:grid-cols-3 md:gap-12">
-          {investorServices.map((service) => {
-            const Icon = icons[service.slug];
-            return (
-              <Link
-                className="group flex flex-col gap-5"
-                href={`/services/investors/${service.slug}`}
-                key={service.slug}
-              >
-                {Icon ? (
-                  <Icon aria-hidden="true" className="size-6 text-navy-700" />
-                ) : null}
-                <h3 className="font-heading text-3xl leading-tight font-medium text-navy-700 group-hover:text-navy-900 md:text-4xl">
-                  {service.title}
-                </h3>
-                <p className="text-sm leading-relaxed text-gray-500 md:text-base">
-                  {service.subtitle}
-                </p>
-                <span className="mt-2 text-sm text-navy-700 transition-transform group-hover:translate-x-1">
-                  Learn more →
-                </span>
-              </Link>
-            );
-          })}
-        </div>
+        <DisclosureList
+          items={investorServices.map((service) => ({
+            description: service.intro,
+            href: `/services/investors/${service.slug}`,
+            title: service.title,
+          }))}
+          name="investor-services"
+        />
       </PageSection>
 
       {methodology.length > 0 ? (
-        <PageSection className="bg-[var(--background-alt)]">
-          <div className="flex flex-col gap-12">
-            <ContentRail>
-              <div className="flex flex-col gap-4">
-                <Eyebrow>How we work</Eyebrow>
-                <h3 className="font-heading text-[clamp(2rem,4vw,3rem)] leading-tight font-normal tracking-tight text-navy-700">
-                  Our methodology
-                </h3>
-                <p className="max-w-2xl text-base text-gray-500 md:text-lg">
-                  Discovery, Design, Build, Execute — a disciplined path from
-                  first conversation to closing.
-                </p>
-              </div>
-            </ContentRail>
-            <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-4">
-              {methodology.map((step, index) => (
-                <MethodologyStep
-                  description={step.description}
-                  index={index + 1}
-                  key={step.label}
-                  label={step.label}
-                  title={step.title}
-                />
-              ))}
+        <PageSection className="border-t border-navy-700/10">
+          <div className="grid gap-10 lg:grid-cols-[minmax(0,0.55fr)_minmax(0,1.45fr)] lg:gap-20">
+            <div className="flex flex-col gap-4">
+              <Eyebrow>How we work</Eyebrow>
+              <h3 className="font-heading text-[clamp(2rem,4vw,3rem)] leading-tight font-medium tracking-tight text-navy-700">
+                Our methodology
+              </h3>
+              <p className="max-w-md text-base text-navy-600 md:text-lg">
+                Discovery, Design, Build, Execute: a disciplined path from first conversation to
+                closing.
+              </p>
             </div>
+            <DisclosureList
+              items={methodology.map((step) => ({
+                description: step.description,
+                title: step.title,
+              }))}
+              name="investor-methodology"
+            />
           </div>
         </PageSection>
       ) : null}
 
-      <AskRobCard />
+      <AskRobCard person="simon" />
     </>
   );
 }
