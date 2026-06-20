@@ -1,5 +1,4 @@
 import { type Metadata } from "next";
-import Link from "next/link";
 import { notFound } from "next/navigation";
 
 import { AskRobCard } from "@/components/ask-rob-card";
@@ -79,8 +78,6 @@ export default async function IndustryPage(props: PageProps<"/industries/[slug]"
   const relatedInsights = insights
     .filter((insight) => matchesIndustry(insight.slug, industry.slug))
     .slice(0, 3);
-  const caseStudies = relatedInsights.filter((insight) => insight.category === "Case study");
-  const editorialInsights = relatedInsights.filter((insight) => insight.category !== "Case study");
 
   const deeperColor = toneDeeperColor[industry.tone];
   const industryProjects = projectsForIndustry(industry.slug);
@@ -112,82 +109,14 @@ export default async function IndustryPage(props: PageProps<"/industries/[slug]"
         projects={industryProjects}
       />
 
-      {caseStudies.length > 0 ? (
-        <PageSection>
-          <div className="flex flex-col gap-12">
-            <div className="flex flex-col gap-3">
-              <p className="font-mono text-[0.6875rem] tracking-[0.2em] text-gray-500 uppercase">
-                Case study
-              </p>
-              <h2 className="font-heading text-[clamp(2rem,4vw,3rem)] leading-tight font-medium tracking-tight text-navy-700">
-                Work we&apos;ve done in {industry.title}
-              </h2>
-            </div>
-            <div className="grid gap-8">
-              {caseStudies.map((insight) => (
-                <article
-                  className="overflow-hidden rounded-3xl bg-[var(--background-alt)]"
-                  key={insight.slug}
-                >
-                  <div className="grid gap-0 md:grid-cols-[1.05fr_0.95fr]">
-                    <Link
-                      className={`aspect-[16/11] overflow-hidden ${
-                        insight.imageFit === "contain" ? "bg-navy-700" : "bg-gray-100"
-                      }`}
-                      href={`/insights/${insight.slug}`}
-                    >
-                      {insight.image ? (
-                        // eslint-disable-next-line @next/next/no-img-element
-                        <img
-                          alt=""
-                          className={`h-full w-full ${
-                            insight.imageFit === "contain" ? "object-contain" : "object-cover"
-                          }`}
-                          src={insight.image}
-                        />
-                      ) : null}
-                    </Link>
-                    <div className="flex flex-col gap-6 p-8 md:p-10">
-                      <div className="flex flex-wrap items-center gap-3 text-[0.6875rem] tracking-[0.2em] uppercase">
-                        <span className="text-navy-700">{insight.category}</span>
-                        <span aria-hidden="true" className="text-gray-300">
-                          /
-                        </span>
-                        <span className="text-gray-500">{insight.publishedAt}</span>
-                      </div>
-                      <div className="flex flex-col gap-4">
-                        <h3 className="font-heading text-[clamp(1.75rem,3vw,2.5rem)] leading-[1.08] font-medium tracking-tight text-navy-700">
-                          {insight.title}
-                        </h3>
-                        <p className="max-w-xl text-base leading-relaxed text-gray-500 md:text-lg">
-                          {insight.excerpt}
-                        </p>
-                      </div>
-                      <div className="mt-auto pt-2">
-                        <Link
-                          className="inline-flex items-center gap-2 text-sm text-navy-700 underline-offset-4 hover:underline"
-                          href={`/insights/${insight.slug}`}
-                        >
-                          Read the case study →
-                        </Link>
-                      </div>
-                    </div>
-                  </div>
-                </article>
-              ))}
-            </div>
-          </div>
-        </PageSection>
-      ) : null}
-
-      {editorialInsights.length > 0 ? (
+      {relatedInsights.length > 0 ? (
         <PageSection>
           <div className="flex flex-col gap-12">
             <h2 className="font-heading text-2xl leading-tight font-medium tracking-tight text-navy-700 md:text-3xl">
               Related insights
             </h2>
             <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-              {editorialInsights.map((insight) => (
+              {relatedInsights.map((insight) => (
                 <InsightCard key={insight.slug} insight={insight} />
               ))}
             </div>

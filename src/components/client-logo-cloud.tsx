@@ -20,7 +20,7 @@ const CLIENT_LOGOS = [
 export function ClientLogoCloud({
   eyebrow = "Clients",
   embedded = false,
-  title = "A sample of our 80+ clients",
+  title = "A sample of our 100+ clients",
   variant = "light",
 }: {
   eyebrow?: string;
@@ -61,7 +61,7 @@ export function ClientLogoCloud({
               alt={logo.name}
               className={cn(
                 "max-h-12 max-w-[60%] object-contain",
-                variant === "dark" ? "brightness-0 invert opacity-65" : "opacity-80",
+                variant === "dark" ? "opacity-65 brightness-0 invert" : "opacity-80",
               )}
               src={logo.src}
             />

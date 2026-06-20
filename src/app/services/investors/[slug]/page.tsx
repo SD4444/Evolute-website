@@ -39,9 +39,11 @@ export default async function InvestorServicePage(props: PageProps<"/services/in
         eyebrow="For investors"
         title={service.title}
         subtitle={service.subtitle}
+        className="flex min-h-screen"
+        contentClassName="flex-1 justify-center"
       />
 
-      <PageSection>
+      <PageSection className="flex min-h-screen items-center">
         <div className="flex flex-col gap-8">
           <SectionHeading
             eyebrow="Overview"
