@@ -70,7 +70,7 @@ export function HomeHero() {
         }}
       />
 
-      <div className="relative mx-auto flex min-h-screen w-full max-w-[1760px] flex-col gap-8 px-6 pt-28 pb-4 md:px-10 md:pt-28 md:pb-5">
+      <div className="relative mx-auto flex min-h-screen w-full max-w-[1400px] flex-col gap-8 px-6 pt-28 pb-4 md:px-10 md:pt-28 md:pb-5">
         <div
           className="flex flex-1 flex-col justify-center gap-8 pb-6"
           onMouseEnter={() => setPaused(true)}

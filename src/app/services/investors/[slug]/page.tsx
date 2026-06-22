@@ -3,6 +3,7 @@ import { notFound } from "next/navigation";
 import { DisclosureList } from "@/components/disclosure-list";
 import { Eyebrow } from "@/components/eyebrow";
 import { Hero } from "@/components/hero";
+import { MethodologyCycle } from "@/components/methodology-cycle";
 import { PageSection } from "@/components/page-container";
 import { SectionHeading } from "@/components/section-heading";
 import { investorServices } from "@/lib/content/nav";
@@ -36,6 +37,7 @@ export default async function InvestorServicePage(props: PageProps<"/services/in
     <>
       <Hero
         variant="dark"
+        ambientGlow
         eyebrow="For investors"
         title={service.title}
         subtitle={service.subtitle}
@@ -46,7 +48,6 @@ export default async function InvestorServicePage(props: PageProps<"/services/in
       <PageSection className="flex min-h-screen items-center">
         <div className="flex flex-col gap-8">
           <SectionHeading
-            eyebrow="Overview"
             title="Your partner every step of the way."
             className="[&>h2]:text-[clamp(2.5rem,5vw,3.5rem)]"
           />
@@ -80,26 +81,7 @@ export default async function InvestorServicePage(props: PageProps<"/services/in
                 investment process.
               </p>
             </div>
-            <DisclosureList
-              items={service.methodology.map((step) => ({
-                description: step.description,
-                title: step.title,
-              }))}
-              name={`${service.slug}-methodology`}
-            />
-          </div>
-        </PageSection>
-      ) : null}
-
-      {service.exampleEngagement ? (
-        <PageSection className="border-t border-navy-700/10">
-          <div className="flex max-w-3xl flex-col gap-4">
-            <h4 className="font-heading text-[clamp(1.75rem,3vw,2rem)] font-medium text-navy-700">
-              {service.exampleEngagement.title}
-            </h4>
-            <p className="text-base text-gray-500 md:text-lg">
-              {service.exampleEngagement.description}
-            </p>
+            <MethodologyCycle steps={service.methodology} />
           </div>
         </PageSection>
       ) : null}

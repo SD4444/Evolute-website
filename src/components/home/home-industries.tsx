@@ -14,7 +14,7 @@ const toneInk: Record<AccentTone, string> = {
 export function HomeIndustries() {
   return (
     <section className="py-24 md:py-32">
-      <div className="mx-auto grid w-full max-w-[1760px] gap-10 px-6 md:px-10 lg:grid-cols-[minmax(0,0.65fr)_minmax(0,1.35fr)] lg:gap-20">
+      <div className="mx-auto grid w-full max-w-[1400px] gap-10 px-6 md:px-10 lg:grid-cols-[minmax(0,0.65fr)_minmax(0,1.35fr)] lg:gap-20">
         <div className="flex flex-col gap-4">
           <p className="font-mono text-[0.6875rem] tracking-[0.2em] text-gray-500 uppercase">
             Our focus

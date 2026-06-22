@@ -17,7 +17,7 @@ export default function TeamPage() {
     <>
       <Hero
         eyebrow="Team"
-        subtitle="Corporate finance, investment, operational, and entrepreneurial experience brought together around one objective: disciplined execution."
+        subtitle="Our team combines corporate finance, investment, operational, and entrepreneurial experience to deliver clear thinking and disciplined execution."
         title="The people behind the process"
         variant="light"
       />

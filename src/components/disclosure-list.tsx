@@ -24,7 +24,7 @@ export function DisclosureList({
     <div className={cn("border-b border-navy-700/20", className)}>
       {items.map((item, index) => (
         <details className="group border-t border-navy-700/20" key={item.title} name={name}>
-          <summary className="grid cursor-pointer list-none grid-cols-[2.5rem_minmax(0,1fr)_2rem] items-center gap-3 py-6 text-navy-700 marker:content-none transition-colors hover:text-navy-900 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-navy-700 md:grid-cols-[4rem_minmax(0,1fr)_3rem] md:py-8 [&::-webkit-details-marker]:hidden">
+          <summary className="grid cursor-pointer list-none grid-cols-[2.5rem_minmax(0,1fr)_2rem] items-center gap-3 py-6 text-navy-700 transition-colors marker:content-none hover:text-navy-900 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-navy-700 md:grid-cols-[4rem_minmax(0,1fr)_3rem] md:py-8 [&::-webkit-details-marker]:hidden">
             <span
               className="font-mono text-[0.6875rem] tracking-[0.14em] text-gray-500"
               style={item.accentColor ? { color: item.accentColor } : undefined}

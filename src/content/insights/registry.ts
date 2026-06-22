@@ -6,6 +6,7 @@ import * as advancedMaterials from "./advanced-materials-manufacturing-sector-de
 import * as digitalTech from "./digital-technology-sector-deep-dive";
 import * as energy from "./energy-sustainability-sector-deep-dive";
 import * as euInc from "./eu-inc-europes-28th-regime-and-the-quest-for-scale";
+import * as eic from "./evolute-eic-ecosystem-partnership-programme";
 import * as deepTech from "./evolute-what-is-deep-tech";
 import * as scisports from "./facilitating-scisports-growth-through-acquisition";
 import * as food from "./food-agriculture-sector-deep-dive";
@@ -24,6 +25,7 @@ const modules: {
   meta: Insight;
   default: ComponentType;
 }[] = [
+  eic,
   euInc,
   collie,
   scisports,

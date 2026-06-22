@@ -4,6 +4,7 @@ export const meta: Insight = {
   category: "Blog",
   excerpt:
     "The EU has introduced EU Inc., a proposed 28th corporate regime designed to simplify how companies scale across Europe. The goal is clear: reduce fragmentation and enable pan-European growth from day one.",
+  image: "/images/insights/eu-inc-europes-28th-regime-and-the-quest-for-scale-hero.webp",
   legacyPath: "/insights/eu-inc.-europe’s-28th-regime-and-the-quest-for-scale",
   publishedAt: "2026-03-19",
   slug: "eu-inc-europes-28th-regime-and-the-quest-for-scale",

@@ -30,7 +30,7 @@ export default async function Page() {
       <HomeServices />
 
       <section className="flex min-h-screen bg-navy-700 text-white">
-        <div className="mx-auto flex w-full max-w-[1760px] flex-col justify-center gap-16 px-6 py-24 md:gap-20 md:px-10 md:py-32">
+        <div className="mx-auto flex w-full max-w-[1400px] flex-col justify-center gap-16 px-6 py-24 md:gap-20 md:px-10 md:py-32">
           <div className="grid gap-12 md:grid-cols-[0.8fr_1.2fr] md:gap-20">
             <h2 className="font-heading text-[clamp(2.5rem,5.5vw,4.5rem)] leading-[0.98] font-medium tracking-tight">
               Our
@@ -55,7 +55,7 @@ export default async function Page() {
       <HomeIndustries />
 
       <section className="pb-24 md:pb-32">
-        <div className="mx-auto flex w-full max-w-[1760px] flex-col gap-12 px-6 md:px-10">
+        <div className="mx-auto flex w-full max-w-[1400px] flex-col gap-12 px-6 md:px-10">
           <div className="flex flex-col items-start justify-between gap-4 md:flex-row md:items-end">
             <h2 className="font-heading text-[clamp(2rem,4vw,3rem)] leading-[1.02] font-medium tracking-tight text-navy-700">
               Venture capital news

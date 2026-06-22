@@ -1,118 +1,92 @@
 import { type Metadata } from "next";
+import Link from "next/link";
 
 import { AskRobCard } from "@/components/ask-rob-card";
-import { DisclosureList } from "@/components/disclosure-list";
 import { Hero } from "@/components/hero";
 import { PageSection } from "@/components/page-container";
 
 export const metadata: Metadata = {
   description:
-    "Evolute specialises in corporate finance for tech pioneers: visionary founders who push boundaries and see their companies as catalysts for the future.",
+    "Learn about Evolute, our mission, and the team helping technology companies navigate key inflection points in their growth.",
   title: "About us | Evolute Partners",
 };
-
-const principles = [
-  {
-    description:
-      "We work like an embedded transaction and capital strategy team, not a detached advisory layer.",
-    title: "Built alongside founders",
-  },
-  {
-    description:
-      "Every mandate is grounded in structured analysis, proprietary research, and tight process control.",
-    title: "Data-led by default",
-  },
-  {
-    description:
-      "Our sector lens stays fixed on deep tech, where technical nuance and capital timing matter most.",
-    title: "Focused on frontier sectors",
-  },
-];
-
-const valueAreas = [
-  "Fundraising and investor positioning",
-  "M&A preparation, process design, and execution",
-  "Corporate finance strategy for growth and exits",
-  "Support for investors evaluating deep tech opportunities",
-];
 
 export default function Page() {
   return (
     <>
-      <Hero
-        variant="light"
-        eyebrow="About us"
-        title="Capital partners for deep tech"
-        subtitle="Evolute specialises in corporate finance for tech pioneers: visionary founders who push boundaries and see their companies as catalysts for the future."
-      />
+      <Hero title="About us" variant="light" />
 
-      <PageSection>
-        <div className="grid gap-10 lg:grid-cols-[minmax(0,1fr)_minmax(0,1.25fr)] lg:gap-20">
-          <div className="flex flex-col gap-4">
-            <p className="font-mono text-[0.6875rem] tracking-[0.2em] text-gray-500 uppercase">
-              Our role
-            </p>
-            <h2 className="font-heading text-[clamp(2rem,4vw,3rem)] leading-[1.02] font-medium tracking-tight text-navy-700">
-              Strategic corporate finance for companies shaping the future.
-            </h2>
-          </div>
-          <div className="flex flex-col gap-6">
-            <p className="text-lg leading-relaxed text-navy-700 md:text-xl">
-              We focus on growth capital, M&amp;A, and corporate finance strategy for ambitious
-              companies and the investors backing them.
-            </p>
-            <p className="text-base leading-relaxed text-gray-500 md:text-lg">
-              Our mission is to help deep tech teams navigate complex capital markets with clearer
-              positioning, stronger process discipline, and better information at the moments that
-              matter most.
-            </p>
-            <p className="text-base leading-relaxed text-gray-500 md:text-lg">
-              The work spans fundraising, transactions, strategic finance, and investor support, but
-              the operating model stays consistent: we act as an extension of the team and stay
-              close to execution.
-            </p>
-          </div>
-        </div>
-      </PageSection>
+      <PageSection className="border-t border-navy-700/10 pt-0 md:pt-0">
+        <div className="divide-y divide-navy-700/10 border-b border-navy-700/10">
+          <article className="grid grid-cols-[3rem_minmax(0,1fr)] gap-6 py-16 md:grid-cols-[4rem_minmax(0,1fr)] md:gap-8 md:py-20">
+            <p className="font-mono text-[0.6875rem] tracking-[0.2em] text-gray-500">01</p>
+            <div className="flex flex-col gap-8">
+              <h2 className="font-heading text-4xl leading-[1.05] font-medium tracking-tight text-navy-700 md:text-5xl">
+                Evolute explained
+              </h2>
+              <p className="max-w-[70ch] text-base leading-relaxed text-gray-500 md:text-lg">
+                The <strong className="font-semibold text-navy-700">evolute</strong> is the locus of
+                points that define the centers of curvature along a curve, guiding design in fields
+                like geometry and robotics. Just as an evolute reveals the underlying structure of a
+                shape, a well-crafted growth and financing strategy shapes a company&rsquo;s
+                trajectory. Inspired by this concept, we help tech companies navigate key inflection
+                points along their growth paths.
+              </p>
+            </div>
+          </article>
 
-      <PageSection className="border-t border-navy-700/10">
-        <div className="grid gap-10 lg:grid-cols-[minmax(0,0.65fr)_minmax(0,1.35fr)] lg:gap-20">
-          <div className="flex flex-col gap-4">
-            <p className="font-mono text-[0.6875rem] tracking-[0.2em] text-gray-500 uppercase">
-              How we work
-            </p>
-            <h2 className="max-w-md font-heading text-[clamp(2rem,4vw,3rem)] leading-[1.02] font-medium tracking-tight text-navy-700">
-              Close to the work, clear on the outcome
-            </h2>
-          </div>
-          <DisclosureList items={principles} name="about-principles" />
-        </div>
-      </PageSection>
+          <article className="grid grid-cols-[3rem_minmax(0,1fr)] gap-6 py-16 md:grid-cols-[4rem_minmax(0,1fr)] md:gap-8 md:py-20">
+            <p className="font-mono text-[0.6875rem] tracking-[0.2em] text-gray-500">02</p>
+            <div className="flex flex-col gap-8">
+              <h2 className="font-heading text-4xl leading-[1.05] font-medium tracking-tight text-navy-700 md:text-5xl">
+                Our mission
+              </h2>
+              <p className="max-w-[70ch] text-base leading-relaxed text-gray-500 md:text-lg">
+                At Evolute, our mission is simple yet powerful: to help innovative companies reach
+                their full potential. We thrive on working alongside those pushing the boundaries of
+                technology. With years of experience, we understand how products come to life, what
+                drives successful company growth, and how to navigate capital markets. Our team
+                helps companies cut through the noise and focus on what truly matters, ensuring they
+                build businesses that are not only investable, but sustainable.
+              </p>
+            </div>
+          </article>
 
-      <PageSection>
-        <div className="grid gap-10 lg:grid-cols-[minmax(0,1fr)_minmax(0,1.25fr)] lg:gap-20">
-          <div>
-            <p className="font-mono text-[0.6875rem] tracking-[0.2em] text-gray-500 uppercase">
-              Where we add value
-            </p>
-            <h2 className="mt-4 font-heading text-[clamp(2rem,4vw,3rem)] leading-[1.02] font-medium tracking-tight text-navy-700">
-              Support that stays practical from first brief to close.
-            </h2>
-          </div>
-          <div className="flex flex-col gap-4">
-            {valueAreas.map((item) => (
-              <div className="border-b border-navy-700/10 pb-4 text-lg text-navy-700" key={item}>
-                {item}
-              </div>
-            ))}
-          </div>
+          <article className="grid grid-cols-[3rem_minmax(0,1fr)] gap-6 py-16 md:grid-cols-[4rem_minmax(0,1fr)] md:gap-8 md:py-20">
+            <p className="font-mono text-[0.6875rem] tracking-[0.2em] text-gray-500">03</p>
+            <div className="flex flex-col gap-8">
+              <h2 className="font-heading text-4xl leading-[1.05] font-medium tracking-tight text-navy-700 md:text-5xl">
+                <Link
+                  className="group inline-flex items-center gap-4 rounded-sm outline-none focus-visible:ring-2 focus-visible:ring-navy-700 focus-visible:ring-offset-4"
+                  href="/team"
+                >
+                  Our team
+                  <span
+                    aria-hidden="true"
+                    className="transition-transform duration-200 group-hover:translate-x-2"
+                  >
+                    →
+                  </span>
+                </Link>
+              </h2>
+              <p className="max-w-[70ch] text-base leading-relaxed text-gray-500 md:text-lg">
+                Our team has expertise in finance, venture capital, asset management,
+                entrepreneurship, and consultancy. This diverse background allows us to view
+                challenges through multiple lenses, leading to creative and effective solutions. We
+                blend strategic insight with hands-on execution, ensuring our advice delivers
+                tangible results. Above all, we treat every collaboration as if it were our only
+                one, working closely with clients to achieve the best possible outcome. Focused.
+                Strategic. Results-driven.
+              </p>
+            </div>
+          </article>
         </div>
       </PageSection>
 
       <AskRobCard
+        cta="Contact Evolute"
         eyebrow="Start a conversation"
         title="Talk to us about your next capital move."
-        cta="Contact Evolute"
       />
     </>
   );

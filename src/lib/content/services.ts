@@ -2,7 +2,7 @@ import { type MethodologyStep, type Service } from "./types";
 
 const methodology: MethodologyStep[] = [
   {
-    description: "Granular analysis supported by proprietary data.",
+    description: "Granular analysis using proprietary data.",
     label: "Discovery",
     title: "Discovery",
   },
@@ -65,23 +65,23 @@ export const services: Service[] = [
     capabilities: [
       {
         description:
-          "Align strategy, market positioning, and financial data to craft a compelling, investor-facing narrative.",
-        title: "Foundation, positioning, and pitch",
+          "Define the capital strategy, sharpen market positioning, and build the foundations for a compelling investor narrative.",
+        title: "Capital strategy, foundation, and positioning",
       },
       {
         description:
-          "Build investor-focused financial models and understand valuations to support discussions and negotiations.",
-        title: "Financial modelling & valuation",
+          "Build investor-ready financial models, assess valuation, and identify key risks before entering the market.",
+        title: "Financial modelling, valuation, and risk assessment",
       },
       {
         description:
-          "Prepare all relevant documentation for data rooms to streamline due diligence, showcase the business, and reduce deal friction.",
-        title: "Due diligence support",
+          "Prepare investor materials and data-room documentation while aligning shareholders on objectives, process, and terms.",
+        title: "Document preparation and shareholder alignment",
       },
       {
         description:
-          "Identify the ideal investors based on stage, sector, and investment strategy, ensuring efficient outreach and conversions.",
-        title: "Investor targeting and outreach",
+          "Identify and engage the right investors, manage the process, and support negotiations through closing.",
+        title: "Investor engagement and deal closing",
       },
     ],
     intro:

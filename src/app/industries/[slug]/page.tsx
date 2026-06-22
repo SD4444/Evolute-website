@@ -20,6 +20,15 @@ const toneDeeperColor: Record<AccentTone, string> = {
   sky: "var(--accent-ocean)",
 };
 
+const toneColor: Record<AccentTone, string> = {
+  lilac: "var(--accent-lilac)",
+  lime: "var(--accent-lime)",
+  rose: "var(--accent-rose)",
+  sage: "var(--accent-sage)",
+  sand: "var(--accent-sand)",
+  sky: "var(--accent-sky)",
+};
+
 const additionalIndustryInsights: Record<string, string[]> = {
   "digital-technology": ["facilitating-scisports-growth-through-acquisition"],
   "food-and-agri": ["providing-collie-with-end-to-end-fundraising-support"],
@@ -85,23 +94,23 @@ export default async function IndustryPage(props: PageProps<"/industries/[slug]"
   return (
     <>
       <Hero
-        variant="light"
+        variant="dark"
+        ambientGlow
+        ambientGlowColor={toneColor[industry.tone]}
         eyebrow={industry.title}
         title={industry.subtitle}
-        contentClassName="pb-12 md:pb-12 [&_h1]:max-w-6xl"
-      />
-
-      <section>
-        <div className="mx-auto grid w-full max-w-[1400px] gap-6 px-6 py-12 md:px-10 md:py-16 lg:grid-cols-[minmax(0,0.8fr)_minmax(0,1.2fr)] lg:gap-20">
+        contentClassName="pb-12 md:pb-16 [&_h1]:max-w-6xl"
+      >
+        <div className="mt-12 grid gap-6 md:mt-20 lg:grid-cols-[minmax(0,0.8fr)_minmax(0,1.2fr)] lg:gap-20">
           <p
             className="max-w-xl font-heading text-[clamp(1.5rem,3vw,2rem)] leading-tight font-medium"
-            style={{ color: deeperColor }}
+            style={{ color: toneColor[industry.tone] }}
           >
             Some of the industries and applications that fall into {industry.title}.
           </p>
-          <p className="max-w-3xl text-lg leading-relaxed text-gray-500">{industry.intro}</p>
+          <p className="max-w-3xl text-lg leading-relaxed text-gray-200">{industry.intro}</p>
         </div>
-      </section>
+      </Hero>
 
       <IndustryProjectIndex
         accentColor={deeperColor}

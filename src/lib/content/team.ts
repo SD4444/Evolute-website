@@ -18,7 +18,8 @@ export const teamMembers: TeamMember[] = [
     introduction:
       "Simon co-leads the firm and oversees the client side of the business across all mandates. He leads fundraising and M&A processes from capital strategy through to closing.",
     name: "Simon Demarmels",
-    outsideWork: "Simon spends his time cooking, reading science fiction, and surfing wherever he can find waves.",
+    outsideWork:
+      "Simon spends his time cooking, reading science fiction, and surfing wherever he can find waves.",
     role: "Partner & Co-founder",
   },
   {

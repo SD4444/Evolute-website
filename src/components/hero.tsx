@@ -8,6 +8,8 @@ export function Hero({
   subtitle,
   children,
   variant = "light",
+  ambientGlow = false,
+  ambientGlowColor = "#fbfaf8",
   className,
   contentClassName,
 }: {
@@ -16,6 +18,8 @@ export function Hero({
   subtitle?: string;
   children?: React.ReactNode;
   variant?: "light" | "dark";
+  ambientGlow?: boolean;
+  ambientGlowColor?: string;
   className?: string;
   contentClassName?: string;
 }) {
@@ -27,9 +31,16 @@ export function Hero({
         className,
       )}
     >
+      {ambientGlow ? (
+        <div
+          aria-hidden="true"
+          className="pointer-events-none absolute -top-32 -right-24 h-[42rem] w-[42rem] rounded-full opacity-25 blur-3xl"
+          style={{ backgroundColor: ambientGlowColor }}
+        />
+      ) : null}
       <div
         className={cn(
-          "mx-auto flex w-full max-w-[1400px] flex-col gap-8 px-6 pt-28 pb-20 md:px-10 md:pt-36 md:pb-28",
+          "relative z-10 mx-auto flex w-full max-w-[1400px] flex-col gap-8 px-6 pt-28 pb-20 md:px-10 md:pt-36 md:pb-28",
           contentClassName,
         )}
       >

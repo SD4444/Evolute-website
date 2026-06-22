@@ -17,7 +17,7 @@ const services: Record<Audience, ServiceItem[]> = {
   companies: [
     {
       description:
-        "M&A advisory covering strategy, preparation, value-creation, deal structuring, and negotiation for successful exits.",
+        "We guide businesses from early M&A strategy and preparation through deal structuring, negotiation, and a successful exit.",
       href: "/services/companies/m-a",
       title: "M&A",
     },
@@ -60,7 +60,7 @@ export function HomeServices() {
 
   return (
     <section className="border-t border-navy-700/10 py-24 md:py-32">
-      <div className="mx-auto flex w-full max-w-[1760px] flex-col gap-12 px-6 md:gap-16 md:px-10">
+      <div className="mx-auto flex w-full max-w-[1400px] flex-col gap-12 px-6 md:gap-16 md:px-10">
         <div className="flex flex-col items-start justify-between gap-6 md:flex-row md:items-end">
           <h2 className="font-heading text-[clamp(2rem,4vw,3.5rem)] leading-[1.02] font-medium tracking-tight text-navy-700">
             Our services

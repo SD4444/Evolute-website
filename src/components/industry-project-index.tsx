@@ -8,7 +8,7 @@ import { cn } from "@/lib/utils";
 
 function ProjectDetails({ project, accentColor }: { project: Project; accentColor: string }) {
   return (
-    <div className="flex flex-col gap-8 py-8 md:py-10">
+    <div className="flex flex-col gap-8 py-8 md:py-10 lg:pt-0">
       <div className="flex h-14 items-center">
         {/* eslint-disable-next-line @next/next/no-img-element */}
         <img
@@ -117,7 +117,7 @@ export function IndustryProjectIndex({
         </div>
 
         <div className="hidden gap-16 lg:grid lg:grid-cols-[minmax(0,0.9fr)_minmax(24rem,1.1fr)]">
-          <ol className="border-b border-navy-700/15">
+          <ol>
             {projects.map((project, index) => {
               const active = index === selectedIndex;
               return (

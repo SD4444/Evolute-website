@@ -48,14 +48,15 @@ export function SiteNav() {
   const close = () => setOpen(false);
   const pathname = usePathname();
   const onHome = pathname === "/";
-  const onDarkHero = onHome || pathname.startsWith("/services/");
+  const onDarkHero =
+    onHome || pathname.startsWith("/services/") || pathname.startsWith("/industries/");
 
   return (
     <header className="absolute top-0 right-0 left-0 z-40">
       <div
         className={cn(
           "mx-auto flex h-24 w-full items-center justify-between px-6 md:px-10",
-          onHome ? "max-w-[1760px]" : "max-w-[1400px]",
+          "max-w-[1400px]",
         )}
       >
         <Link href="/" aria-label="Evolute" className="flex items-center">

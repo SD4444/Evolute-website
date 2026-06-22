@@ -121,7 +121,8 @@ export const projects: Project[] = [
     logo: "/images/clients/datylon.svg",
     name: "Datylon",
     stage: "Series A",
-    summary: "Professional data visualisation and chart-design tools for clear visual communication.",
+    summary:
+      "Professional data visualisation and chart-design tools for clear visual communication.",
     vertical: "Digital Technology",
   },
   {
@@ -148,7 +149,8 @@ export const projects: Project[] = [
     logo: "/images/clients/blue-heart-energy.png",
     name: "Blue Heart Energy",
     stage: "Series A",
-    summary: "Thermoacoustic technology using sound waves to provide efficient heating and cooling.",
+    summary:
+      "Thermoacoustic technology using sound waves to provide efficient heating and cooling.",
     vertical: "HVAC Technology",
   },
   {
@@ -157,7 +159,8 @@ export const projects: Project[] = [
     logo: "/images/clients/viride.png",
     name: "Viride",
     stage: "Series A",
-    summary: "Clean-technology solutions supporting industrial decarbonisation and resource efficiency.",
+    summary:
+      "Clean-technology solutions supporting industrial decarbonisation and resource efficiency.",
     vertical: "FoodTech",
   },
   {
@@ -184,7 +187,8 @@ export const projects: Project[] = [
     logo: "/images/clients/evert.svg",
     name: "Evert",
     stage: "Seed",
-    summary: "Smart energy-management technology optimising energy use for businesses and consumers.",
+    summary:
+      "Smart energy-management technology optimising energy use for businesses and consumers.",
     vertical: "Energy & Sustainability",
   },
   {
@@ -230,7 +234,8 @@ export const projects: Project[] = [
     logo: "/images/clients/horus.png",
     name: "Horus",
     stage: "Strategic acquisition",
-    summary: "Adaptive mapping technology turning vehicles into intelligent spatial-computing platforms.",
+    summary:
+      "Adaptive mapping technology turning vehicles into intelligent spatial-computing platforms.",
     vertical: "Mobility & Mapping",
   },
   {
@@ -248,7 +253,8 @@ export const projects: Project[] = [
     logo: "/images/clients/stilride.png",
     name: "Stilride / STILFOLD",
     stage: "Seed",
-    summary: "Industrial-origami manufacturing enabling lighter and more sustainable mobility products.",
+    summary:
+      "Industrial-origami manufacturing enabling lighter and more sustainable mobility products.",
     vertical: "Mobility & Aerospace",
   },
   {
@@ -257,7 +263,8 @@ export const projects: Project[] = [
     logo: "/images/clients/incus-3d.svg",
     name: "Incus 3D",
     stage: "Series B",
-    summary: "Industrial metal additive manufacturing based on lithography-based metal manufacturing.",
+    summary:
+      "Industrial metal additive manufacturing based on lithography-based metal manufacturing.",
     vertical: "Additive Manufacturing",
   },
   {
@@ -275,7 +282,8 @@ export const projects: Project[] = [
     logo: "/images/clients/recell.svg",
     name: "Recell",
     stage: "Series A",
-    summary: "Technology converting discarded cellulosic waste into next-generation industrial resources.",
+    summary:
+      "Technology converting discarded cellulosic waste into next-generation industrial resources.",
     vertical: "Biotech",
   },
   {
@@ -284,7 +292,8 @@ export const projects: Project[] = [
     logo: "/images/clients/solid-3d.png",
     name: "{Solid}3D",
     stage: "Series A",
-    summary: "Robotics accelerating the transition to automated warehouses and manufacturing facilities.",
+    summary:
+      "Robotics accelerating the transition to automated warehouses and manufacturing facilities.",
     vertical: "Robotics",
   },
   {
@@ -293,7 +302,8 @@ export const projects: Project[] = [
     logo: "/images/clients/am-flow.png",
     name: "AM-Flow",
     stage: "Series A",
-    summary: "AI-powered automation for identification, sorting and routing in additive manufacturing.",
+    summary:
+      "AI-powered automation for identification, sorting and routing in additive manufacturing.",
     vertical: "Advanced Manufacturing",
   },
   {
@@ -302,7 +312,8 @@ export const projects: Project[] = [
     logo: "/images/clients/co2bioclean.png",
     name: "CO2BioClean",
     stage: "Seed",
-    summary: "Fermentation technology converting carbon emissions into natural, fossil-free biopolymers.",
+    summary:
+      "Fermentation technology converting carbon emissions into natural, fossil-free biopolymers.",
     vertical: "Advanced Materials",
   },
   {
@@ -311,7 +322,8 @@ export const projects: Project[] = [
     logo: "/images/clients/alfarim.png",
     name: "Alfarim",
     stage: "Series A",
-    summary: "Industrial production of actinium-225 for next-generation targeted cancer treatments.",
+    summary:
+      "Industrial production of actinium-225 for next-generation targeted cancer treatments.",
     vertical: "Health & Life Sciences",
   },
   {
@@ -329,7 +341,8 @@ export const projects: Project[] = [
     logo: "/images/clients/prosoma.svg",
     name: "Prosoma",
     stage: "Series A",
-    summary: "Digital-health programmes combining clinical expertise with patient-centred technology.",
+    summary:
+      "Digital-health programmes combining clinical expertise with patient-centred technology.",
     vertical: "HealthTech",
   },
   {
@@ -347,7 +360,8 @@ export const projects: Project[] = [
     logo: "/images/clients/corelife-analytics.svg",
     name: "CoreLife Analytics",
     stage: "Series A",
-    summary: "Advanced analytics helping life-science teams accelerate drug discovery and development.",
+    summary:
+      "Advanced analytics helping life-science teams accelerate drug discovery and development.",
     vertical: "AI-Driven Drug Discovery",
   },
 ];
