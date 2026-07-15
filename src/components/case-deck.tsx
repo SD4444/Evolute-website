@@ -28,7 +28,7 @@ function CoverSlide({
   client: string;
 }) {
   return (
-    <div className="flex h-full flex-col justify-between">
+    <div className="flex flex-1 flex-col justify-between gap-10">
       <p className="text-[clamp(0.6875rem,1.4vw,0.875rem)] tracking-[0.18em] text-gray-400 uppercase">
         Case study · {client}
       </p>
@@ -59,7 +59,7 @@ function SectionSlide({
   index: number;
 }) {
   return (
-    <div className="flex h-full flex-col justify-center gap-10">
+    <div className="flex flex-1 flex-col justify-center gap-10">
       <div className="grid gap-10 lg:grid-cols-[minmax(0,1.1fr)_minmax(0,1fr)] lg:gap-20">
         <div className="flex flex-col gap-5">
           <SlideLabel index={index} label={slide.label} />
@@ -111,7 +111,7 @@ function SectionSlide({
 
 function QuoteSlide({ slide }: { slide: Extract<DeckSlide, { kind: "quote" }> }) {
   return (
-    <div className="flex h-full flex-col justify-center gap-10">
+    <div className="flex flex-1 flex-col justify-center gap-10">
       <p className="max-w-4xl font-heading text-[clamp(1.5rem,3.4vw,2.5rem)] leading-[1.25] tracking-[-0.02em] text-paper">
         &ldquo;{slide.quote}&rdquo;
       </p>
@@ -125,7 +125,7 @@ function QuoteSlide({ slide }: { slide: Extract<DeckSlide, { kind: "quote" }> })
 
 function ClosingSlide({ slide }: { slide: Extract<DeckSlide, { kind: "closing" }> }) {
   return (
-    <div className="flex h-full flex-col justify-between">
+    <div className="flex flex-1 flex-col justify-between gap-10">
       <p className="text-[clamp(0.6875rem,1.4vw,0.875rem)] tracking-[0.18em] text-gray-400 uppercase">
         Next step
       </p>
@@ -211,7 +211,18 @@ export function CaseDeck({ deck, onClose }: { deck: CaseDeckData; onClose: () =>
     if (!container) {
       return;
     }
-    setIndex(Math.round(container.scrollTop / container.clientHeight));
+    // Slides can be taller than the viewport, so find the nearest slide top.
+    const top = container.scrollTop;
+    let nearest = 0;
+    let nearestDistance = Infinity;
+    Array.from(container.children).forEach((child, i) => {
+      const distance = Math.abs((child as HTMLElement).offsetTop - top);
+      if (distance < nearestDistance) {
+        nearestDistance = distance;
+        nearest = i;
+      }
+    });
+    setIndex(nearest);
   };
 
   useEffect(() => {
@@ -245,12 +256,12 @@ export function CaseDeck({ deck, onClose }: { deck: CaseDeckData; onClose: () =>
         {deck.slides.map((slide, i) => (
           <section
             className={cn(
-              "flex h-dvh snap-start flex-col px-6 py-[clamp(4.5rem,9vh,6.5rem)] md:px-10",
+              "flex min-h-dvh snap-start flex-col px-6 pt-24 pb-24 md:px-10 md:pt-[clamp(4.5rem,9vh,6.5rem)] md:pb-[clamp(4.5rem,9vh,6.5rem)]",
               isDarkSlide(slide) ? "bg-dark-bg" : "bg-paper",
             )}
             key={i}
           >
-            <div className="mx-auto h-full w-full max-w-[1400px]">
+            <div className="mx-auto flex w-full max-w-[1400px] flex-1 flex-col">
               {slide.kind === "cover" ? <CoverSlide client={deck.client} slide={slide} /> : null}
               {slide.kind === "section" ? (
                 <SectionSlide index={sectionIndexes[i]} slide={slide} />
@@ -263,7 +274,12 @@ export function CaseDeck({ deck, onClose }: { deck: CaseDeckData; onClose: () =>
       </div>
 
       {/* Chrome */}
-      <div className="pointer-events-none fixed inset-x-0 top-0 z-[92]">
+      <div
+        className={cn(
+          "pointer-events-none fixed inset-x-0 top-0 z-[92] bg-gradient-to-b to-transparent pb-8 transition-colors duration-300",
+          chromeDark ? "from-dark-bg from-55% via-dark-bg/80" : "from-paper from-55% via-paper/80",
+        )}
+      >
         <div
           className="h-0.5 origin-left bg-gray-400/60 transition-transform duration-300"
           style={{ transform: `scaleX(${(index + 1) / total})` }}
