@@ -34,11 +34,11 @@ export default function ServicesPage() {
           eyebrow="Services"
           title="Capital strategy for ambitious companies."
           subtitle="Whether you're raising or exiting, we work as an extension of your team across the deal lifecycle."
-          contentClassName="gap-6 pt-24 pb-6 md:pt-28 md:pb-8 [&_h1]:md:text-5xl"
+          contentClassName="gap-6 pt-24 pb-10 md:pt-32 md:pb-14"
         />
 
-        <PageSection className="pt-6 pb-6 md:pt-10 md:pb-8">
-          <div className="grid gap-10 lg:grid-cols-[minmax(0,0.55fr)_minmax(0,1.45fr)] lg:gap-20">
+        <PageSection className="pt-0 pb-10 md:pt-0 md:pb-14">
+          <div className="flex flex-col gap-8 md:gap-10">
             <Eyebrow>Choose your perspective</Eyebrow>
             <DisclosureList
               items={[
@@ -55,7 +55,6 @@ export default function ServicesPage() {
                   title: "Q.",
                 },
               ]}
-              className="md:[&_summary]:py-5"
               name="service-audiences"
             />
           </div>
