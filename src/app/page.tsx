@@ -57,16 +57,14 @@ export default async function Page() {
       <section className="rise pb-24 md:pb-32">
         <div className="mx-auto flex w-full max-w-[1400px] flex-col gap-12 px-6 md:px-10">
           <div className="flex flex-col items-start justify-between gap-4 md:flex-row md:items-end">
-            <h2 className="font-heading text-[clamp(2rem,4vw,3rem)] leading-[1.02] tracking-[-0.03em] text-navy-700">
-              Venture capital news
-              <br />
-              and latest investments
+            <h2 className="max-w-[62rem] font-heading text-[clamp(2rem,4vw,3rem)] leading-[1.02] tracking-[-0.03em] text-navy-700">
+              Latest deals, news, and thoughts
             </h2>
             <Link
-              className="text-sm text-navy-700 underline-offset-4 hover:underline md:text-base"
+              className="inline-flex h-11 shrink-0 items-center justify-center rounded-full border border-rule px-6 text-[0.6875rem] tracking-[0.14em] text-gray-500 uppercase transition-colors hover:border-gray-400 hover:text-navy-700"
               href="/insights"
             >
-              See all insights →
+              See all insights
             </Link>
           </div>
           <div className="grid gap-6 md:grid-cols-3">
