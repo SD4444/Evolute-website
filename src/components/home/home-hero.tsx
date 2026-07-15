@@ -108,13 +108,13 @@ export function HomeHero() {
 
           <div className="flex flex-col gap-3 sm:flex-row sm:items-center sm:gap-4">
             <Link
-              className="inline-flex h-11 items-center justify-center rounded-full border border-gray-300 px-6 text-[0.6875rem] tracking-[0.14em] text-white uppercase transition-colors hover:border-white hover:text-white"
+              className="inline-flex h-11 items-center justify-center rounded-full border border-white/70 px-6 text-[0.6875rem] tracking-[0.14em] text-white uppercase transition-colors hover:border-white hover:bg-white/10"
               href="/contact"
             >
               Start a conversation
             </Link>
             <Link
-              className="inline-flex h-11 items-center justify-center rounded-full border border-dark-rule px-6 text-[0.6875rem] tracking-[0.14em] text-gray-300 uppercase transition-colors hover:border-gray-400 hover:text-paper"
+              className="inline-flex h-11 items-center justify-center rounded-full border border-white/40 px-6 text-[0.6875rem] tracking-[0.14em] text-gray-100 uppercase transition-colors hover:border-white hover:text-white"
               href="/services"
             >
               Explore our services

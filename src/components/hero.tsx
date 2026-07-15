@@ -47,7 +47,7 @@ export function Hero({
         {eyebrow ? (
           <Eyebrow className={variant === "dark" ? "text-gray-300" : undefined}>{eyebrow}</Eyebrow>
         ) : null}
-        <h1 className="max-w-4xl font-heading text-4xl leading-[1] tracking-[-0.035em] md:text-6xl">
+        <h1 className="max-w-[72rem] font-heading text-4xl leading-[1] tracking-[-0.035em] md:text-6xl">
           {title}
         </h1>
         {subtitle ? (

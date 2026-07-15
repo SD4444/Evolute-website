@@ -68,7 +68,7 @@ export function SiteNav() {
             className={cn(
               "h-11 px-5 text-[0.6875rem]",
               onDarkHero
-                ? "border-dark-rule text-gray-300 hover:border-gray-400 hover:text-paper"
+                ? "border-white/40 text-gray-100 hover:border-white hover:text-white"
                 : undefined,
             )}
             nativeButton={false}
@@ -86,7 +86,7 @@ export function SiteNav() {
                   className={cn(
                     "h-11 gap-2 px-5 text-[0.6875rem] [&_svg:not([class*=size-])]:size-4",
                     onDarkHero
-                      ? "border-dark-rule text-gray-300 hover:border-gray-400 hover:text-paper"
+                      ? "border-white/40 text-gray-100 hover:border-white hover:text-white"
                       : undefined,
                   )}
                   size="lg"

@@ -305,7 +305,7 @@ export function CaseDeck({ deck, onClose }: { deck: CaseDeckData; onClose: () =>
         </div>
       </div>
 
-      <div className="pointer-events-none fixed right-6 md:right-10 bottom-6 z-[92] flex gap-2">
+      <div className="pointer-events-none fixed right-6 bottom-6 z-[92] flex gap-2 md:right-10">
         <button
           aria-label="Previous slide"
           className={cn(
