@@ -63,13 +63,13 @@ export default function ServicesPage() {
 
       {methodology.length > 0 ? (
         <PageSection className="border-t border-rule">
-          <div className="grid gap-10 lg:grid-cols-[minmax(0,0.55fr)_minmax(0,1.45fr)] lg:gap-20">
+          <div className="flex flex-col gap-10 md:gap-14">
             <div className="flex flex-col gap-4">
               <Eyebrow>How we work</Eyebrow>
               <h3 className="font-heading text-[clamp(2rem,4vw,3rem)] leading-tight tracking-[-0.03em] text-navy-700">
                 Our methodology
               </h3>
-              <p className="max-w-md text-base text-navy-600 md:text-lg">
+              <p className="max-w-[62rem] text-base text-navy-600 md:text-lg">
                 Discovery, Design, Build, Execute: a disciplined path from first conversation to
                 closing.
               </p>

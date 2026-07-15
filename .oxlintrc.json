@@ -1,5 +1,13 @@
 {
-  "ignorePatterns": ["**/node_modules/**", "**/dist/**", "**/out/**", "**/build/**"],
+  "ignorePatterns": [
+    "**/node_modules/**",
+    "**/dist/**",
+    "**/out/**",
+    "**/build/**",
+    "**/.next/**",
+    "**/.open-next/**",
+    "**/.wrangler/**"
+  ],
   "plugins": ["eslint", "import", "oxc", "react", "typescript", "unicorn"],
   "rules": {
     "curly": "error",

@@ -5,13 +5,13 @@
   "scripts": {
     "build": "next build",
     "check": "oxlint --fix --type-aware && oxfmt --write",
+    "deploy": "opennextjs-cloudflare build && opennextjs-cloudflare deploy",
     "dev": "next dev",
     "format": "npm run check",
     "lint": "npm run check",
-    "start": "next start",
-    "typecheck": "tsgo --noEmit",
     "preview": "opennextjs-cloudflare build && opennextjs-cloudflare preview",
-    "deploy": "opennextjs-cloudflare build && opennextjs-cloudflare deploy"
+    "start": "next start",
+    "typecheck": "tsgo --noEmit"
   },
   "dependencies": {
     "@base-ui/react": "^1.4.1",

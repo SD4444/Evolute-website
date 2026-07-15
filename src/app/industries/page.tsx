@@ -32,11 +32,9 @@ export default function IndustriesPage() {
         subtitle="Six sectors at the frontier of deep tech, each with its own dynamics, capital cycles, and value-creation playbooks."
       />
 
-      <PageSection>
-        <div className="grid gap-10 lg:grid-cols-[minmax(0,0.55fr)_minmax(0,1.45fr)] lg:gap-20">
-          <div>
-            <p className="text-[0.6875rem] tracking-[0.18em] text-gray-500 uppercase">Our focus</p>
-          </div>
+      <PageSection className="pt-0 md:pt-0">
+        <div className="flex flex-col gap-8 md:gap-10">
+          <p className="text-[0.6875rem] tracking-[0.18em] text-gray-500 uppercase">Our focus</p>
           <DisclosureList
             items={industries.map((industry) => ({
               accentColor: toneInk[industry.tone],
