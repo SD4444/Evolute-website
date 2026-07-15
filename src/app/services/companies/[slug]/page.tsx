@@ -55,7 +55,7 @@ export default async function CompanyServicePage(props: PageProps<"/services/com
         </div>
       </PageSection>
 
-      <PageSection className="border-t border-navy-700/10">
+      <PageSection className="border-t border-rule">
         <div className="grid gap-10 lg:grid-cols-[minmax(0,0.55fr)_minmax(0,1.45fr)] lg:gap-20">
           <Eyebrow>Capabilities</Eyebrow>
           <DisclosureList
@@ -69,11 +69,11 @@ export default async function CompanyServicePage(props: PageProps<"/services/com
       </PageSection>
 
       {service.methodology ? (
-        <PageSection className="border-t border-navy-700/10">
+        <PageSection className="border-t border-rule">
           <div className="grid gap-10 lg:grid-cols-[minmax(0,0.55fr)_minmax(0,1.45fr)] lg:gap-20">
             <div className="flex flex-col gap-4">
               <Eyebrow>How we work</Eyebrow>
-              <h3 className="font-heading text-[clamp(2rem,4vw,3rem)] leading-tight font-medium tracking-tight text-navy-700">
+              <h3 className="font-heading text-[clamp(2rem,4vw,3rem)] leading-tight tracking-[-0.03em] text-navy-700">
                 Our methodology
               </h3>
               <p className="max-w-md text-base text-navy-600 md:text-lg">

@@ -10,7 +10,7 @@ import { type AccentTone } from "@/lib/content/types";
 export const metadata: Metadata = {
   description:
     "Where Evolute deploys capital and expertise: digital technology, energy, food, mobility, materials, and life sciences.",
-  title: "Industries | Evolute Partners",
+  title: "Industries",
 };
 
 const toneInk: Record<AccentTone, string> = {
@@ -35,9 +35,7 @@ export default function IndustriesPage() {
       <PageSection>
         <div className="grid gap-10 lg:grid-cols-[minmax(0,0.55fr)_minmax(0,1.45fr)] lg:gap-20">
           <div>
-            <p className="font-mono text-[0.6875rem] tracking-[0.2em] text-gray-500 uppercase">
-              Our focus
-            </p>
+            <p className="text-[0.6875rem] tracking-[0.18em] text-gray-500 uppercase">Our focus</p>
           </div>
           <DisclosureList
             items={industries.map((industry) => ({

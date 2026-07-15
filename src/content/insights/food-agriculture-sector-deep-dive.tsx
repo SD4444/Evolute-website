@@ -7,7 +7,7 @@ export const meta: Insight = {
   image: "/images/insights/food-agriculture-sector-deep-dive-hero.png",
   publishedAt: "2025-07-18",
   slug: "food-agriculture-sector-deep-dive",
-  title: "Food & Agriculture Sector Deep Dive",
+  title: "Food & agriculture sector deep dive",
 };
 
 export default function Body() {
@@ -19,8 +19,8 @@ export default function Body() {
         dedicated to the final sector, food and agriculture.
       </p>
 
-      <h2 className="mt-8 font-heading text-2xl font-medium text-navy-700">
-        Definition of Food &amp; Agriculture
+      <h2 className="mt-8 font-heading text-2xl text-navy-700">
+        Definition of food &amp; agriculture
       </h2>
       <p className="text-base leading-relaxed text-gray-500 md:text-lg">
         The food and agriculture sector comprises technologies that transform the food industry,
@@ -39,8 +39,8 @@ export default function Body() {
         agricultural residues.
       </p>
 
-      <h2 className="mt-8 font-heading text-2xl font-medium text-navy-700">
-        Food &amp; Agriculture 2024 Performance
+      <h2 className="mt-8 font-heading text-2xl text-navy-700">
+        Food &amp; agriculture 2024 performance
       </h2>
       <p className="text-base leading-relaxed text-gray-500 md:text-lg">
         As the global population inches closer to the 9 billion mark, we will need to devote
@@ -55,7 +55,7 @@ export default function Body() {
         proven technologies.
       </p>
 
-      <h2 className="mt-8 font-heading text-2xl font-medium text-navy-700">2025 Outlook</h2>
+      <h2 className="mt-8 font-heading text-2xl text-navy-700">2025 outlook</h2>
       <p className="text-base leading-relaxed text-gray-500 md:text-lg">
         Some key segments to watch in the second half of 2025 include livestock health, indoor
         farming, cellular agriculture, and insect-based foods. These spaces have been particularly
@@ -65,7 +65,7 @@ export default function Body() {
         activity.
       </p>
 
-      <h2 className="mt-8 font-heading text-2xl font-medium text-navy-700">Conclusion</h2>
+      <h2 className="mt-8 font-heading text-2xl text-navy-700">Conclusion</h2>
       <p className="text-base leading-relaxed text-gray-500 md:text-lg">
         The food and agriculture sector is arguably the most important sector for our everyday
         lives. As we continue to monitor these sub-verticals, it is clear that this space will

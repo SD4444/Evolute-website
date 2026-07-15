@@ -7,7 +7,7 @@ export const meta: Insight = {
   image: "/images/insights/digital-technology-sector-deep-dive-hero.png",
   publishedAt: "2025-07-18",
   slug: "digital-technology-sector-deep-dive",
-  title: "Digital Technology Sector Deep Dive",
+  title: "Digital technology sector deep dive",
 };
 
 export default function Body() {
@@ -23,9 +23,7 @@ export default function Body() {
         Digital Technology sector.
       </p>
 
-      <h2 className="mt-8 font-heading text-2xl font-medium text-navy-700">
-        Definition of Digital Technology
-      </h2>
+      <h2 className="mt-8 font-heading text-2xl text-navy-700">Definition of digital technology</h2>
       <p className="text-base leading-relaxed text-gray-500 md:text-lg">
         The digital technology sector encompasses a broad spectrum of innovations, focusing on
         software applications across various industries. While not necessarily focusing on hardware,
@@ -52,8 +50,8 @@ export default function Body() {
         of change across sectors.
       </p>
 
-      <h2 className="mt-8 font-heading text-2xl font-medium text-navy-700">
-        Digital Technology 2024 Performance
+      <h2 className="mt-8 font-heading text-2xl text-navy-700">
+        Digital technology 2024 performance
       </h2>
       <p className="text-base leading-relaxed text-gray-500 md:text-lg">
         Digital Technology is arguably the largest sector when looking at overall funding. In 2024,
@@ -69,7 +67,7 @@ export default function Body() {
         refinancing, or other.
       </p>
 
-      <h2 className="mt-8 font-heading text-2xl font-medium text-navy-700">2025 Outlook</h2>
+      <h2 className="mt-8 font-heading text-2xl text-navy-700">2025 outlook</h2>
       <p className="text-base leading-relaxed text-gray-500 md:text-lg">
         Some key spaces to watch in the second half of 2025 include LLM agents, quantum sensing,
         high-performance/quantum computing, and photonics. These spaces have reported H1 metrics
@@ -77,7 +75,7 @@ export default function Body() {
         proving market validation and strengthening the later-stage pipelines.
       </p>
 
-      <h2 className="mt-8 font-heading text-2xl font-medium text-navy-700">Conclusion</h2>
+      <h2 className="mt-8 font-heading text-2xl text-navy-700">Conclusion</h2>
       <p className="text-base leading-relaxed text-gray-500 md:text-lg">
         The digital technology sector remains a cornerstone of the deep tech landscape, underpinning
         innovation across industries through continued investment and technological breakthroughs.

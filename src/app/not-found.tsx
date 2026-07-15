@@ -10,7 +10,7 @@ const links = [
     title: "Home",
   },
   {
-    description: "See services for companies and investors.",
+    description: "See services for companies.",
     href: "/services",
     title: "Services",
   },
@@ -37,14 +37,14 @@ export default function NotFound() {
       />
 
       <PageSection>
-        <div className="border-b border-navy-700/20">
+        <div className="border-b border-rule">
           {links.map((link) => (
             <Link
-              className="group grid gap-3 border-t border-navy-700/20 py-6 transition-colors hover:text-navy-900 md:grid-cols-[minmax(0,0.7fr)_minmax(0,1fr)_auto] md:items-center md:gap-8 md:py-8"
+              className="group grid gap-3 border-t border-rule py-6 transition-colors hover:text-navy-900 md:grid-cols-[minmax(0,0.7fr)_minmax(0,1fr)_auto] md:items-center md:gap-8 md:py-8"
               href={link.href}
               key={link.href}
             >
-              <h2 className="font-heading text-2xl font-medium text-navy-700 transition-colors group-hover:text-navy-900 md:text-3xl">
+              <h2 className="font-heading text-2xl text-navy-700 transition-colors group-hover:text-navy-900 md:text-3xl">
                 {link.title}
               </h2>
               <p className="max-w-md text-base text-navy-600">{link.description}</p>

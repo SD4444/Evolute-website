@@ -8,13 +8,13 @@ export const meta: Insight = {
   legacyPath: "/insights/eu-inc.-europe’s-28th-regime-and-the-quest-for-scale",
   publishedAt: "2026-03-19",
   slug: "eu-inc-europes-28th-regime-and-the-quest-for-scale",
-  title: "EU Inc.: Europe's 28th Regime and the Quest for Scale",
+  title: "EU Inc.: Europe's 28th regime and the quest for scale",
 };
 
 export default function Body() {
   return (
     <div className="flex flex-col gap-6">
-      <h2 className="mt-8 font-heading text-2xl font-medium text-navy-700">Executive summary</h2>
+      <h2 className="mt-8 font-heading text-2xl text-navy-700">Executive summary</h2>
       <p className="text-base leading-relaxed text-gray-500 md:text-lg">
         The EU has introduced <strong>EU Inc.</strong>, a proposed 28th corporate regime designed to
         simplify how companies scale across Europe.
@@ -35,7 +35,7 @@ export default function Body() {
         implementation, adoption, and broader reforms in capital markets and taxation.
       </p>
 
-      <h2 className="mt-8 font-heading text-2xl font-medium text-navy-700">The challenge</h2>
+      <h2 className="mt-8 font-heading text-2xl text-navy-700">The challenge</h2>
       <p className="text-base leading-relaxed text-gray-500 md:text-lg">
         EU&apos;s debate has often focused on how to create more startups, how to stimulate
         innovation, fund early-stage ventures, and build local ecosystems. By most measures, that
@@ -52,9 +52,7 @@ export default function Body() {
         scaled.
       </p>
 
-      <h2 className="mt-8 font-heading text-2xl font-medium text-navy-700">
-        From fragmentation to friction
-      </h2>
+      <h2 className="mt-8 font-heading text-2xl text-navy-700">From fragmentation to friction</h2>
       <p className="text-base leading-relaxed text-gray-500 md:text-lg">
         Despite the existence of the Single Market, companies in Europe still operate across a
         patchwork of national systems. Legal structures, tax regimes, labour rules, and reporting
@@ -78,9 +76,7 @@ export default function Body() {
         outside the EU.
       </p>
 
-      <h2 className="mt-8 font-heading text-2xl font-medium text-navy-700">
-        What EU Inc. is trying to change
-      </h2>
+      <h2 className="mt-8 font-heading text-2xl text-navy-700">What EU Inc. is trying to change</h2>
       <p className="text-base leading-relaxed text-gray-500 md:text-lg">
         EU Inc. is, at its core, an attempt to remove that friction at the structural level.
       </p>
@@ -103,7 +99,7 @@ export default function Body() {
         companies it produces.
       </p>
 
-      <h2 className="mt-8 font-heading text-2xl font-medium text-navy-700">
+      <h2 className="mt-8 font-heading text-2xl text-navy-700">
         A timeline measured in years, not months
       </h2>
       <p className="text-base leading-relaxed text-gray-500 md:text-lg">
@@ -118,7 +114,7 @@ export default function Body() {
         short-term execution and more in long-term positioning.
       </p>
 
-      <h2 className="mt-8 font-heading text-2xl font-medium text-navy-700">
+      <h2 className="mt-8 font-heading text-2xl text-navy-700">
         Implications for deals, capital, and scale
       </h2>
       <p className="text-base leading-relaxed text-gray-500 md:text-lg">
@@ -146,9 +142,7 @@ export default function Body() {
         European companies as scalable, institutional-grade opportunities from earlier stages.
       </p>
 
-      <h2 className="mt-8 font-heading text-2xl font-medium text-navy-700">
-        The limits of legal reform
-      </h2>
+      <h2 className="mt-8 font-heading text-2xl text-navy-700">The limits of legal reform</h2>
       <p className="text-base leading-relaxed text-gray-500 md:text-lg">
         One of the risks in the current discussion around EU Inc. is that it is seen as a solution
         to Europe&apos;s scaling problem. The European Commission&apos;s own analysis highlights
@@ -182,7 +176,7 @@ export default function Body() {
         friction, but it does not, on its own, resolve the underlying capital market gap.
       </p>
 
-      <h2 className="mt-8 font-heading text-2xl font-medium text-navy-700">
+      <h2 className="mt-8 font-heading text-2xl text-navy-700">
         A structural tailwind, with conditions
       </h2>
       <p className="text-base leading-relaxed text-gray-500 md:text-lg">
@@ -203,7 +197,7 @@ export default function Body() {
         period where old and new systems coexist.
       </p>
 
-      <h2 className="mt-8 font-heading text-2xl font-medium text-navy-700">Conclusion</h2>
+      <h2 className="mt-8 font-heading text-2xl text-navy-700">Conclusion</h2>
       <p className="text-base leading-relaxed text-gray-500 md:text-lg">
         EU Inc. reflects a broader shift in European policy. It is an acknowledgement that
         competitiveness is not just about innovation, it is about the ability to scale that

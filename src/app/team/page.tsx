@@ -9,7 +9,7 @@ import { teamMembers } from "@/lib/content/team";
 export const metadata: Metadata = {
   description:
     "Meet the Evolute team combining corporate finance, investment, operational, and entrepreneurial experience.",
-  title: "Team | Evolute Partners",
+  title: "Team",
 };
 
 export default function TeamPage() {
@@ -22,13 +22,11 @@ export default function TeamPage() {
         variant="light"
       />
 
-      <PageSection className="border-t border-navy-700/10">
+      <PageSection className="border-t border-rule">
         <div className="grid gap-10 lg:grid-cols-[minmax(0,0.65fr)_minmax(0,1.35fr)] lg:gap-20">
           <div className="flex max-w-lg flex-col gap-4">
-            <p className="font-mono text-[0.6875rem] tracking-[0.2em] text-gray-500 uppercase">
-              Our team
-            </p>
-            <h2 className="font-heading text-[clamp(2rem,4vw,3rem)] leading-[1.02] font-medium tracking-tight text-navy-700">
+            <p className="text-[0.6875rem] tracking-[0.18em] text-gray-500 uppercase">Our team</p>
+            <h2 className="font-heading text-[clamp(2rem,4vw,3rem)] leading-[1.02] tracking-[-0.03em] text-navy-700">
               Focused, strategic, hands-on
             </h2>
           </div>
@@ -39,7 +37,7 @@ export default function TeamPage() {
                 <div className="flex flex-col gap-8">
                   <p className="text-lg leading-relaxed text-navy-700">{member.introduction}</p>
                   <div className="flex flex-col gap-4">
-                    <p className="font-mono text-[0.6875rem] tracking-[0.18em] text-gray-500 uppercase">
+                    <p className="text-[0.6875rem] tracking-[0.18em] text-gray-500 uppercase">
                       Background
                     </p>
                     <div className="flex flex-col gap-4">
@@ -49,8 +47,8 @@ export default function TeamPage() {
                     </div>
                   </div>
                   {member.outsideWork ? (
-                    <div className="flex flex-col gap-3 border-t border-navy-700/10 pt-6">
-                      <p className="font-mono text-[0.6875rem] tracking-[0.18em] text-gray-500 uppercase">
+                    <div className="flex flex-col gap-3 border-t border-rule pt-6">
+                      <p className="text-[0.6875rem] tracking-[0.18em] text-gray-500 uppercase">
                         Outside of work
                       </p>
                       <p>{member.outsideWork}</p>

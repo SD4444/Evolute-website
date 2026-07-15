@@ -17,10 +17,10 @@ export const metadata: Metadata = {
   openGraph: {
     description:
       "Get in touch with Evolute Partners. Talk to our capital partners for deep tech about M&A, fundraising, and corporate finance.",
-    title: "Contact | Evolute Partners",
+    title: "Contact",
     type: "website",
   },
-  title: "Contact | Evolute Partners",
+  title: "Contact",
 };
 
 const statusCopy = {
@@ -72,10 +72,11 @@ export default async function ContactPage(props: PageProps<"/contact">) {
         <div className="grid gap-16 md:grid-cols-[1fr_1.25fr] md:gap-20">
           <aside className="flex flex-col gap-10">
             <div className="flex flex-col gap-4">
-              <h2 className="font-heading text-[clamp(1.75rem,3vw,2.5rem)] font-medium text-navy-700">
+              <p className="text-[0.6875rem] tracking-[0.18em] text-gray-400 uppercase">Visit us</p>
+              <h2 className="max-w-md font-heading text-[clamp(1.5rem,2.5vw,2rem)] leading-[1.1] tracking-[-0.02em] text-navy-700">
                 Based in the heart of Amsterdam
               </h2>
-              <address className="text-base leading-relaxed text-navy-700 not-italic">
+              <address className="text-base leading-[1.65] text-navy-600 not-italic">
                 Evolute HQ
                 <br />
                 Herengracht 450
@@ -87,12 +88,10 @@ export default async function ContactPage(props: PageProps<"/contact">) {
             </div>
 
             <div className="flex flex-col gap-4">
-              <h2 className="font-heading text-[clamp(1.75rem,3vw,2.5rem)] font-medium text-navy-700">
-                Email
-              </h2>
+              <p className="text-[0.6875rem] tracking-[0.18em] text-gray-400 uppercase">Email</p>
               <a
                 href="mailto:info@evolute.partners"
-                className="text-base text-navy-700 underline-offset-4 hover:underline"
+                className="w-fit font-heading text-xl text-navy-700 underline-offset-4 hover:underline md:text-2xl"
               >
                 info@evolute.partners
               </a>
@@ -101,7 +100,7 @@ export default async function ContactPage(props: PageProps<"/contact">) {
 
           <div className="flex flex-col gap-6">
             {statusMessage ? (
-              <Alert className="border-navy-700/10 bg-white" variant={statusMessage.variant}>
+              <Alert className="border-rule bg-white" variant={statusMessage.variant}>
                 <AlertTitle>{statusMessage.title}</AlertTitle>
                 <AlertDescription>{statusMessage.description}</AlertDescription>
               </Alert>
@@ -111,49 +110,70 @@ export default async function ContactPage(props: PageProps<"/contact">) {
               <FieldGroup>
                 <div className="grid gap-4 md:grid-cols-2">
                   <Field>
-                    <FieldLabel htmlFor="name">Name</FieldLabel>
+                    <FieldLabel
+                      className="text-[0.6875rem] font-normal tracking-[0.18em] text-gray-400 uppercase"
+                      htmlFor="name"
+                    >
+                      Name
+                    </FieldLabel>
                     <Input
                       id="name"
                       name="name"
                       type="text"
                       required
                       autoComplete="name"
-                      className="rounded-none border-0 border-b border-navy-700/30 bg-transparent px-0 focus-visible:border-navy-700 focus-visible:ring-0"
+                      className="h-11 rounded-none border-0 border-b border-rule bg-transparent px-0 text-base text-navy-700 focus-visible:border-navy-700 focus-visible:ring-0"
                     />
                   </Field>
 
                   <Field>
-                    <FieldLabel htmlFor="company">Company</FieldLabel>
+                    <FieldLabel
+                      className="text-[0.6875rem] font-normal tracking-[0.18em] text-gray-400 uppercase"
+                      htmlFor="company"
+                    >
+                      Company
+                    </FieldLabel>
                     <Input
                       id="company"
                       name="company"
                       type="text"
                       required
                       autoComplete="organization"
-                      className="rounded-none border-0 border-b border-navy-700/30 bg-transparent px-0 focus-visible:border-navy-700 focus-visible:ring-0"
+                      className="h-11 rounded-none border-0 border-b border-rule bg-transparent px-0 text-base text-navy-700 focus-visible:border-navy-700 focus-visible:ring-0"
                     />
                   </Field>
                 </div>
 
                 <Field>
-                  <FieldLabel htmlFor="email">Email</FieldLabel>
+                  <FieldLabel
+                    className="text-[0.6875rem] font-normal tracking-[0.18em] text-gray-400 uppercase"
+                    htmlFor="email"
+                  >
+                    Email
+                  </FieldLabel>
                   <Input
                     id="email"
                     name="email"
                     type="email"
                     required
                     autoComplete="email"
-                    className="rounded-none border-0 border-b border-navy-700/30 bg-transparent px-0 focus-visible:border-navy-700 focus-visible:ring-0"
+                    className="h-11 rounded-none border-0 border-b border-rule bg-transparent px-0 text-base text-navy-700 focus-visible:border-navy-700 focus-visible:ring-0"
                   />
                 </Field>
 
                 <Field>
-                  <FieldLabel htmlFor="topic">How can we help?</FieldLabel>
+                  <FieldLabel
+                    className="text-[0.6875rem] font-normal tracking-[0.18em] text-gray-400 uppercase"
+                    htmlFor="topic"
+                  >
+                    How can we help?
+                  </FieldLabel>
                   <NativeSelect
                     id="topic"
                     name="topic"
                     defaultValue=""
-                    className="w-full rounded-none border-0 border-b border-navy-700/30 bg-transparent px-0 focus-visible:border-navy-700 focus-visible:ring-0"
+                    className="w-full"
+                    selectClassName="h-11 rounded-none border-0 border-b border-rule bg-transparent px-0 text-base text-navy-700 focus-visible:border-navy-700 focus-visible:ring-0"
                   >
                     <NativeSelectOption value="" disabled>
                       Select a topic
@@ -163,22 +183,24 @@ export default async function ContactPage(props: PageProps<"/contact">) {
                     <NativeSelectOption value="corporate-finance">
                       Corporate finance
                     </NativeSelectOption>
-                    <NativeSelectOption value="investor-advisory">
-                      Investor advisory
-                    </NativeSelectOption>
                     <NativeSelectOption value="other">Other</NativeSelectOption>
                   </NativeSelect>
                 </Field>
 
                 <Field>
-                  <FieldLabel htmlFor="message">Message</FieldLabel>
+                  <FieldLabel
+                    className="text-[0.6875rem] font-normal tracking-[0.18em] text-gray-400 uppercase"
+                    htmlFor="message"
+                  >
+                    Message
+                  </FieldLabel>
                   <Textarea
                     id="message"
                     name="message"
                     required
                     rows={6}
                     placeholder="Tell us a little about what you're working on."
-                    className="rounded-none border-0 border-b border-navy-700/30 bg-transparent px-0 focus-visible:border-navy-700 focus-visible:ring-0"
+                    className="rounded-none border-0 border-b border-rule bg-transparent px-0 text-base text-navy-700 focus-visible:border-navy-700 focus-visible:ring-0"
                   />
                   <FieldDescription>
                     We treat every message as confidential. Please include a few details so we can

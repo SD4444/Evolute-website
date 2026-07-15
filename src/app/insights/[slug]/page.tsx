@@ -1,8 +1,11 @@
+import Link from "next/link";
 import { notFound } from "next/navigation";
 
+import { CaseDeckRoute } from "@/components/case-deck-route";
 import { Eyebrow } from "@/components/eyebrow";
 import { InsightCard } from "@/components/insight-card";
-import { EditorialContainer, PageSection } from "@/components/page-container";
+import { EditorialContainer, PageContainer, PageSection } from "@/components/page-container";
+import { findCaseDeck } from "@/lib/content/case-decks";
 import { findInsightEntry, insights } from "@/lib/content/insights";
 
 export async function generateStaticParams() {
@@ -34,45 +37,56 @@ export default async function InsightPage(props: PageProps<"/insights/[slug]">) 
   const { meta, Body } = entry;
   const caseStudy = entry.caseStudy;
 
+  // Case studies render as a fullscreen flip-through deck, nothing else.
+  if (findCaseDeck(slug)) {
+    return <CaseDeckRoute slug={slug} />;
+  }
+
   const relatedPosts = insights.filter((insight) => insight.slug !== slug).slice(0, 3);
 
   return (
     <>
       <section className="bg-background text-navy-700">
-        <EditorialContainer className="pt-28 pb-16 md:pt-36 md:pb-20">
-          <div className="flex flex-col gap-8">
+        <PageContainer className="pt-28 pb-12 md:pt-36 md:pb-16">
+          <div className="flex flex-col gap-7">
+            <Link
+              className="w-fit text-[0.6875rem] tracking-[0.18em] text-gray-400 uppercase transition-colors hover:text-navy-700"
+              href="/insights"
+            >
+              ← All insights
+            </Link>
             <Eyebrow>{`${meta.category} · ${meta.publishedAt}`}</Eyebrow>
-            <h1 className="max-w-4xl font-heading text-4xl leading-[1.05] font-medium tracking-tight md:text-6xl">
+            <h1 className="max-w-[62rem] font-heading text-[clamp(2.5rem,6vw,4.5rem)] leading-[1] tracking-[-0.035em]">
               {meta.title}
             </h1>
-            <p className="max-w-3xl text-lg text-gray-500 md:text-xl">{meta.excerpt}</p>
+            <p className="max-w-[62rem] text-[clamp(0.9375rem,1.8vw,1.1875rem)] leading-[1.6] text-navy-600">
+              {meta.excerpt}
+            </p>
           </div>
-        </EditorialContainer>
+        </PageContainer>
       </section>
       {meta.image ? (
         <section>
-          <EditorialContainer>
-            <div className="aspect-[16/9] w-full overflow-hidden rounded-3xl bg-gray-200">
+          <PageContainer>
+            <div className="aspect-[16/7] w-full overflow-hidden bg-gray-200">
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img alt="" className="h-full w-full object-cover" src={meta.image} />
             </div>
-          </EditorialContainer>
+          </PageContainer>
         </section>
       ) : null}
       <PageSection className={meta.image ? "pt-10 md:pt-14" : "pt-2 md:pt-4"}>
-        <EditorialContainer>
-          <div className="prose prose-navy prose-headings:font-heading prose-h2:mt-12 prose-h2:text-[clamp(1.75rem,3vw,2.5rem)] prose-h2:font-normal prose-h2:text-navy-700 max-w-none">
-            <Body />
-          </div>
-        </EditorialContainer>
+        <div className="article-body">
+          <Body />
+        </div>
       </PageSection>
       {caseStudy ? (
-        <section className="bg-navy-700 text-white">
+        <section className="bg-dark-bg text-paper">
           <EditorialContainer className="py-16 md:py-24">
             <div className="grid gap-10 xl:grid-cols-[1.1fr_0.9fr]">
               <div className="flex flex-col gap-10">
                 {caseStudy.person.quote ? (
-                  <blockquote className="max-w-3xl font-heading text-[clamp(1.5rem,3vw,2rem)] leading-[1.2] font-medium tracking-tight text-white">
+                  <blockquote className="max-w-3xl font-heading text-[clamp(1.5rem,3vw,2rem)] leading-[1.2] tracking-[-0.03em] text-white">
                     &ldquo;{caseStudy.person.quote}&rdquo;
                   </blockquote>
                 ) : null}
@@ -93,12 +107,12 @@ export default async function InsightPage(props: PageProps<"/insights/[slug]">) 
                 </div>
               </div>
 
-              <div className="rounded-3xl border border-white/10 bg-white/5 p-8 md:p-10">
-                <h2 className="font-heading text-2xl font-medium text-white">About</h2>
+              <div className="rounded-[8px] border border-dark-panel-border bg-dark-panel p-8 md:p-10">
+                <h2 className="font-heading text-2xl text-white">About</h2>
                 <dl className="mt-8 flex flex-col gap-5">
                   {caseStudy.about.map((item) => (
                     <div
-                      className="border-b border-white/10 pb-5 last:border-b-0 last:pb-0"
+                      className="border-b border-dark-rule pb-5 last:border-b-0 last:pb-0"
                       key={item.label}
                     >
                       <dt className="text-sm text-gray-300">{item.label}:</dt>
@@ -115,7 +129,7 @@ export default async function InsightPage(props: PageProps<"/insights/[slug]">) 
         <PageSection>
           <div className="flex flex-col gap-12">
             <EditorialContainer className="px-6 md:px-10">
-              <h2 className="font-heading text-[clamp(1.75rem,3vw,3rem)] font-medium text-navy-700">
+              <h2 className="font-heading text-[clamp(1.75rem,3vw,3rem)] text-navy-700">
                 Related posts
               </h2>
             </EditorialContainer>

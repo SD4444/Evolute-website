@@ -7,14 +7,14 @@ export const meta: Insight = {
   image: "/images/insights/mobility-aerospace-sector-deep-dive-hero.png",
   publishedAt: "2025-07-18",
   slug: "mobility-aerospace-sector-deep-dive",
-  title: "Mobility & Aerospace in Deep Tech: Performance in 2024 & Outlook for 2025",
+  title: "Mobility & aerospace in deep tech: performance in 2024 & outlook for 2025",
 };
 
 export default function Body() {
   return (
     <div className="flex flex-col gap-6">
-      <h2 className="mt-8 font-heading text-2xl font-medium text-navy-700">
-        Definition of Mobility &amp; Aerospace
+      <h2 className="mt-8 font-heading text-2xl text-navy-700">
+        Definition of mobility &amp; aerospace
       </h2>
       <p className="text-base leading-relaxed text-gray-500 md:text-lg">
         The mobility &amp; aerospace sector comprises technologies improving how we move, connect,
@@ -29,8 +29,8 @@ export default function Body() {
         the forefront of building a more efficient, interconnected and safer world.
       </p>
 
-      <h2 className="mt-8 font-heading text-2xl font-medium text-navy-700">
-        Mobility &amp; Aerospace 2024 Performance
+      <h2 className="mt-8 font-heading text-2xl text-navy-700">
+        Mobility &amp; aerospace 2024 performance
       </h2>
       <p className="text-base leading-relaxed text-gray-500 md:text-lg">
         Fueled by the modern space race, geo-political tensions, and the pursuit of autonomous
@@ -47,7 +47,7 @@ export default function Body() {
         investors believe there is extreme room for growth beyond their billion-dollar investments.
       </p>
 
-      <h2 className="mt-8 font-heading text-2xl font-medium text-navy-700">2025 Outlook</h2>
+      <h2 className="mt-8 font-heading text-2xl text-navy-700">2025 outlook</h2>
       <p className="text-base leading-relaxed text-gray-500 md:text-lg">
         While global sentiment on electric vehicles may be cooling, other areas of this sector
         continue to grow; some key segments to watch in the second half of 2025 include air taxis,
@@ -57,7 +57,7 @@ export default function Body() {
         and strengthening the later-stage pipelines.
       </p>
 
-      <h2 className="mt-8 font-heading text-2xl font-medium text-navy-700">Conclusion</h2>
+      <h2 className="mt-8 font-heading text-2xl text-navy-700">Conclusion</h2>
       <p className="text-base leading-relaxed text-gray-500 md:text-lg">
         The mobility and aerospace sector is extremely cyclical; however, given the growing global
         demand for these types of technologies, it is becoming a key sector of the deep tech

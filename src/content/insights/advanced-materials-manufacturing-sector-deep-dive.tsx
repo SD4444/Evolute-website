@@ -7,14 +7,14 @@ export const meta: Insight = {
   image: "/images/insights/advanced-materials-manufacturing-sector-deep-dive-hero.png",
   publishedAt: "2025-07-18",
   slug: "advanced-materials-manufacturing-sector-deep-dive",
-  title: "Advanced Materials & Manufacturing Sector Deep Dive",
+  title: "Advanced materials & manufacturing sector deep dive",
 };
 
 export default function Body() {
   return (
     <div className="flex flex-col gap-6">
-      <h2 className="mt-8 font-heading text-2xl font-medium text-navy-700">
-        Definition of Advanced Materials &amp; Manufacturing
+      <h2 className="mt-8 font-heading text-2xl text-navy-700">
+        Definition of advanced materials &amp; manufacturing
       </h2>
       <p className="text-base leading-relaxed text-gray-500 md:text-lg">
         The advanced materials and manufacturing sector comprises technologies innovating how we
@@ -31,8 +31,8 @@ export default function Body() {
         properties, and circular manufacturing strategies are all major innovators in this industry.
       </p>
 
-      <h2 className="mt-8 font-heading text-2xl font-medium text-navy-700">
-        Advanced Materials &amp; Manufacturing 2024 Performance
+      <h2 className="mt-8 font-heading text-2xl text-navy-700">
+        Advanced materials &amp; manufacturing 2024 performance
       </h2>
       <p className="text-base leading-relaxed text-gray-500 md:text-lg">
         As demand in key industries like housing and e-commerce continues to rise, the need for
@@ -52,7 +52,7 @@ export default function Body() {
         of these scale-ups to continue growing.
       </p>
 
-      <h2 className="mt-8 font-heading text-2xl font-medium text-navy-700">2025 Outlook</h2>
+      <h2 className="mt-8 font-heading text-2xl text-navy-700">2025 outlook</h2>
       <p className="text-base leading-relaxed text-gray-500 md:text-lg">
         Despite the cold shoulder this sector is experiencing from investors, there are several
         niche spaces within the sector to watch in the second half of 2025, including carbon
@@ -62,7 +62,7 @@ export default function Body() {
         stages and leading to continued M&amp;A activity.
       </p>
 
-      <h2 className="mt-8 font-heading text-2xl font-medium text-navy-700">Conclusion</h2>
+      <h2 className="mt-8 font-heading text-2xl text-navy-700">Conclusion</h2>
       <p className="text-base leading-relaxed text-gray-500 md:text-lg">
         The advanced material and manufacturing sector is extremely important to the supply chain
         and B2B backbone of the global economy. As we continue to monitor these evolving

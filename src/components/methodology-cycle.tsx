@@ -28,11 +28,11 @@ export function MethodologyCycle({ steps }: { steps: MethodologyStep[] }) {
             className="grid grid-cols-[2.5rem_1fr] gap-4 border-t border-navy-700/15 py-6 last:border-b"
             key={step.title}
           >
-            <span className="font-mono text-[0.6875rem] tracking-[0.12em] text-gray-500">
+            <span className="text-[0.6875rem] tracking-[0.12em] text-gray-500">
               {String(index + 1).padStart(2, "0")}
             </span>
             <div className="flex flex-col gap-2">
-              <h4 className="font-heading text-2xl font-medium text-navy-700">{step.title}</h4>
+              <h4 className="font-heading text-2xl text-navy-700">{step.title}</h4>
               <p className="text-sm leading-relaxed text-gray-500">{step.description}</p>
             </div>
           </div>
@@ -103,10 +103,10 @@ export function MethodologyCycle({ steps }: { steps: MethodologyStep[] }) {
                 onClick={() => setActiveIndex(index)}
                 type="button"
               >
-                <span className="font-mono text-[0.625rem] tracking-[0.12em]">
+                <span className="text-[0.625rem] tracking-[0.12em]">
                   {String(index + 1).padStart(2, "0")}
                 </span>
-                <span className="font-heading text-lg font-medium">{step.title}</span>
+                <span className="font-heading text-lg">{step.title}</span>
               </button>
             );
           })}
@@ -116,7 +116,7 @@ export function MethodologyCycle({ steps }: { steps: MethodologyStep[] }) {
           aria-live="polite"
           className="grid min-h-24 grid-cols-[7rem_1fr] gap-6 border-t border-navy-700/15 pt-6"
         >
-          <p className="font-mono text-[0.6875rem] tracking-[0.12em] text-gray-500 uppercase">
+          <p className="text-[0.6875rem] tracking-[0.18em] text-gray-500 uppercase">
             {String(activeIndex + 1).padStart(2, "0")} / {activeStep.label}
           </p>
           <p className="text-base leading-relaxed text-navy-600">{activeStep.description}</p>

@@ -31,6 +31,7 @@ const buttonVariants = cva(
         link: "text-primary underline-offset-4 hover:underline",
         outline:
           "border-border hover:bg-input/50 hover:text-foreground aria-expanded:bg-muted aria-expanded:text-foreground dark:bg-input/30",
+        pill: "rounded-full border-rule bg-transparent font-normal tracking-[0.14em] text-gray-500 uppercase transition-colors hover:border-gray-400 hover:text-navy-700",
         secondary:
           "bg-secondary text-secondary-foreground hover:bg-secondary/80 aria-expanded:bg-secondary aria-expanded:text-secondary-foreground",
       },

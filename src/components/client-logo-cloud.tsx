@@ -38,7 +38,7 @@ export function ClientLogoCloud({
       <div className="flex flex-col gap-4">
         <span
           className={cn(
-            "font-mono text-[0.6875rem] tracking-widest uppercase",
+            "text-[0.6875rem] tracking-[0.18em] uppercase",
             variant === "dark" ? "text-gray-300" : "text-gray-500",
           )}
         >
@@ -46,7 +46,7 @@ export function ClientLogoCloud({
         </span>
         <h2
           className={cn(
-            "max-w-3xl font-heading text-[clamp(2rem,4vw,3rem)] leading-[1.02] font-medium tracking-tight",
+            "max-w-3xl font-heading text-[clamp(2rem,4vw,3rem)] leading-[1.02] tracking-[-0.03em]",
             variant === "dark" ? "text-white" : "text-navy-700",
           )}
         >

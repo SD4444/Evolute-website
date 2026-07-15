@@ -7,7 +7,7 @@ export const meta: Insight = {
   image: "/images/insights/health-and-life-sciences-sector-deep-dive-hero.png",
   publishedAt: "2025-07-18",
   slug: "health-and-life-sciences-sector-deep-dive",
-  title: "Health & Life Sciences in Deep Tech: Performance in 2024 & Outlook for 2025",
+  title: "Health & life sciences in deep tech: performance in 2024 & outlook for 2025",
 };
 
 export default function Body() {
@@ -19,8 +19,8 @@ export default function Body() {
         to something that impacts us all, the health and life sciences sector.
       </p>
 
-      <h2 className="mt-8 font-heading text-2xl font-medium text-navy-700">
-        Definition of Health and Life Sciences
+      <h2 className="mt-8 font-heading text-2xl text-navy-700">
+        Definition of health &amp; life sciences
       </h2>
       <p className="text-base leading-relaxed text-gray-500 md:text-lg">
         The health and life sciences sector comprises technologies that enhance how we diagnose,
@@ -38,8 +38,8 @@ export default function Body() {
         detection are all propelling the industry toward a more personalized, healthier world.
       </p>
 
-      <h2 className="mt-8 font-heading text-2xl font-medium text-navy-700">
-        Health and Life Sciences 2024 Performance
+      <h2 className="mt-8 font-heading text-2xl text-navy-700">
+        Health &amp; life sciences 2024 performance
       </h2>
       <p className="text-base leading-relaxed text-gray-500 md:text-lg">
         With an aging population and increasing rates of terminal and degenerative diseases
@@ -59,7 +59,7 @@ export default function Body() {
         can reach the markers investors look for in the Series B plus stages.
       </p>
 
-      <h2 className="mt-8 font-heading text-2xl font-medium text-navy-700">2025 Outlook</h2>
+      <h2 className="mt-8 font-heading text-2xl text-navy-700">2025 outlook</h2>
       <p className="text-base leading-relaxed text-gray-500 md:text-lg">
         Some key segments to watch in the second half of 2025 include AI-powered drug discovery,
         longevity tech, exoskeletons and prosthetics, and neurotechnology. These spaces have
@@ -68,7 +68,7 @@ export default function Body() {
         stages and leading to continued M&amp;A activity.
       </p>
 
-      <h2 className="mt-8 font-heading text-2xl font-medium text-navy-700">Conclusion</h2>
+      <h2 className="mt-8 font-heading text-2xl text-navy-700">Conclusion</h2>
       <p className="text-base leading-relaxed text-gray-500 md:text-lg">
         The health and life science sector is becoming of the utmost importance given the growing
         global demand of a sicker, aging population. As we monitor these evolving sub-verticals, it

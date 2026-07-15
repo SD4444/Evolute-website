@@ -8,7 +8,7 @@ export const meta: Insight = {
   imageFit: "contain",
   publishedAt: "2025-02-06",
   slug: "facilitating-scisports-growth-through-acquisition",
-  title: "Facilitating SciSports' Growth Through Acquisition",
+  title: "Facilitating SciSports' growth through acquisition",
 };
 
 export const caseStudy: CaseStudy = {
@@ -38,9 +38,7 @@ export const caseStudy: CaseStudy = {
 export default function Body() {
   return (
     <div className="flex flex-col gap-6">
-      <h2 className="mt-8 font-heading text-2xl font-medium text-navy-700">
-        Introduction to SciSports
-      </h2>
+      <h2 className="mt-8 font-heading text-2xl text-navy-700">Introduction to SciSports</h2>
       <p className="text-base leading-relaxed text-gray-500 md:text-lg">
         SciSports is a global leader in AI-driven football analytics, delivering real-time,
         actionable insights into player and team performance. Their innovative solution empowers
@@ -55,8 +53,8 @@ export default function Body() {
         others.
       </p>
 
-      <h2 className="mt-8 font-heading text-2xl font-medium text-navy-700">The Challenge</h2>
-      <h3 className="mt-2 font-heading text-xl font-medium text-navy-700">
+      <h2 className="mt-8 font-heading text-2xl text-navy-700">The challenge</h2>
+      <h3 className="mt-2 font-heading text-xl text-navy-700">
         Preparing SciSports for a successful transaction
       </h3>
       <p className="text-base leading-relaxed text-gray-500 md:text-lg">
@@ -73,8 +71,8 @@ export default function Body() {
         acquisition preparation process.
       </p>
 
-      <h2 className="mt-8 font-heading text-2xl font-medium text-navy-700">Our Approach</h2>
-      <h3 className="mt-2 font-heading text-xl font-medium text-navy-700">
+      <h2 className="mt-8 font-heading text-2xl text-navy-700">Our approach</h2>
+      <h3 className="mt-2 font-heading text-xl text-navy-700">
         Crafting a compelling acquisition narrative with supporting materials
       </h3>
       <p className="text-base leading-relaxed text-gray-500 md:text-lg">
@@ -109,10 +107,8 @@ export default function Body() {
         well-prepared to engage with potential buyers.
       </p>
 
-      <h2 className="mt-8 font-heading text-2xl font-medium text-navy-700">The Results</h2>
-      <h3 className="mt-2 font-heading text-xl font-medium text-navy-700">
-        SciSports successfully acquired
-      </h3>
+      <h2 className="mt-8 font-heading text-2xl text-navy-700">The results</h2>
+      <h3 className="mt-2 font-heading text-xl text-navy-700">SciSports successfully acquired</h3>
       <p className="text-base leading-relaxed text-gray-500 md:text-lg">
         By refining their story and materials, we helped SciSports strengthen their positioning,
         leading to a successful acquisition. The improved investor-facing foundation gave them the

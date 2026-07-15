@@ -4,15 +4,6 @@ export const companyServices = [
   { slug: "corporate-finance", title: "Corporate finance" },
 ];
 
-export const investorServices = [
-  { slug: "deal-origination", title: "Deal origination" },
-  { slug: "deal-evaluation", title: "Deal evaluation" },
-  {
-    slug: "commercial-due-diligence",
-    title: "Commercial due diligence",
-  },
-];
-
 export const industryLinks = [
   { slug: "digital-technology", title: "Digital technology" },
   {

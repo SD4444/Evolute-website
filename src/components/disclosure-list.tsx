@@ -21,23 +21,23 @@ export function DisclosureList({
   name: string;
 }) {
   return (
-    <div className={cn("border-b border-navy-700/20", className)}>
+    <div className={cn("border-b border-rule", className)}>
       {items.map((item, index) => (
-        <details className="group border-t border-navy-700/20" key={item.title} name={name}>
+        <details className="group border-t border-rule" key={item.title} name={name}>
           <summary className="grid cursor-pointer list-none grid-cols-[2.5rem_minmax(0,1fr)_2rem] items-center gap-3 py-6 text-navy-700 transition-colors marker:content-none hover:text-navy-900 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-navy-700 md:grid-cols-[4rem_minmax(0,1fr)_3rem] md:py-8 [&::-webkit-details-marker]:hidden">
             <span
-              className="font-mono text-[0.6875rem] tracking-[0.14em] text-gray-500"
+              className="font-heading text-[0.6875rem] tracking-[0.14em] text-gray-500"
               style={item.accentColor ? { color: item.accentColor } : undefined}
             >
               {String(index + 1).padStart(2, "0")}
             </span>
             <span className="flex min-w-0 flex-col gap-1">
               {item.eyebrow ? (
-                <span className="text-xs tracking-[0.12em] text-gray-500 uppercase">
+                <span className="text-xs tracking-[0.18em] text-gray-500 uppercase">
                   {item.eyebrow}
                 </span>
               ) : null}
-              <span className="font-heading text-[clamp(1.5rem,3vw,2.5rem)] leading-[1.08] font-medium tracking-tight">
+              <span className="font-heading text-[clamp(1.5rem,3vw,2.5rem)] leading-[1.08] tracking-[-0.03em]">
                 {item.title}
               </span>
             </span>

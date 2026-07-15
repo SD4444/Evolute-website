@@ -31,7 +31,7 @@ export const industries: Industry[] = [
       },
     ],
     title: "Digital technology",
-    tone: "lilac",
+    tone: "sand",
   },
   {
     image: "/images/industries/energy-and-sustainability-kitepower.png",
@@ -62,14 +62,14 @@ export const industries: Industry[] = [
       },
     ],
     title: "Energy & sustainability",
-    tone: "sage",
+    tone: "lime",
   },
   {
     image: "/images/industries/food-and-agri.webp",
     intro:
       "Food and agriculture span a broad range of technologies aimed at creating a more sustainable, efficient, and resilient global food system. These range from precision agriculture and cultured meat to autonomous farming equipment, plant-based proteins, smart irrigation, insect protein, cellular agriculture, and water conservation.",
     slug: "food-and-agri",
-    subtitle: "We support ventures revolutionizing the food and agricultural systems.",
+    subtitle: "We support ventures transforming the food and agricultural systems.",
     themes: [
       {
         description:
@@ -93,7 +93,7 @@ export const industries: Industry[] = [
       },
     ],
     title: "Food & agri",
-    tone: "lime",
+    tone: "sage",
   },
   {
     image: "/images/industries/mobility-and-aerospace.jpg",
@@ -133,7 +133,7 @@ export const industries: Industry[] = [
       "Advanced materials and manufacturing span a broad range of technologies driving innovations that enable a more efficient, sustainable, and automated future. These include 3D printing, nanomaterials for energy storage, advanced composites, photonics, robotics for warehouse automation, AI-driven process optimization, collaborative robotics, high-performance alloys, smart materials, and circular manufacturing.",
     slug: "advanced-materials-and-manufacturing",
     subtitle:
-      "We support ventures revolutionizing future industries through cutting-edge materials and processes.",
+      "We support ventures transforming future industries through advanced materials and processes.",
     themes: [
       {
         description:
@@ -157,7 +157,7 @@ export const industries: Industry[] = [
       },
     ],
     title: "Advanced materials & manufacturing",
-    tone: "sand",
+    tone: "lilac",
   },
   {
     image: "/images/industries/health-and-life-sciences.webp",

@@ -35,7 +35,7 @@ export const metadata: Metadata = {
     images: ["/images/og-image.jpg"],
   },
   title: {
-    default: "Evolute | Capital partners for deep tech",
+    default: "Evolute | Capital partners for deep tech.",
     template: "%s | Evolute",
   },
   twitter: {
@@ -61,6 +61,7 @@ export default function RootLayout({
       style={{ fontFamily: "var(--font-inter), system-ui, sans-serif" }}
     >
       <body className="flex min-h-full flex-col bg-background text-foreground">
+        <div aria-hidden className="scroll-progress" />
         <TooltipProvider>
           <SiteNav />
           <main className="flex-1">{children}</main>

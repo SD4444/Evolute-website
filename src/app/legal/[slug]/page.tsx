@@ -26,14 +26,14 @@ function renderBlock(block: LegalBlock, index: number) {
   if (block.type === "heading") {
     if (block.level === 2) {
       return (
-        <h2 key={index} className="mt-8 font-heading text-2xl font-medium">
+        <h2 key={index} className="mt-8 font-heading text-2xl">
           {block.text}
         </h2>
       );
     }
 
     return (
-      <h3 key={index} className="mt-6 font-heading text-xl font-medium">
+      <h3 key={index} className="mt-6 font-heading text-xl">
         {block.text}
       </h3>
     );
