@@ -63,7 +63,7 @@ export default async function InsightPage(props: PageProps<"/insights/[slug]">) 
       ) : null}
       <PageSection className={meta.image ? "pt-10 md:pt-14" : "pt-2 md:pt-4"}>
         <EditorialContainer>
-          <div className="prose prose-navy prose-headings:font-heading prose-h2:mt-12 prose-h2:text-[clamp(1.75rem,3vw,2.5rem)] prose-h2:font-normal prose-h2:text-navy-700 max-w-none">
+          <div className="article-body">
             <Body />
           </div>
         </EditorialContainer>
