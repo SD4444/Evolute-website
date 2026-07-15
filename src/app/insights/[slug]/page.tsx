@@ -48,7 +48,7 @@ export default async function InsightPage(props: PageProps<"/insights/[slug]">) 
     <>
       <section className="bg-background text-navy-700">
         <EditorialContainer className="pt-28 pb-16 md:pt-36 md:pb-20">
-          <div className="mx-auto flex w-full max-w-[46rem] flex-col gap-8">
+          <div className="mx-auto flex w-full max-w-[52rem] flex-col gap-8">
             <Link
               className="w-fit text-[0.6875rem] tracking-[0.18em] text-gray-400 uppercase transition-colors hover:text-navy-700"
               href="/insights"
@@ -66,7 +66,7 @@ export default async function InsightPage(props: PageProps<"/insights/[slug]">) 
       {meta.image ? (
         <section>
           <EditorialContainer>
-            <div className="aspect-[16/9] w-full overflow-hidden bg-gray-200">
+            <div className="mx-auto aspect-[16/9] w-full max-w-[52rem] overflow-hidden bg-gray-200">
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img alt="" className="h-full w-full object-cover" src={meta.image} />
             </div>
@@ -75,7 +75,7 @@ export default async function InsightPage(props: PageProps<"/insights/[slug]">) 
       ) : null}
       <PageSection className={meta.image ? "pt-10 md:pt-14" : "pt-2 md:pt-4"}>
         <EditorialContainer>
-          <div className="article-body mx-auto w-full max-w-[46rem]">
+          <div className="article-body mx-auto w-full max-w-[52rem]">
             <Body />
           </div>
         </EditorialContainer>
