@@ -66,7 +66,7 @@ export function SiteNav() {
         <div className="flex items-center gap-2">
           <Button
             className={cn(
-              "h-11 px-5 text-[0.6875rem]",
+              "hidden h-11 px-5 text-[0.6875rem] sm:inline-flex",
               onDarkHero
                 ? "border-white/40 text-gray-100 hover:border-white hover:text-white"
                 : undefined,
