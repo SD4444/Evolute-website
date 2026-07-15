@@ -18,9 +18,13 @@ export function InsightsFilter({ insights }: { insights: Insight[] }) {
 
   return (
     <Tabs value={filter} onValueChange={(value) => setFilter(value as Filter)}>
-      <TabsList className="mb-10" variant="line">
+      <TabsList className="mb-10 h-auto gap-6 p-0" variant="line">
         {FILTERS.map((item) => (
-          <TabsTrigger key={item} value={item}>
+          <TabsTrigger
+            className="px-0 py-2 text-[0.6875rem] font-normal tracking-[0.18em] text-gray-400 uppercase transition-colors hover:text-navy-700 data-active:text-navy-700"
+            key={item}
+            value={item}
+          >
             {item}
           </TabsTrigger>
         ))}
