@@ -242,6 +242,112 @@ export const caseDecks: Record<string, CaseDeck> = {
     ],
     slug: "providing-collie-with-end-to-end-fundraising-support",
   },
+  "supporting-horus-through-a-strategic-sale-to-nilario": {
+    client: "Horus",
+    slides: [
+      {
+        kind: "cover",
+        meta: [
+          "Geospatial intelligence",
+          "Strategic sale",
+          "Sell-side advisory",
+          "Europe & United States",
+        ],
+        subtitle:
+          "How deep immersion, a tailored transaction package, and a targeted buyer process led an infrastructure intelligence platform to the right strategic home.",
+        title: "Supporting Horus through a strategic sale to Nilario",
+      },
+      {
+        headline: "Infrastructure data, turned into intelligence.",
+        kind: "section",
+        label: "The company",
+        lead: "Horus built something difficult to replicate: a modular platform combining mobile mapping, sensor fusion, and NVIDIA-powered edge computing to transform raw infrastructure data into actionable intelligence.",
+        rails: [
+          {
+            label: "The platform",
+            text: "Mobile mapping, sensor fusion, and edge computing in one modular stack, operating at the intersection of geospatial intelligence, infrastructure monitoring, and advanced data processing.",
+          },
+          {
+            label: "The position",
+            text: "Strong product-market fit, a clear growth trajectory, and a management team with a strong vision for the future.",
+          },
+          {
+            label: "The moment",
+            text: "The shareholders were ready for a transition, without disrupting the company's momentum.",
+          },
+        ],
+      },
+      {
+        headline: "Not just a buyer. The right strategic partner.",
+        kind: "section",
+        label: "The challenge",
+        lead: "The value of the platform was clear to customers. Communicating it to prospective acquirers required a deep understanding of both the technology and the market.",
+        rails: [
+          {
+            label: "The complexity",
+            text: "A buyer had to appreciate the sophistication of the business, the complexity of the value chain, and the strategic opportunities ahead.",
+          },
+          {
+            label: "The condition",
+            text: "The right environment for the management team and organisation to continue building on their success.",
+          },
+        ],
+      },
+      {
+        headline: "Inside out first. Then to market.",
+        kind: "section",
+        label: "Our approach",
+        lead: "Before representing the company to acquirers, we immersed ourselves in its technology, commercial model, value chain, and growth strategy, so we could position the business with confidence and credibility.",
+        rails: [
+          {
+            label: "Transaction package",
+            text: "Teaser, information memorandum, and financial model, built around the unique strengths of Horus rather than generic acquisition materials.",
+          },
+          {
+            label: "Targeted process",
+            text: "No broad auction. A carefully selected group of strategic and financial buyers across Europe and the United States, guided through a structured, stage-gated process.",
+          },
+          {
+            label: "The strategic fit",
+            text: "Nilario was actively building an Infrastructure & Environmental Monitoring platform. Horus' capabilities aligned directly with its long-term vision.",
+          },
+          {
+            label: "Full lifecycle",
+            text: "From positioning and buyer outreach through due diligence, SPA negotiations, and successful closing.",
+          },
+        ],
+      },
+      {
+        headline: "Horus joined Nilario. The momentum stayed.",
+        kind: "section",
+        label: "The results",
+        lead: "Horus became the second company within Nilario's Infrastructure & Environmental Monitoring vertical. The management team remained in place, the brand continued independently, and the roadmap stayed intact.",
+        stats: [
+          { caption: "months to complete the end-to-end transaction", value: "6" },
+          { caption: "month to develop the transaction materials", value: "1" },
+          {
+            aux: "+",
+            caption: "global investors and acquirers screened and qualified",
+            value: "100",
+          },
+        ],
+      },
+      {
+        kind: "quote",
+        name: "Jakob Glasberg",
+        quote:
+          "Horus brings highly relevant capabilities within geospatial intelligence, software-enabled infrastructure insight, and advanced data processing.",
+        role: "Nilario",
+      },
+      {
+        accent: "Let's talk.",
+        headline: "An exit that protects momentum deserves a process built for it.",
+        kind: "closing",
+        sub: "We work as an extension of your team from positioning to closing.",
+      },
+    ],
+    slug: "supporting-horus-through-a-strategic-sale-to-nilario",
+  },
 };
 
 export const findCaseDeck = (slug: string): CaseDeck | undefined => caseDecks[slug];

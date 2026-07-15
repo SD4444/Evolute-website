@@ -13,6 +13,7 @@ import * as food from "./food-agriculture-sector-deep-dive";
 import * as health from "./health-and-life-sciences-sector-deep-dive";
 import * as mobility from "./mobility-aerospace-sector-deep-dive";
 import * as collie from "./providing-collie-with-end-to-end-fundraising-support";
+import * as horus from "./supporting-horus-through-a-strategic-sale-to-nilario";
 
 export type InsightEntry = {
   meta: Insight;
@@ -25,6 +26,7 @@ const modules: {
   meta: Insight;
   default: ComponentType;
 }[] = [
+  horus,
   eic,
   euInc,
   collie,
