@@ -28,17 +28,16 @@ export default function ServicesPage() {
 
   return (
     <>
-      <div className="flex min-h-[100svh] flex-col">
+      <div>
         <Hero
           variant="light"
           eyebrow="Services"
           title="Capital strategy for ambitious companies."
           subtitle="Whether you're raising or exiting, we work as an extension of your team across the deal lifecycle."
-          className="shrink-0"
           contentClassName="gap-6 pt-24 pb-6 md:pt-28 md:pb-8 [&_h1]:md:text-5xl"
         />
 
-        <PageSection className="flex flex-1 items-end pt-2 pb-6 md:pt-3 md:pb-8">
+        <PageSection className="pt-6 pb-6 md:pt-10 md:pb-8">
           <div className="grid gap-10 lg:grid-cols-[minmax(0,0.55fr)_minmax(0,1.45fr)] lg:gap-20">
             <Eyebrow>Choose your perspective</Eyebrow>
             <DisclosureList
