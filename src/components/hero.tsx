@@ -53,7 +53,7 @@ export function Hero({
         {subtitle ? (
           <p
             className={cn(
-              "max-w-2xl text-lg md:text-xl",
+              "max-w-[62rem] text-lg md:text-xl",
               variant === "dark" ? "text-gray-200" : "text-gray-500",
             )}
           >

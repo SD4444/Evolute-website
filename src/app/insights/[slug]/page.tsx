@@ -59,7 +59,7 @@ export default async function InsightPage(props: PageProps<"/insights/[slug]">) 
             <h1 className="max-w-[62rem] font-heading text-[clamp(2.5rem,6vw,4.5rem)] leading-[1] tracking-[-0.035em]">
               {meta.title}
             </h1>
-            <p className="max-w-2xl text-[clamp(0.9375rem,1.8vw,1.1875rem)] leading-[1.6] text-navy-600">
+            <p className="max-w-[62rem] text-[clamp(0.9375rem,1.8vw,1.1875rem)] leading-[1.6] text-navy-600">
               {meta.excerpt}
             </p>
           </div>
