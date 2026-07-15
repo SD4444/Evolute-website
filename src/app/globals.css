@@ -238,7 +238,6 @@ body {
 }
 
 .article-body p {
-  max-width: 40rem;
   font-size: clamp(0.9375rem, 1.6vw, 1.0625rem);
   line-height: 1.7;
   color: var(--navy-600);
@@ -246,7 +245,6 @@ body {
 
 .article-body ul,
 .article-body ol {
-  max-width: 40rem;
   list-style: none;
   margin-left: 0;
   padding-left: clamp(1.75rem, 3.5vw, 3rem);
@@ -282,7 +280,6 @@ body {
 }
 
 .article-body blockquote {
-  max-width: 44rem;
   border-left: 1px solid var(--rule);
   padding-left: clamp(1.75rem, 3.5vw, 3rem);
   font-family: var(--font-heading);

@@ -158,8 +158,13 @@ export function CaseDeck({ deck, onClose }: { deck: CaseDeckData; onClose: () =>
   const containerRef = useRef<HTMLDivElement>(null);
   const indexRef = useRef(0);
   const [index, setIndex] = useState(0);
+  const [mounted, setMounted] = useState(false);
   indexRef.current = index;
   const total = deck.slides.length;
+
+  useEffect(() => {
+    setMounted(true);
+  }, []);
 
   const goTo = useCallback((next: number) => {
     const container = containerRef.current;
@@ -220,6 +225,11 @@ export function CaseDeck({ deck, onClose }: { deck: CaseDeckData; onClose: () =>
   );
 
   const chromeDark = isDarkSlide(deck.slides[index] ?? deck.slides[0]);
+
+  // Client-only: the portal target does not exist during server rendering.
+  if (!mounted) {
+    return null;
+  }
 
   // Portal to <body>: ancestors animated by the scroll-driven `rise` transform
   // would otherwise become the containing block for these fixed layers.

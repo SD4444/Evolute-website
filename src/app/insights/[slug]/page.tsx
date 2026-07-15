@@ -1,9 +1,11 @@
+import Link from "next/link";
 import { notFound } from "next/navigation";
 
-import { CaseDeckButton } from "@/components/case-deck-launcher";
+import { CaseDeckRoute } from "@/components/case-deck-route";
 import { Eyebrow } from "@/components/eyebrow";
 import { InsightCard } from "@/components/insight-card";
 import { EditorialContainer, PageSection } from "@/components/page-container";
+import { findCaseDeck } from "@/lib/content/case-decks";
 import { findInsightEntry, insights } from "@/lib/content/insights";
 
 export async function generateStaticParams() {
@@ -35,26 +37,36 @@ export default async function InsightPage(props: PageProps<"/insights/[slug]">) 
   const { meta, Body } = entry;
   const caseStudy = entry.caseStudy;
 
+  // Case studies render as a fullscreen flip-through deck, nothing else.
+  if (findCaseDeck(slug)) {
+    return <CaseDeckRoute slug={slug} />;
+  }
+
   const relatedPosts = insights.filter((insight) => insight.slug !== slug).slice(0, 3);
 
   return (
     <>
       <section className="bg-background text-navy-700">
         <EditorialContainer className="pt-28 pb-16 md:pt-36 md:pb-20">
-          <div className="flex flex-col gap-8">
+          <div className="mx-auto flex w-full max-w-[46rem] flex-col gap-8">
+            <Link
+              className="w-fit text-[0.6875rem] tracking-[0.18em] text-gray-400 uppercase transition-colors hover:text-navy-700"
+              href="/insights"
+            >
+              ← All insights
+            </Link>
             <Eyebrow>{`${meta.category} · ${meta.publishedAt}`}</Eyebrow>
-            <h1 className="max-w-4xl font-heading text-4xl leading-[1.05] tracking-[-0.03em] md:text-6xl">
+            <h1 className="font-heading text-4xl leading-[1.05] tracking-[-0.03em] md:text-5xl">
               {meta.title}
             </h1>
-            <p className="max-w-3xl text-lg text-gray-500 md:text-xl">{meta.excerpt}</p>
-            <CaseDeckButton slug={slug} />
+            <p className="text-lg text-gray-500 md:text-xl">{meta.excerpt}</p>
           </div>
         </EditorialContainer>
       </section>
       {meta.image ? (
         <section>
           <EditorialContainer>
-            <div className="aspect-[16/9] w-full overflow-hidden rounded-3xl bg-gray-200">
+            <div className="aspect-[16/9] w-full overflow-hidden bg-gray-200">
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img alt="" className="h-full w-full object-cover" src={meta.image} />
             </div>
@@ -63,7 +75,7 @@ export default async function InsightPage(props: PageProps<"/insights/[slug]">) 
       ) : null}
       <PageSection className={meta.image ? "pt-10 md:pt-14" : "pt-2 md:pt-4"}>
         <EditorialContainer>
-          <div className="article-body">
+          <div className="article-body mx-auto w-full max-w-[46rem]">
             <Body />
           </div>
         </EditorialContainer>
