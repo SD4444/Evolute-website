@@ -7,14 +7,14 @@ import { type AccentTone } from "@/lib/content/types";
 import { cn } from "@/lib/utils";
 
 const cycle: { title: string; tone: AccentTone; slug: string }[] = [
-  { slug: "digital-technology", title: "digital technology", tone: "lilac" },
-  { slug: "energy-and-sustainability", title: "energy & sustainability", tone: "sage" },
-  { slug: "food-and-agri", title: "food & agri", tone: "lime" },
+  { slug: "digital-technology", title: "digital technology", tone: "sand" },
+  { slug: "energy-and-sustainability", title: "energy & sustainability", tone: "lime" },
+  { slug: "food-and-agri", title: "food & agri", tone: "sage" },
   { slug: "mobility-and-aerospace", title: "mobility & aerospace", tone: "sky" },
   {
     slug: "advanced-materials-and-manufacturing",
     title: "advanced materials & manufacturing",
-    tone: "sand",
+    tone: "lilac",
   },
   { slug: "health-and-life-sciences", title: "health & life sciences", tone: "rose" },
 ];
@@ -55,7 +55,7 @@ export function HomeHero() {
   const tone = toneColor[current.tone];
 
   return (
-    <section className="relative overflow-hidden bg-navy-700 text-white">
+    <section className="relative overflow-hidden bg-dark-bg text-paper">
       <div
         aria-hidden
         className="pointer-events-none absolute -top-32 -right-24 h-[42rem] w-[42rem] rounded-full opacity-25 blur-3xl transition-colors duration-[1200ms]"
@@ -76,7 +76,7 @@ export function HomeHero() {
           onMouseEnter={() => setPaused(true)}
           onMouseLeave={() => setPaused(false)}
         >
-          <h1 className="font-heading leading-[1.02] font-medium tracking-tight">
+          <h1 className="font-heading leading-[1] tracking-[-0.035em]">
             <span className="block text-[clamp(2.25rem,3.5vw,3rem)] text-white">
               Corporate finance for
             </span>
@@ -108,13 +108,13 @@ export function HomeHero() {
 
           <div className="flex flex-col gap-3 sm:flex-row sm:items-center sm:gap-4">
             <Link
-              className="inline-flex h-11 items-center justify-center rounded-md bg-white px-6 text-sm font-medium text-navy-700 transition-colors hover:bg-gray-100"
+              className="inline-flex h-11 items-center justify-center rounded-full border border-gray-300 px-6 text-[0.6875rem] tracking-[0.14em] text-white uppercase transition-colors hover:border-white hover:text-white"
               href="/contact"
             >
               Start a conversation
             </Link>
             <Link
-              className="inline-flex h-11 items-center justify-center rounded-md border border-white/30 px-6 text-sm font-medium text-white transition-colors hover:bg-white/10"
+              className="inline-flex h-11 items-center justify-center rounded-full border border-dark-rule px-6 text-[0.6875rem] tracking-[0.14em] text-gray-300 uppercase transition-colors hover:border-gray-400 hover:text-paper"
               href="/services"
             >
               Explore our services
@@ -143,7 +143,7 @@ export function HomeHero() {
                     type="button"
                   >
                     <span
-                      className="font-mono text-[0.625rem] tracking-[0.1em] md:text-[0.6875rem]"
+                      className="font-heading text-[0.625rem] tracking-[0.1em] md:text-[0.6875rem]"
                       style={{ color: isActive ? toneColor[item.tone] : undefined }}
                     >
                       {String(i + 1).padStart(2, "0")}

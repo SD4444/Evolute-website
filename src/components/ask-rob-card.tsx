@@ -22,7 +22,7 @@ export function AskRobCard({
   return (
     <section>
       <div className="mx-auto w-full max-w-[1400px] px-6 py-16 md:px-10 md:py-24">
-        <div className="overflow-hidden rounded-3xl bg-navy-700 text-white">
+        <div className="overflow-hidden bg-dark-bg text-paper">
           <div className="flex flex-col gap-8 md:flex-row md:items-stretch">
             <div className="relative aspect-square w-full shrink-0 overflow-hidden md:w-[40%] md:max-w-md">
               <Image
@@ -34,14 +34,14 @@ export function AskRobCard({
               />
             </div>
             <div className="flex flex-1 flex-col justify-center gap-6 px-8 pb-10 md:px-12 md:py-12">
-              <Eyebrow className="text-gray-300">{eyebrow}</Eyebrow>
-              <h2 className="max-w-xl font-heading text-[clamp(2rem,3.5vw,2.5rem)] leading-[1.1] font-medium tracking-tight">
+              <Eyebrow>{eyebrow}</Eyebrow>
+              <h2 className="max-w-xl font-heading text-[clamp(2rem,3.5vw,2.5rem)] leading-[1.1] tracking-[-0.03em]">
                 {resolvedTitle}
               </h2>
               <div>
                 <Link
                   href={href}
-                  className="group inline-flex items-center gap-2 font-heading text-lg font-medium text-white underline-offset-4 hover:underline md:text-xl"
+                  className="group inline-flex items-center gap-2 font-heading text-lg text-white underline-offset-4 hover:underline md:text-xl"
                 >
                   {cta}
                   <span

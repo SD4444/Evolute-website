@@ -34,9 +34,7 @@ export const caseStudy: CaseStudy = {
 export default function Body() {
   return (
     <div className="flex flex-col gap-6">
-      <h2 className="mt-8 font-heading text-2xl font-medium text-navy-700">
-        Introduction to Collie
-      </h2>
+      <h2 className="mt-8 font-heading text-2xl text-navy-700">Introduction to Collie</h2>
       <p className="text-base leading-relaxed text-gray-500 md:text-lg">
         Collie has developed a deep-tech virtual fencing and cow guidance system for sustainable and
         regenerative dairy farming.
@@ -53,8 +51,8 @@ export default function Body() {
         and contributes to more sustainable and profitable farming practices.
       </p>
 
-      <h2 className="mt-8 font-heading text-2xl font-medium text-navy-700">The Challenge</h2>
-      <h3 className="mt-2 font-heading text-xl font-medium text-navy-700">
+      <h2 className="mt-8 font-heading text-2xl text-navy-700">The challenge</h2>
+      <h3 className="mt-2 font-heading text-xl text-navy-700">
         Difficulty advancing investor meetings toward closing
       </h3>
       <p className="text-base leading-relaxed text-gray-500 md:text-lg">
@@ -68,8 +66,8 @@ export default function Body() {
         positioning, enabling them to close a €2,000,000 round.
       </p>
 
-      <h2 className="mt-8 font-heading text-2xl font-medium text-navy-700">Our approach</h2>
-      <h3 className="mt-2 font-heading text-xl font-medium text-navy-700">
+      <h2 className="mt-8 font-heading text-2xl text-navy-700">Our approach</h2>
+      <h3 className="mt-2 font-heading text-xl text-navy-700">
         Laying the foundation for their fundraise
       </h3>
       <p className="text-base leading-relaxed text-gray-500 md:text-lg">
@@ -84,10 +82,8 @@ export default function Body() {
         <li>Negotiation and deal support</li>
       </ul>
 
-      <h2 className="mt-8 font-heading text-2xl font-medium text-navy-700">The results</h2>
-      <h3 className="mt-2 font-heading text-xl font-medium text-navy-700">
-        Closing a successful €2M round
-      </h3>
+      <h2 className="mt-8 font-heading text-2xl text-navy-700">The results</h2>
+      <h3 className="mt-2 font-heading text-xl text-navy-700">Closing a successful €2M round</h3>
       <p className="text-base leading-relaxed text-gray-500 md:text-lg">
         Within a month of sourcing, we successfully secured an introduction to Collie&apos;s new
         lead investor, who promptly issued a term sheet. Four months later, the transaction was

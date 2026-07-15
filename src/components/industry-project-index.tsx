@@ -18,7 +18,7 @@ function ProjectDetails({ project, accentColor }: { project: Project; accentColo
         />
       </div>
       <div className="flex flex-col gap-4">
-        <h3 className="font-heading text-[clamp(2rem,4vw,3.5rem)] leading-none font-medium tracking-tight text-navy-700">
+        <h3 className="font-heading text-[clamp(2rem,4vw,3.5rem)] leading-none tracking-[-0.03em] text-navy-700">
           {project.name}
         </h3>
         <p className="max-w-xl text-base leading-relaxed text-gray-500 md:text-lg">
@@ -77,14 +77,14 @@ export function IndustryProjectIndex({
   }
 
   return (
-    <section className="border-t border-navy-700/10 py-20 md:py-28">
+    <section className="border-t border-rule py-20 md:py-28">
       <div className="mx-auto flex w-full max-w-[1400px] flex-col gap-12 px-6 md:px-10 lg:gap-16">
         <div className="flex max-w-4xl flex-col gap-6">
-          <p className="font-mono text-[0.6875rem] tracking-[0.2em] text-gray-500 uppercase">
+          <p className="text-[0.6875rem] tracking-[0.18em] text-gray-500 uppercase">
             Selected work
           </p>
           <div className="flex flex-col gap-5">
-            <h2 className="font-heading text-[clamp(2rem,4vw,3rem)] leading-[1.02] font-medium tracking-tight text-navy-700">
+            <h2 className="font-heading text-[clamp(2rem,4vw,3rem)] leading-[1.02] tracking-[-0.03em] text-navy-700">
               Projects in {industryTitle}
             </h2>
             <p className="max-w-2xl text-base leading-relaxed text-gray-500 md:text-lg">
@@ -98,12 +98,10 @@ export function IndustryProjectIndex({
           {projects.map((project, index) => (
             <details className="group border-t border-navy-700/15" key={project.name}>
               <summary className="grid min-h-16 cursor-pointer list-none grid-cols-[2.5rem_1fr_2rem] items-center gap-3 py-4 marker:content-none [&::-webkit-details-marker]:hidden">
-                <span className="font-mono text-[0.6875rem] tracking-[0.12em] text-gray-500">
+                <span className="text-[0.6875rem] tracking-[0.12em] text-gray-500">
                   {String(index + 1).padStart(2, "0")}
                 </span>
-                <span className="font-heading text-xl font-medium text-navy-700">
-                  {project.name}
-                </span>
+                <span className="font-heading text-xl text-navy-700">{project.name}</span>
                 <span className="justify-self-end text-xl text-navy-700 transition-transform group-open:rotate-45">
                   +
                 </span>
@@ -134,12 +132,12 @@ export function IndustryProjectIndex({
                     type="button"
                   >
                     <span
-                      className="font-mono text-[0.6875rem] tracking-[0.12em]"
+                      className="text-[0.6875rem] tracking-[0.12em]"
                       style={{ color: active ? accentColor : undefined }}
                     >
                       {String(index + 1).padStart(2, "0")}
                     </span>
-                    <span className="font-heading text-xl font-medium">{project.name}</span>
+                    <span className="font-heading text-xl">{project.name}</span>
                     <span className="text-xs tracking-[0.08em] uppercase">{project.stage}</span>
                   </button>
                 </li>

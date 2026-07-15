@@ -42,7 +42,7 @@ export default async function InsightPage(props: PageProps<"/insights/[slug]">) 
         <EditorialContainer className="pt-28 pb-16 md:pt-36 md:pb-20">
           <div className="flex flex-col gap-8">
             <Eyebrow>{`${meta.category} · ${meta.publishedAt}`}</Eyebrow>
-            <h1 className="max-w-4xl font-heading text-4xl leading-[1.05] font-medium tracking-tight md:text-6xl">
+            <h1 className="max-w-4xl font-heading text-4xl leading-[1.05] tracking-[-0.03em] md:text-6xl">
               {meta.title}
             </h1>
             <p className="max-w-3xl text-lg text-gray-500 md:text-xl">{meta.excerpt}</p>
@@ -67,12 +67,12 @@ export default async function InsightPage(props: PageProps<"/insights/[slug]">) 
         </EditorialContainer>
       </PageSection>
       {caseStudy ? (
-        <section className="bg-navy-700 text-white">
+        <section className="bg-dark-bg text-paper">
           <EditorialContainer className="py-16 md:py-24">
             <div className="grid gap-10 xl:grid-cols-[1.1fr_0.9fr]">
               <div className="flex flex-col gap-10">
                 {caseStudy.person.quote ? (
-                  <blockquote className="max-w-3xl font-heading text-[clamp(1.5rem,3vw,2rem)] leading-[1.2] font-medium tracking-tight text-white">
+                  <blockquote className="max-w-3xl font-heading text-[clamp(1.5rem,3vw,2rem)] leading-[1.2] tracking-[-0.03em] text-white">
                     &ldquo;{caseStudy.person.quote}&rdquo;
                   </blockquote>
                 ) : null}
@@ -93,12 +93,12 @@ export default async function InsightPage(props: PageProps<"/insights/[slug]">) 
                 </div>
               </div>
 
-              <div className="rounded-3xl border border-white/10 bg-white/5 p-8 md:p-10">
-                <h2 className="font-heading text-2xl font-medium text-white">About</h2>
+              <div className="rounded-[8px] border border-dark-panel-border bg-dark-panel p-8 md:p-10">
+                <h2 className="font-heading text-2xl text-white">About</h2>
                 <dl className="mt-8 flex flex-col gap-5">
                   {caseStudy.about.map((item) => (
                     <div
-                      className="border-b border-white/10 pb-5 last:border-b-0 last:pb-0"
+                      className="border-b border-dark-rule pb-5 last:border-b-0 last:pb-0"
                       key={item.label}
                     >
                       <dt className="text-sm text-gray-300">{item.label}:</dt>
@@ -115,7 +115,7 @@ export default async function InsightPage(props: PageProps<"/insights/[slug]">) 
         <PageSection>
           <div className="flex flex-col gap-12">
             <EditorialContainer className="px-6 md:px-10">
-              <h2 className="font-heading text-[clamp(1.75rem,3vw,3rem)] font-medium text-navy-700">
+              <h2 className="font-heading text-[clamp(1.75rem,3vw,3rem)] text-navy-700">
                 Related posts
               </h2>
             </EditorialContainer>

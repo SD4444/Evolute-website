@@ -27,7 +27,7 @@ export function Hero({
     <section
       className={cn(
         "relative overflow-hidden",
-        variant === "dark" ? "bg-navy-700 text-white" : "bg-background text-navy-700",
+        variant === "dark" ? "bg-dark-bg text-paper" : "bg-background text-navy-700",
         className,
       )}
     >
@@ -47,7 +47,7 @@ export function Hero({
         {eyebrow ? (
           <Eyebrow className={variant === "dark" ? "text-gray-300" : undefined}>{eyebrow}</Eyebrow>
         ) : null}
-        <h1 className="max-w-4xl font-heading text-4xl leading-[1.05] font-medium tracking-tight md:text-6xl">
+        <h1 className="max-w-4xl font-heading text-4xl leading-[1] tracking-[-0.035em] md:text-6xl">
           {title}
         </h1>
         {subtitle ? (

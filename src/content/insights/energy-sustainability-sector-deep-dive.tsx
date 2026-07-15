@@ -7,14 +7,14 @@ export const meta: Insight = {
   image: "/images/insights/energy-sustainability-sector-deep-dive-hero.png",
   publishedAt: "2025-07-18",
   slug: "energy-sustainability-sector-deep-dive",
-  title: "Energy & Sustainability in Deep Tech: Performance in 2024 & Outlook for 2025",
+  title: "Energy & sustainability in deep tech: performance in 2024 & outlook for 2025",
 };
 
 export default function Body() {
   return (
     <div className="flex flex-col gap-6">
-      <h2 className="mt-8 font-heading text-2xl font-medium text-navy-700">
-        Definition of Energy &amp; Sustainability
+      <h2 className="mt-8 font-heading text-2xl text-navy-700">
+        Definition of energy &amp; sustainability
       </h2>
       <p className="text-base leading-relaxed text-gray-500 md:text-lg">
         The energy &amp; sustainability sector encompasses a broad spectrum of innovative solutions,
@@ -30,8 +30,8 @@ export default function Body() {
         low-carbon and sustainable economy.
       </p>
 
-      <h2 className="mt-8 font-heading text-2xl font-medium text-navy-700">
-        Energy &amp; Sustainability 2024 Performance
+      <h2 className="mt-8 font-heading text-2xl text-navy-700">
+        Energy &amp; sustainability 2024 performance
       </h2>
       <p className="text-base leading-relaxed text-gray-500 md:text-lg">
         Energy &amp; sustainability is one of the most notable deep tech sectors when it comes to
@@ -52,7 +52,7 @@ export default function Body() {
         with the mega deals recorded signals strong activity at all stages of the funding pipeline.
       </p>
 
-      <h2 className="mt-8 font-heading text-2xl font-medium text-navy-700">2025 Outlook</h2>
+      <h2 className="mt-8 font-heading text-2xl text-navy-700">2025 outlook</h2>
       <p className="text-base leading-relaxed text-gray-500 md:text-lg">
         Some growing segments based on increased investor sentiment/activity in the second half of
         2025 include geothermal power, fusion energy, long-duration energy storage, and next-gen
@@ -61,7 +61,7 @@ export default function Body() {
         strengthening the later-stage pipelines.
       </p>
 
-      <h2 className="mt-8 font-heading text-2xl font-medium text-navy-700">Conclusion</h2>
+      <h2 className="mt-8 font-heading text-2xl text-navy-700">Conclusion</h2>
       <p className="text-base leading-relaxed text-gray-500 md:text-lg">
         The energy and sustainability sector remains a cornerstone of the deep tech landscape and a
         reflection of the zeitgeist of modern society. As we monitor these evolving sub-verticals,

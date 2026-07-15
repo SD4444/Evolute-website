@@ -8,7 +8,7 @@ import { useState } from "react";
 import { LogoWordmark } from "@/components/brand/logo-wordmark";
 import { Button } from "@/components/ui/button";
 import { Sheet, SheetClose, SheetContent, SheetTrigger } from "@/components/ui/sheet";
-import { companyServices, industryLinks, investorServices } from "@/lib/content/nav";
+import { companyServices, industryLinks } from "@/lib/content/nav";
 import { cn } from "@/lib/utils";
 
 function NavColumn({
@@ -22,7 +22,7 @@ function NavColumn({
 }) {
   return (
     <div className="flex flex-col gap-4">
-      <p className="font-mono text-[0.6875rem] tracking-widest text-gray-500 uppercase">{title}</p>
+      <p className="text-[0.6875rem] tracking-[0.18em] text-gray-500 uppercase">{title}</p>
       <ul className="flex flex-col gap-3">
         {items.map((item) => (
           <li key={item.href}>
@@ -66,12 +66,15 @@ export function SiteNav() {
         <div className="flex items-center gap-2">
           <Button
             className={cn(
-              "h-11 px-4 text-sm",
-              onDarkHero ? "bg-white text-navy-700 hover:bg-white/90" : undefined,
+              "h-11 px-5 text-[0.6875rem]",
+              onDarkHero
+                ? "border-dark-rule text-gray-300 hover:border-gray-400 hover:text-paper"
+                : undefined,
             )}
             nativeButton={false}
             render={<Link href="/contact" />}
             size="lg"
+            variant="pill"
           >
             Get in touch
           </Button>
@@ -81,11 +84,13 @@ export function SiteNav() {
                 <Button
                   aria-label="Open menu"
                   className={cn(
-                    "h-11 gap-2 px-4 text-sm [&_svg:not([class*=size-])]:size-5",
-                    onDarkHero ? "border-white/30 text-white hover:bg-white/10" : undefined,
+                    "h-11 gap-2 px-5 text-[0.6875rem] [&_svg:not([class*=size-])]:size-4",
+                    onDarkHero
+                      ? "border-dark-rule text-gray-300 hover:border-gray-400 hover:text-paper"
+                      : undefined,
                   )}
                   size="lg"
-                  variant="outline"
+                  variant="pill"
                 >
                   <RiMenuLine />
                   Menu
@@ -117,11 +122,10 @@ export function SiteNav() {
                     onItemClick={close}
                     title="Services for companies"
                   />
-                  <NavColumn
-                    items={withPrefix(investorServices, "/services/investors")}
-                    onItemClick={close}
-                    title="Services for investors"
-                  />
+                  <div className="flex flex-col gap-4">
+                    <p className="text-[0.6875rem] tracking-[0.18em] text-gray-500 uppercase">Q.</p>
+                    <p className="font-heading text-xl text-gray-400 md:text-2xl">Coming soon</p>
+                  </div>
                 </div>
                 <div className="flex flex-col gap-10">
                   <NavColumn

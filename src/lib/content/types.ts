@@ -11,7 +11,7 @@ export type MethodologyStep = {
   description: string;
 };
 
-export type ServiceAudience = "companies" | "investors";
+export type ServiceAudience = "companies";
 
 export type Service = {
   audience: ServiceAudience;

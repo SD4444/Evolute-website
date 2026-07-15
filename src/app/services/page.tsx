@@ -9,8 +9,8 @@ import { services } from "@/lib/content/services";
 
 export const metadata: Metadata = {
   description:
-    "Corporate finance services for both sides of the table: companies raising capital and investors deploying it.",
-  title: "Services | Evolute Partners",
+    "Corporate finance services for companies: M&A, fundraising, and corporate finance from strategy to closing.",
+  title: "Services",
 };
 
 const audiences = [
@@ -20,12 +20,6 @@ const audiences = [
     eyebrow: "For founders and operators",
     href: "/services/companies",
     title: "For companies",
-  },
-  {
-    description: "Origination, evaluation, and commercial diligence to sharpen capital deployment.",
-    eyebrow: "For funds and family offices",
-    href: "/services/investors",
-    title: "For investors",
   },
 ];
 
@@ -38,8 +32,8 @@ export default function ServicesPage() {
         <Hero
           variant="light"
           eyebrow="Services"
-          title="Capital strategy for both sides of the table."
-          subtitle="Whether you're raising, exiting, originating, or evaluating, we work as an extension of your team across the deal lifecycle."
+          title="Capital strategy for ambitious companies."
+          subtitle="Whether you're raising or exiting, we work as an extension of your team across the deal lifecycle."
           className="shrink-0"
           contentClassName="gap-6 pt-24 pb-6 md:pt-28 md:pb-8 [&_h1]:md:text-5xl"
         />
@@ -48,13 +42,20 @@ export default function ServicesPage() {
           <div className="grid gap-10 lg:grid-cols-[minmax(0,0.55fr)_minmax(0,1.45fr)] lg:gap-20">
             <Eyebrow>Choose your perspective</Eyebrow>
             <DisclosureList
-              items={audiences.map((audience) => ({
-                description: audience.description,
-                eyebrow: audience.eyebrow,
-                href: audience.href,
-                linkLabel: `View services ${audience.title.toLowerCase()}`,
-                title: audience.title,
-              }))}
+              items={[
+                ...audiences.map((audience) => ({
+                  description: audience.description,
+                  eyebrow: audience.eyebrow,
+                  href: audience.href,
+                  linkLabel: `View services ${audience.title.toLowerCase()}`,
+                  title: audience.title,
+                })),
+                {
+                  description: "Our client software platform. Coming soon.",
+                  eyebrow: "Coming soon",
+                  title: "Q.",
+                },
+              ]}
               className="md:[&_summary]:py-5"
               name="service-audiences"
             />
@@ -63,11 +64,11 @@ export default function ServicesPage() {
       </div>
 
       {methodology.length > 0 ? (
-        <PageSection className="border-t border-navy-700/10">
+        <PageSection className="border-t border-rule">
           <div className="grid gap-10 lg:grid-cols-[minmax(0,0.55fr)_minmax(0,1.45fr)] lg:gap-20">
             <div className="flex flex-col gap-4">
               <Eyebrow>How we work</Eyebrow>
-              <h3 className="font-heading text-[clamp(2rem,4vw,3rem)] leading-tight font-medium tracking-tight text-navy-700">
+              <h3 className="font-heading text-[clamp(2rem,4vw,3rem)] leading-tight tracking-[-0.03em] text-navy-700">
                 Our methodology
               </h3>
               <p className="max-w-md text-base text-navy-600 md:text-lg">

@@ -20,7 +20,7 @@ export function PageSection({
   className?: string;
 }) {
   return (
-    <section className={cn("py-16 md:py-24", className)}>
+    <section className={cn("rise py-16 md:py-24", className)}>
       <PageContainer>{children}</PageContainer>
     </section>
   );

@@ -17,10 +17,10 @@ export const metadata: Metadata = {
   openGraph: {
     description:
       "Get in touch with Evolute Partners. Talk to our capital partners for deep tech about M&A, fundraising, and corporate finance.",
-    title: "Contact | Evolute Partners",
+    title: "Contact",
     type: "website",
   },
-  title: "Contact | Evolute Partners",
+  title: "Contact",
 };
 
 const statusCopy = {
@@ -72,7 +72,7 @@ export default async function ContactPage(props: PageProps<"/contact">) {
         <div className="grid gap-16 md:grid-cols-[1fr_1.25fr] md:gap-20">
           <aside className="flex flex-col gap-10">
             <div className="flex flex-col gap-4">
-              <h2 className="font-heading text-[clamp(1.75rem,3vw,2.5rem)] font-medium text-navy-700">
+              <h2 className="font-heading text-[clamp(1.75rem,3vw,2.5rem)] text-navy-700">
                 Based in the heart of Amsterdam
               </h2>
               <address className="text-base leading-relaxed text-navy-700 not-italic">
@@ -87,9 +87,7 @@ export default async function ContactPage(props: PageProps<"/contact">) {
             </div>
 
             <div className="flex flex-col gap-4">
-              <h2 className="font-heading text-[clamp(1.75rem,3vw,2.5rem)] font-medium text-navy-700">
-                Email
-              </h2>
+              <h2 className="font-heading text-[clamp(1.75rem,3vw,2.5rem)] text-navy-700">Email</h2>
               <a
                 href="mailto:info@evolute.partners"
                 className="text-base text-navy-700 underline-offset-4 hover:underline"
@@ -101,7 +99,7 @@ export default async function ContactPage(props: PageProps<"/contact">) {
 
           <div className="flex flex-col gap-6">
             {statusMessage ? (
-              <Alert className="border-navy-700/10 bg-white" variant={statusMessage.variant}>
+              <Alert className="border-rule bg-white" variant={statusMessage.variant}>
                 <AlertTitle>{statusMessage.title}</AlertTitle>
                 <AlertDescription>{statusMessage.description}</AlertDescription>
               </Alert>
@@ -162,9 +160,6 @@ export default async function ContactPage(props: PageProps<"/contact">) {
                     <NativeSelectOption value="m-a">M&amp;A</NativeSelectOption>
                     <NativeSelectOption value="corporate-finance">
                       Corporate finance
-                    </NativeSelectOption>
-                    <NativeSelectOption value="investor-advisory">
-                      Investor advisory
                     </NativeSelectOption>
                     <NativeSelectOption value="other">Other</NativeSelectOption>
                   </NativeSelect>

@@ -8,7 +8,7 @@ import { PageSection } from "@/components/page-container";
 export const metadata: Metadata = {
   description:
     "Learn about Evolute, our mission, and the team helping technology companies navigate key inflection points in their growth.",
-  title: "About us | Evolute Partners",
+  title: "About us",
 };
 
 export default function Page() {
@@ -16,12 +16,12 @@ export default function Page() {
     <>
       <Hero title="About us" variant="light" />
 
-      <PageSection className="border-t border-navy-700/10 pt-0 md:pt-0">
-        <div className="divide-y divide-navy-700/10 border-b border-navy-700/10">
+      <PageSection className="border-t border-rule pt-0 md:pt-0">
+        <div className="divide-y divide-navy-700/10 border-b border-rule">
           <article className="grid grid-cols-[3rem_minmax(0,1fr)] gap-6 py-16 md:grid-cols-[4rem_minmax(0,1fr)] md:gap-8 md:py-20">
-            <p className="font-mono text-[0.6875rem] tracking-[0.2em] text-gray-500">01</p>
+            <p className="font-heading text-[0.6875rem] tracking-[0.18em] text-gray-500">01</p>
             <div className="flex flex-col gap-8">
-              <h2 className="font-heading text-4xl leading-[1.05] font-medium tracking-tight text-navy-700 md:text-5xl">
+              <h2 className="font-heading text-4xl leading-[1.05] tracking-[-0.03em] text-navy-700 md:text-5xl">
                 Evolute explained
               </h2>
               <p className="max-w-[70ch] text-base leading-relaxed text-gray-500 md:text-lg">
@@ -36,9 +36,9 @@ export default function Page() {
           </article>
 
           <article className="grid grid-cols-[3rem_minmax(0,1fr)] gap-6 py-16 md:grid-cols-[4rem_minmax(0,1fr)] md:gap-8 md:py-20">
-            <p className="font-mono text-[0.6875rem] tracking-[0.2em] text-gray-500">02</p>
+            <p className="font-heading text-[0.6875rem] tracking-[0.18em] text-gray-500">02</p>
             <div className="flex flex-col gap-8">
-              <h2 className="font-heading text-4xl leading-[1.05] font-medium tracking-tight text-navy-700 md:text-5xl">
+              <h2 className="font-heading text-4xl leading-[1.05] tracking-[-0.03em] text-navy-700 md:text-5xl">
                 Our mission
               </h2>
               <p className="max-w-[70ch] text-base leading-relaxed text-gray-500 md:text-lg">
@@ -53,9 +53,9 @@ export default function Page() {
           </article>
 
           <article className="grid grid-cols-[3rem_minmax(0,1fr)] gap-6 py-16 md:grid-cols-[4rem_minmax(0,1fr)] md:gap-8 md:py-20">
-            <p className="font-mono text-[0.6875rem] tracking-[0.2em] text-gray-500">03</p>
+            <p className="font-heading text-[0.6875rem] tracking-[0.18em] text-gray-500">03</p>
             <div className="flex flex-col gap-8">
-              <h2 className="font-heading text-4xl leading-[1.05] font-medium tracking-tight text-navy-700 md:text-5xl">
+              <h2 className="font-heading text-4xl leading-[1.05] tracking-[-0.03em] text-navy-700 md:text-5xl">
                 <Link
                   className="group inline-flex items-center gap-4 rounded-sm outline-none focus-visible:ring-2 focus-visible:ring-navy-700 focus-visible:ring-offset-4"
                   href="/team"

@@ -7,15 +7,13 @@ export const meta: Insight = {
   image: "/images/insights/evolute-what-is-deep-tech-hero.jpg",
   publishedAt: "2025-07-17",
   slug: "evolute-what-is-deep-tech",
-  title: "Evolute: What is Deep Tech?",
+  title: "Evolute: What is deep tech?",
 };
 
 export default function Body() {
   return (
     <div className="flex flex-col gap-6">
-      <h2 className="mt-8 font-heading text-2xl font-medium text-navy-700">
-        Deep Technology or Deep Tech?
-      </h2>
+      <h2 className="mt-8 font-heading text-2xl text-navy-700">Deep technology or deep tech?</h2>
       <p className="text-base leading-relaxed text-gray-500 md:text-lg">
         Deep technology or &ldquo;deep tech&rdquo; has become a popular term in the venture capital
         space, but what does it mean? A quick search would tell you it refers to startups built on
@@ -40,9 +38,7 @@ export default function Body() {
         identify a deep tech startup from your traditional tech ones.
       </p>
 
-      <h2 className="mt-8 font-heading text-2xl font-medium text-navy-700">
-        Deep tech vs. Traditional Tech
-      </h2>
+      <h2 className="mt-8 font-heading text-2xl text-navy-700">Deep tech vs. traditional tech</h2>
       <p className="text-base leading-relaxed text-gray-500 md:text-lg">
         What sets deep tech apart from traditional tech is not simply the use of advanced
         technology, but the origin, complexity, and time horizon of innovation.
@@ -65,9 +61,7 @@ export default function Body() {
         different approach to company building.
       </p>
 
-      <h2 className="mt-8 font-heading text-2xl font-medium text-navy-700">
-        Evolute Deep Tech Sectors
-      </h2>
+      <h2 className="mt-8 font-heading text-2xl text-navy-700">Evolute deep tech sectors</h2>
       <p className="text-base leading-relaxed text-gray-500 md:text-lg">
         At Evolute, we have chosen to segment to another degree and have defined key segments within
         deep tech (keep posted for further blog posts delving into each of the sectors):
@@ -99,7 +93,7 @@ export default function Body() {
         </li>
       </ul>
 
-      <h2 className="mt-8 font-heading text-2xl font-medium text-navy-700">Conclusion</h2>
+      <h2 className="mt-8 font-heading text-2xl text-navy-700">Conclusion</h2>
       <p className="text-base leading-relaxed text-gray-500 md:text-lg">
         Deep tech is about bold ideas backed by science. At Evolute, we support founders tackling
         complex problems with long-term impact. If you are a deep tech founder or investor looking

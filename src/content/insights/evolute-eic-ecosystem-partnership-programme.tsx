@@ -14,9 +14,7 @@ export const meta: Insight = {
 export default function Body() {
   return (
     <div className="flex flex-col gap-6">
-      <h2 className="mt-8 font-heading text-2xl font-medium text-navy-700">
-        EIC Ecosystem Partner
-      </h2>
+      <h2 className="mt-8 font-heading text-2xl text-navy-700">EIC Ecosystem Partner</h2>
       <p className="text-base leading-relaxed text-gray-500 md:text-lg">
         We are pleased to share that Evolute Partners is now part of the European Innovation Council
         (EIC) Ecosystem Partnership Programme.

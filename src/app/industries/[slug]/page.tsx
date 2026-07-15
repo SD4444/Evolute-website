@@ -63,9 +63,9 @@ export async function generateMetadata(props: PageProps<"/industries/[slug]">): 
   const { slug } = await props.params;
   const industry = findIndustry(slug);
   if (!industry) {
-    return { title: "Industry not found | Evolute Partners" };
+    return { title: "Industry not found" };
   }
-  const title = `${industry.title} | Evolute Partners`;
+  const title = `${industry.title}`;
   return {
     description: industry.subtitle,
     openGraph: {
@@ -103,7 +103,7 @@ export default async function IndustryPage(props: PageProps<"/industries/[slug]"
       >
         <div className="mt-12 grid gap-6 md:mt-20 lg:grid-cols-[minmax(0,0.8fr)_minmax(0,1.2fr)] lg:gap-20">
           <p
-            className="max-w-xl font-heading text-[clamp(1.5rem,3vw,2rem)] leading-tight font-medium"
+            className="max-w-xl font-heading text-[clamp(1.5rem,3vw,2rem)] leading-tight"
             style={{ color: toneColor[industry.tone] }}
           >
             Some of the industries and applications that fall into {industry.title}.
@@ -121,7 +121,7 @@ export default async function IndustryPage(props: PageProps<"/industries/[slug]"
       {relatedInsights.length > 0 ? (
         <PageSection>
           <div className="flex flex-col gap-12">
-            <h2 className="font-heading text-2xl leading-tight font-medium tracking-tight text-navy-700 md:text-3xl">
+            <h2 className="font-heading text-2xl leading-tight tracking-[-0.03em] text-navy-700 md:text-3xl">
               Related insights
             </h2>
             <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
