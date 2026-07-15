@@ -4,7 +4,7 @@ import { notFound } from "next/navigation";
 import { CaseDeckRoute } from "@/components/case-deck-route";
 import { Eyebrow } from "@/components/eyebrow";
 import { InsightCard } from "@/components/insight-card";
-import { EditorialContainer, PageSection } from "@/components/page-container";
+import { EditorialContainer, PageContainer, PageSection } from "@/components/page-container";
 import { findCaseDeck } from "@/lib/content/case-decks";
 import { findInsightEntry, insights } from "@/lib/content/insights";
 
@@ -47,8 +47,8 @@ export default async function InsightPage(props: PageProps<"/insights/[slug]">) 
   return (
     <>
       <section className="bg-background text-navy-700">
-        <EditorialContainer className="pt-28 pb-16 md:pt-36 md:pb-20">
-          <div className="mx-auto flex w-full max-w-[52rem] flex-col gap-8">
+        <PageContainer className="pt-28 pb-12 md:pt-36 md:pb-16">
+          <div className="flex flex-col gap-7">
             <Link
               className="w-fit text-[0.6875rem] tracking-[0.18em] text-gray-400 uppercase transition-colors hover:text-navy-700"
               href="/insights"
@@ -56,29 +56,29 @@ export default async function InsightPage(props: PageProps<"/insights/[slug]">) 
               ← All insights
             </Link>
             <Eyebrow>{`${meta.category} · ${meta.publishedAt}`}</Eyebrow>
-            <h1 className="font-heading text-4xl leading-[1.05] tracking-[-0.03em] md:text-5xl">
+            <h1 className="max-w-[62rem] font-heading text-[clamp(2.5rem,6vw,4.5rem)] leading-[1] tracking-[-0.035em]">
               {meta.title}
             </h1>
-            <p className="text-lg text-gray-500 md:text-xl">{meta.excerpt}</p>
+            <p className="max-w-2xl text-[clamp(0.9375rem,1.8vw,1.1875rem)] leading-[1.6] text-navy-600">
+              {meta.excerpt}
+            </p>
           </div>
-        </EditorialContainer>
+        </PageContainer>
       </section>
       {meta.image ? (
         <section>
-          <EditorialContainer>
-            <div className="mx-auto aspect-[16/9] w-full max-w-[52rem] overflow-hidden bg-gray-200">
+          <PageContainer>
+            <div className="aspect-[16/7] w-full overflow-hidden bg-gray-200">
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img alt="" className="h-full w-full object-cover" src={meta.image} />
             </div>
-          </EditorialContainer>
+          </PageContainer>
         </section>
       ) : null}
       <PageSection className={meta.image ? "pt-10 md:pt-14" : "pt-2 md:pt-4"}>
-        <EditorialContainer>
-          <div className="article-body mx-auto w-full max-w-[52rem]">
-            <Body />
-          </div>
-        </EditorialContainer>
+        <div className="article-body">
+          <Body />
+        </div>
       </PageSection>
       {caseStudy ? (
         <section className="bg-dark-bg text-paper">

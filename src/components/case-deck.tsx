@@ -245,7 +245,7 @@ export function CaseDeck({ deck, onClose }: { deck: CaseDeckData; onClose: () =>
         {deck.slides.map((slide, i) => (
           <section
             className={cn(
-              "flex h-dvh snap-start flex-col px-[clamp(1.75rem,7vw,6rem)] py-[clamp(4.5rem,9vh,6.5rem)]",
+              "flex h-dvh snap-start flex-col px-6 py-[clamp(4.5rem,9vh,6.5rem)] md:px-10",
               isDarkSlide(slide) ? "bg-dark-bg" : "bg-paper",
             )}
             key={i}
@@ -268,7 +268,7 @@ export function CaseDeck({ deck, onClose }: { deck: CaseDeckData; onClose: () =>
           className="h-0.5 origin-left bg-gray-400/60 transition-transform duration-300"
           style={{ transform: `scaleX(${(index + 1) / total})` }}
         />
-        <div className="mx-auto flex w-full max-w-[1400px] items-center justify-between px-[clamp(1.75rem,7vw,6rem)] pt-5">
+        <div className="mx-auto flex w-full max-w-[1400px] items-center justify-between px-6 pt-5 md:px-10">
           <p
             className={cn(
               "text-[0.6875rem] tracking-[0.18em] uppercase transition-opacity",
@@ -305,7 +305,7 @@ export function CaseDeck({ deck, onClose }: { deck: CaseDeckData; onClose: () =>
         </div>
       </div>
 
-      <div className="pointer-events-none fixed right-[clamp(1.75rem,7vw,6rem)] bottom-6 z-[92] flex gap-2">
+      <div className="pointer-events-none fixed right-6 md:right-10 bottom-6 z-[92] flex gap-2">
         <button
           aria-label="Previous slide"
           className={cn(

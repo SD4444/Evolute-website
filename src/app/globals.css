@@ -204,6 +204,7 @@ body {
 
 .article-body h2 {
   counter-increment: article-section;
+  max-width: 62rem;
   margin-top: clamp(3.5rem, 8vh, 5.5rem);
   border-top: 1px solid var(--rule);
   padding-top: clamp(1.75rem, 4vh, 2.5rem);
@@ -228,6 +229,7 @@ body {
 }
 
 .article-body h3 {
+  max-width: 46rem;
   margin-top: 2.25rem;
   font-family: var(--font-heading);
   font-size: clamp(1.25rem, 2.3vw, 1.625rem);
@@ -238,6 +240,7 @@ body {
 }
 
 .article-body p {
+  max-width: 46rem;
   font-size: clamp(0.9375rem, 1.6vw, 1.0625rem);
   line-height: 1.7;
   color: var(--navy-600);
@@ -245,6 +248,7 @@ body {
 
 .article-body ul,
 .article-body ol {
+  max-width: 46rem;
   list-style: none;
   margin-left: 0;
   padding-left: clamp(1.75rem, 3.5vw, 3rem);
@@ -280,6 +284,7 @@ body {
 }
 
 .article-body blockquote {
+  max-width: 50rem;
   border-left: 1px solid var(--rule);
   padding-left: clamp(1.75rem, 3.5vw, 3rem);
   font-family: var(--font-heading);
