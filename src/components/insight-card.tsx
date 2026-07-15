@@ -2,9 +2,9 @@ import Link from "next/link";
 
 import { type Insight } from "@/lib/content/types";
 
-export function InsightCard({ insight }: { insight: Insight }) {
+function CardBody({ insight }: { insight: Insight }) {
   return (
-    <Link className="group flex h-full flex-col gap-4" href={`/insights/${insight.slug}`}>
+    <>
       <div className="aspect-[16/10] w-full overflow-hidden bg-gray-100">
         {insight.image ? (
           // eslint-disable-next-line @next/next/no-img-element
@@ -23,6 +23,22 @@ export function InsightCard({ insight }: { insight: Insight }) {
       <h3 className="flex-1 font-heading text-2xl leading-snug text-navy-700 group-hover:text-navy-900 md:text-3xl">
         {insight.title}
       </h3>
+    </>
+  );
+}
+
+export function InsightCard({ insight, linkless }: { insight: Insight; linkless?: boolean }) {
+  if (linkless) {
+    return (
+      <span className="group flex h-full flex-col gap-4">
+        <CardBody insight={insight} />
+      </span>
+    );
+  }
+
+  return (
+    <Link className="group flex h-full flex-col gap-4" href={`/insights/${insight.slug}`}>
+      <CardBody insight={insight} />
     </Link>
   );
 }

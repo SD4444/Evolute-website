@@ -1,5 +1,6 @@
 import { notFound } from "next/navigation";
 
+import { CaseDeckButton } from "@/components/case-deck-launcher";
 import { Eyebrow } from "@/components/eyebrow";
 import { InsightCard } from "@/components/insight-card";
 import { EditorialContainer, PageSection } from "@/components/page-container";
@@ -46,6 +47,7 @@ export default async function InsightPage(props: PageProps<"/insights/[slug]">) 
               {meta.title}
             </h1>
             <p className="max-w-3xl text-lg text-gray-500 md:text-xl">{meta.excerpt}</p>
+            <CaseDeckButton slug={slug} />
           </div>
         </EditorialContainer>
       </section>
