@@ -204,7 +204,6 @@ body {
 
 .article-body h2 {
   counter-increment: article-section;
-  max-width: 62rem;
   margin-top: clamp(3.5rem, 8vh, 5.5rem);
   border-top: 1px solid var(--rule);
   padding-top: clamp(1.75rem, 4vh, 2.5rem);
