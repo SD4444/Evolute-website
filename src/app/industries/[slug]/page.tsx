@@ -99,7 +99,8 @@ export default async function IndustryPage(props: PageProps<"/industries/[slug]"
         ambientGlowColor={toneColor[industry.tone]}
         eyebrow={industry.title}
         title={industry.subtitle}
-        contentClassName="pb-12 md:pb-16 [&_h1]:max-w-6xl"
+        className="flex min-h-screen"
+        contentClassName="flex-1 justify-center pb-12 md:pb-16 [&_h1]:max-w-6xl"
       >
         <p className="mt-8 max-w-[62rem] text-lg leading-[1.65] text-gray-200 md:mt-10 md:text-xl">
           {industry.intro}
