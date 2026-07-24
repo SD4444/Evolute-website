@@ -4,6 +4,7 @@ import { AskRobCard } from "@/components/ask-rob-card";
 import { DisclosureList } from "@/components/disclosure-list";
 import { Eyebrow } from "@/components/eyebrow";
 import { Hero } from "@/components/hero";
+import { MethodologyCycle } from "@/components/methodology-cycle";
 import { PageSection } from "@/components/page-container";
 import { services } from "@/lib/content/services";
 
@@ -50,13 +51,7 @@ export default function CompaniesServicesPage() {
                 closing.
               </p>
             </div>
-            <DisclosureList
-              items={methodology.map((step) => ({
-                description: step.description,
-                title: step.title,
-              }))}
-              name="company-methodology"
-            />
+            <MethodologyCycle steps={methodology} />
           </div>
         </PageSection>
       ) : null}

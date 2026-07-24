@@ -39,7 +39,7 @@ export function MethodologyCycle({ steps }: { steps: MethodologyStep[] }) {
         ))}
       </div>
 
-      <div className="mx-auto hidden w-full max-w-[31rem] flex-col gap-8 md:flex">
+      <div className="hidden w-full flex-col gap-8 md:flex">
         <div className="relative mx-auto aspect-square w-full max-w-[25rem]">
           <svg
             aria-hidden="true"
