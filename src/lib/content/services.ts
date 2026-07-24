@@ -126,7 +126,7 @@ export const services: Service[] = [
     methodology,
     slug: "corporate-finance",
     subtitle:
-      "Strategic projects with a focus on growth, capital allocation, and future financing rounds. We support you at every turn.",
+      "Strategic projects with a focus on growth, capital allocation, and future financing rounds. We support you at every turn.",
     title: "Corporate finance",
   },
 ];
