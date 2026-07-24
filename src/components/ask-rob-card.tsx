@@ -30,7 +30,7 @@ export function AskRobCard({
                 src={isSimon ? "/images/team/simon.png" : "/images/team/rob.jpg"}
                 fill
                 sizes="(min-width: 768px) 40vw, 100vw"
-                className="object-cover"
+                className="object-cover grayscale"
               />
             </div>
             <div className="flex flex-1 flex-col justify-center gap-6 px-8 pb-10 md:px-12 md:py-12">
