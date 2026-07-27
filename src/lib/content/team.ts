@@ -3,6 +3,8 @@ export type TeamMember = {
   introduction: string;
   name: string;
   outsideWork?: string;
+  /** Portrait shown beside the bio while this member's section is expanded. */
+  photo?: string;
   role: string;
 };
 
@@ -19,6 +21,7 @@ export const teamMembers: TeamMember[] = [
     name: "Rob Rasing",
     outsideWork:
       "Rob is an avid golfer and enjoys spending time outdoors, often combining travel with time on the course.",
+    photo: "/images/team/rob.jpg",
     role: "Managing Partner & Co-founder",
   },
   {
@@ -34,6 +37,7 @@ export const teamMembers: TeamMember[] = [
     name: "Simon Demarmels",
     outsideWork:
       "Simon spends his time cooking, reading science fiction, and surfing wherever he can find waves.",
+    photo: "/images/team/simon.png",
     role: "Partner & Co-founder",
   },
   {

@@ -4,6 +4,7 @@ import { AskRobCard } from "@/components/ask-rob-card";
 import { DisclosureList } from "@/components/disclosure-list";
 import { Hero } from "@/components/hero";
 import { PageSection } from "@/components/page-container";
+import { TeamRoster } from "@/components/team-roster";
 import { teamMembers } from "@/lib/content/team";
 
 export const metadata: Metadata = {
@@ -23,14 +24,7 @@ export default function TeamPage() {
       />
 
       <PageSection className="border-t border-rule">
-        <div className="grid gap-10 lg:grid-cols-[minmax(0,0.65fr)_minmax(0,1.35fr)] lg:gap-20">
-          <div className="flex max-w-lg flex-col gap-4">
-            <p className="text-[0.6875rem] tracking-[0.18em] text-gray-500 uppercase">Our team</p>
-            <h2 className="font-heading text-[clamp(2rem,4vw,3rem)] leading-[1.02] tracking-[-0.03em] text-navy-700">
-              Focused, strategic, hands-on
-            </h2>
-          </div>
-
+        <TeamRoster photos={teamMembers.map((member) => ({ alt: member.name, src: member.photo }))}>
           <DisclosureList
             items={teamMembers.map((member) => ({
               description: (
@@ -61,7 +55,7 @@ export default function TeamPage() {
             }))}
             name="team-members"
           />
-        </div>
+        </TeamRoster>
       </PageSection>
 
       <AskRobCard
