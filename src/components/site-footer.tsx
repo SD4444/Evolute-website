@@ -11,7 +11,12 @@ function FooterList({ title, links }: { title: string; links: { href: string; ti
       <ul className="flex flex-col gap-2.5">
         {links.map((link) => (
           <li key={link.href}>
-            <Link className="block text-sm text-white/80 hover:text-white" href={link.href}>
+            {/* -my-1/py-1 grows the tap target to 28px (WCAG 2.5.8 wants >=24)
+                without changing the rendered spacing. */}
+            <Link
+              className="-my-1 block py-1 text-sm text-white/80 hover:text-white"
+              href={link.href}
+            >
               {link.title}
             </Link>
           </li>

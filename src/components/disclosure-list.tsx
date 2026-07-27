@@ -53,7 +53,7 @@ export function DisclosureList({
               {item.description}
               {item.href ? (
                 <Link
-                  className="mt-5 block w-fit text-sm font-medium text-navy-700 underline-offset-4 hover:underline"
+                  className="mt-5 inline-flex min-h-6 w-fit items-center text-sm font-medium text-navy-700 underline-offset-4 hover:underline"
                   href={item.href}
                 >
                   {item.linkLabel ?? `Explore ${item.title}`} →
