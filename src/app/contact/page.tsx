@@ -18,6 +18,9 @@ export const metadata: Metadata = {
   openGraph: {
     description:
       "Get in touch with Evolute Partners. Talk to our capital partners for deep tech about M&A, fundraising, and corporate finance.",
+    // Metadata openGraph replaces the root layout's rather than merging, so the
+    // image has to be restated or the page ships no social card.
+    images: ["/images/og-image.jpg"],
     title: "Contact",
     type: "website",
   },

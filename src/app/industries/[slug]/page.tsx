@@ -71,6 +71,9 @@ export async function generateMetadata(props: PageProps<"/industries/[slug]">): 
     description: industry.subtitle,
     openGraph: {
       description: industry.subtitle,
+      // Metadata openGraph replaces the root layout's rather than merging, so
+      // the image has to be restated or the page ships no social card.
+      images: [industry.image ?? "/images/og-image.jpg"],
       title,
       type: "website",
     },
