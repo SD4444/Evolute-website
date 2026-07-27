@@ -11,6 +11,36 @@ import { Sheet, SheetClose, SheetContent, SheetTrigger } from "@/components/ui/s
 import { companyServices, industryLinks } from "@/lib/content/nav";
 import { cn } from "@/lib/utils";
 
+// The menu holds ~13 links. Prefetching them all when the sheet opens fires a
+// burst of RSC requests, so hold off until the user shows intent (see
+// next/docs "Hover-triggered prefetch"). prefetch={null} restores the default.
+function NavLink({
+  href,
+  onClick,
+  children,
+}: {
+  href: string;
+  onClick?: () => void;
+  children: React.ReactNode;
+}) {
+  const [intent, setIntent] = useState(false);
+  const warm = () => setIntent(true);
+
+  return (
+    <Link
+      className="block font-heading text-xl text-navy-700 hover:text-navy-900 md:text-2xl"
+      href={href}
+      onClick={onClick}
+      onFocus={warm}
+      onMouseEnter={warm}
+      onTouchStart={warm}
+      prefetch={intent ? null : false}
+    >
+      {children}
+    </Link>
+  );
+}
+
 function NavColumn({
   title,
   items,
@@ -26,13 +56,9 @@ function NavColumn({
       <ul className="flex flex-col gap-3">
         {items.map((item) => (
           <li key={item.href}>
-            <Link
-              className="block font-heading text-xl text-navy-700 hover:text-navy-900 md:text-2xl"
-              href={item.href}
-              onClick={onItemClick}
-            >
+            <NavLink href={item.href} onClick={onItemClick}>
               {item.title}
-            </Link>
+            </NavLink>
           </li>
         ))}
       </ul>
