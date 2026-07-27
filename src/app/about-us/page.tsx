@@ -6,6 +6,7 @@ import { Hero } from "@/components/hero";
 import { PageSection } from "@/components/page-container";
 
 export const metadata: Metadata = {
+  alternates: { canonical: "/about-us" },
   description:
     "Learn about Evolute, our mission, and the team helping technology companies navigate key inflection points in their growth.",
   title: "About us",

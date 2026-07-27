@@ -8,6 +8,7 @@ import { PageSection } from "@/components/page-container";
 import { services } from "@/lib/content/services";
 
 export const metadata: Metadata = {
+  alternates: { canonical: "/services" },
   description:
     "Corporate finance services for companies: M&A, fundraising, and corporate finance from strategy to closing.",
   title: "Services",

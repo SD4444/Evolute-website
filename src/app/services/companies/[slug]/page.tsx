@@ -20,6 +20,7 @@ export async function generateMetadata(props: PageProps<"/services/companies/[sl
     return {};
   }
   return {
+    alternates: { canonical: `/services/companies/${slug}` },
     description: service.subtitle,
     title: service.title,
   };

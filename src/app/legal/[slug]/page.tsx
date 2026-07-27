@@ -18,6 +18,7 @@ export async function generateMetadata(props: PageProps<"/legal/[slug]">) {
   }
 
   return {
+    alternates: { canonical: `/legal/${slug}` },
     title: page.title,
   };
 }

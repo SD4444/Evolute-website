@@ -12,6 +12,7 @@ import { submitContactForm } from "./actions";
 import { SubmitButton } from "./submit-button";
 
 export const metadata: Metadata = {
+  alternates: { canonical: "/contact" },
   description:
     "Get in touch with Evolute Partners. Talk to our capital partners for deep tech about M&A, fundraising, and corporate finance.",
   openGraph: {

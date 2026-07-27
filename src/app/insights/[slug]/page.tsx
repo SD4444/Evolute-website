@@ -2,6 +2,7 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 
 import { CaseDeckRoute } from "@/components/case-deck-route";
+import { CaseStudyArticle } from "@/components/case-study-article";
 import { Eyebrow } from "@/components/eyebrow";
 import { InsightCard } from "@/components/insight-card";
 import { EditorialContainer, PageContainer, PageSection } from "@/components/page-container";
@@ -21,6 +22,7 @@ export async function generateMetadata(props: PageProps<"/insights/[slug]">) {
   }
 
   return {
+    alternates: { canonical: `/insights/${slug}` },
     description: entry.meta.excerpt,
     title: entry.meta.title,
   };
@@ -37,9 +39,17 @@ export default async function InsightPage(props: PageProps<"/insights/[slug]">) 
   const { meta, Body } = entry;
   const caseStudy = entry.caseStudy;
 
-  // Case studies render as a fullscreen flip-through deck, nothing else.
-  if (findCaseDeck(slug)) {
-    return <CaseDeckRoute slug={slug} />;
+  // Case studies render as a fullscreen flip-through deck for anyone with JS.
+  // The article underneath is what gets server rendered, so the route still
+  // ships the case study to crawlers and no-JS visitors.
+  const deck = findCaseDeck(slug);
+
+  if (deck) {
+    return (
+      <CaseDeckRoute slug={slug}>
+        <CaseStudyArticle deck={deck} />
+      </CaseDeckRoute>
+    );
   }
 
   const relatedPosts = insights.filter((insight) => insight.slug !== slug).slice(0, 3);

@@ -9,6 +9,7 @@ import { InsightCard } from "@/components/insight-card";
 import { insights } from "@/lib/content/insights";
 
 export const metadata: Metadata = {
+  alternates: { canonical: "/" },
   description:
     "Evolute specialises in corporate finance for tech pioneers: visionary founders who push boundaries and see their companies as catalysts for the future.",
 };

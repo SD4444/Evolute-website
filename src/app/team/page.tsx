@@ -8,6 +8,7 @@ import { TeamRoster } from "@/components/team-roster";
 import { teamMembers } from "@/lib/content/team";
 
 export const metadata: Metadata = {
+  alternates: { canonical: "/team" },
   description:
     "Meet the Evolute team combining corporate finance, investment, operational, and entrepreneurial experience.",
   title: "Team",

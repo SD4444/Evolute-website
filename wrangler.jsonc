@@ -12,4 +12,17 @@
   "observability": {
     "enabled": true,
   },
+  // Contact form storage. Create the database and paste its id here:
+  //   npx wrangler d1 create evolute-contact-submissions
+  //   npx wrangler d1 execute evolute-contact-submissions --remote \
+  //     --file migrations/0001_create_submissions.sql
+  // Until this is bound, the form reports its error state ("email us directly")
+  // rather than falsely confirming receipt.
+  // "d1_databases": [
+  //   {
+  //     "binding": "CONTACT_SUBMISSIONS",
+  //     "database_name": "evolute-contact-submissions",
+  //     "database_id": "<paste-id-here>",
+  //   },
+  // ],
 }

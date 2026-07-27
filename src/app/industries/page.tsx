@@ -8,6 +8,7 @@ import { industries } from "@/lib/content/industries";
 import { type AccentTone } from "@/lib/content/types";
 
 export const metadata: Metadata = {
+  alternates: { canonical: "/industries" },
   description:
     "Where Evolute deploys capital and expertise: digital technology, energy, food, mobility, materials, and life sciences.",
   title: "Industries",

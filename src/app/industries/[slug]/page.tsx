@@ -67,6 +67,7 @@ export async function generateMetadata(props: PageProps<"/industries/[slug]">): 
   }
   const title = `${industry.title}`;
   return {
+    alternates: { canonical: `/industries/${slug}` },
     description: industry.subtitle,
     openGraph: {
       description: industry.subtitle,
