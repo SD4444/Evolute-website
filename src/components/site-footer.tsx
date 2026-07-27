@@ -11,7 +11,7 @@ function FooterList({ title, links }: { title: string; links: { href: string; ti
       <ul className="flex flex-col gap-2.5">
         {links.map((link) => (
           <li key={link.href}>
-            <Link className="text-sm text-white/80 hover:text-white" href={link.href}>
+            <Link className="block text-sm text-white/80 hover:text-white" href={link.href}>
               {link.title}
             </Link>
           </li>

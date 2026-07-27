@@ -122,7 +122,7 @@ export default async function ContactPage(props: PageProps<"/contact">) {
                       type="text"
                       required
                       autoComplete="name"
-                      className="h-11 rounded-none border-0 border-b border-rule bg-transparent px-0 text-base text-navy-700 focus-visible:border-navy-700 focus-visible:ring-0"
+                      className="h-11 rounded-none border-0 border-b border-rule bg-transparent px-0 text-base text-navy-700 focus-visible:border-navy-700 focus-visible:ring-0 md:text-base"
                     />
                   </Field>
 
@@ -139,7 +139,7 @@ export default async function ContactPage(props: PageProps<"/contact">) {
                       type="text"
                       required
                       autoComplete="organization"
-                      className="h-11 rounded-none border-0 border-b border-rule bg-transparent px-0 text-base text-navy-700 focus-visible:border-navy-700 focus-visible:ring-0"
+                      className="h-11 rounded-none border-0 border-b border-rule bg-transparent px-0 text-base text-navy-700 focus-visible:border-navy-700 focus-visible:ring-0 md:text-base"
                     />
                   </Field>
                 </div>
@@ -157,7 +157,7 @@ export default async function ContactPage(props: PageProps<"/contact">) {
                     type="email"
                     required
                     autoComplete="email"
-                    className="h-11 rounded-none border-0 border-b border-rule bg-transparent px-0 text-base text-navy-700 focus-visible:border-navy-700 focus-visible:ring-0"
+                    className="h-11 rounded-none border-0 border-b border-rule bg-transparent px-0 text-base text-navy-700 focus-visible:border-navy-700 focus-visible:ring-0 md:text-base"
                   />
                 </Field>
 
@@ -173,7 +173,7 @@ export default async function ContactPage(props: PageProps<"/contact">) {
                     name="topic"
                     defaultValue=""
                     className="w-full"
-                    selectClassName="h-11 rounded-none border-0 border-b border-rule bg-transparent px-0 text-base text-navy-700 focus-visible:border-navy-700 focus-visible:ring-0"
+                    selectClassName="h-11 rounded-none border-0 border-b border-rule bg-transparent px-0 text-base text-navy-700 focus-visible:border-navy-700 focus-visible:ring-0 [&:has(option[value='']:checked)]:text-muted-foreground"
                   >
                     <NativeSelectOption value="" disabled>
                       Select a topic
@@ -200,7 +200,7 @@ export default async function ContactPage(props: PageProps<"/contact">) {
                     required
                     rows={6}
                     placeholder="Tell us a little about what you're working on."
-                    className="rounded-none border-0 border-b border-rule bg-transparent px-0 text-base text-navy-700 focus-visible:border-navy-700 focus-visible:ring-0"
+                    className="rounded-none border-0 border-b border-rule bg-transparent px-0 text-base text-navy-700 focus-visible:border-navy-700 focus-visible:ring-0 md:text-base"
                   />
                   <FieldDescription>
                     We treat every message as confidential. Please include a few details so we can

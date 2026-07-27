@@ -27,7 +27,7 @@ function NavColumn({
         {items.map((item) => (
           <li key={item.href}>
             <Link
-              className="font-heading text-xl text-navy-700 hover:text-navy-900 md:text-2xl"
+              className="block font-heading text-xl text-navy-700 hover:text-navy-900 md:text-2xl"
               href={item.href}
               onClick={onItemClick}
             >

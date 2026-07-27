@@ -29,7 +29,7 @@ export function HomeServices() {
           <h2 className="font-heading text-[clamp(2rem,4vw,3.5rem)] leading-[1.02] tracking-[-0.03em] text-navy-700">
             Our services
           </h2>
-          <p className="text-[0.6875rem] tracking-[0.18em] text-gray-400 uppercase">
+          <p className="text-sm tracking-[0.18em] text-gray-400 uppercase md:text-base">
             Q. coming soon
           </p>
         </div>

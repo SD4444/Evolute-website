@@ -39,8 +39,8 @@ export function MethodologyCycle({ steps }: { steps: MethodologyStep[] }) {
         ))}
       </div>
 
-      <div className="hidden w-full flex-col gap-8 md:flex">
-        <div className="relative mx-auto aspect-square w-full max-w-[25rem]">
+      <div className="hidden w-full grid-cols-[minmax(0,20rem)_1fr] items-center gap-10 md:grid lg:grid-cols-[minmax(0,24rem)_1fr] lg:gap-16">
+        <div className="relative aspect-square w-full">
           <svg
             aria-hidden="true"
             className="absolute inset-[10%] h-[80%] w-[80%] text-navy-700/25"
@@ -114,12 +114,17 @@ export function MethodologyCycle({ steps }: { steps: MethodologyStep[] }) {
 
         <div
           aria-live="polite"
-          className="grid min-h-24 grid-cols-[7rem_1fr] gap-6 border-t border-navy-700/15 pt-6"
+          className="flex flex-col gap-4 border-l border-navy-700/15 pl-8 lg:pl-10"
         >
           <p className="text-[0.6875rem] tracking-[0.18em] text-gray-500 uppercase">
             {String(activeIndex + 1).padStart(2, "0")} / {activeStep.label}
           </p>
-          <p className="text-base leading-relaxed text-navy-600">{activeStep.description}</p>
+          <h4 className="font-heading text-[clamp(1.5rem,2.2vw,2rem)] leading-tight text-navy-700">
+            {activeStep.title}
+          </h4>
+          <p className="max-w-[38rem] text-base leading-relaxed text-navy-600">
+            {activeStep.description}
+          </p>
         </div>
       </div>
     </div>
