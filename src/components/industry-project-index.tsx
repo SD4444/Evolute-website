@@ -41,7 +41,7 @@ function ProjectDetails({ project, accentColor }: { project: Project; accentColo
       </dl>
       {project.caseStudySlug ? (
         <Link
-          className="w-fit text-sm font-medium underline-offset-4 hover:underline"
+          className="inline-flex min-h-6 w-fit items-center text-sm font-medium underline-offset-4 hover:underline"
           href={`/insights/${project.caseStudySlug}`}
           style={{ color: accentColor }}
         >
@@ -49,7 +49,7 @@ function ProjectDetails({ project, accentColor }: { project: Project; accentColo
         </Link>
       ) : (
         <Link
-          className="w-fit text-sm font-medium underline-offset-4 hover:underline"
+          className="inline-flex min-h-6 w-fit items-center text-sm font-medium underline-offset-4 hover:underline"
           href="/contact"
           style={{ color: accentColor }}
         >

@@ -22,7 +22,7 @@ export function CaseStudyArticle({ deck }: { deck: CaseDeck }) {
       <PageSection className="pt-28 pb-10 md:pt-36 md:pb-14">
         <div className="flex flex-col gap-7">
           <Link
-            className="w-fit text-[0.6875rem] tracking-[0.18em] text-gray-400 uppercase transition-colors hover:text-navy-700"
+            className="inline-flex min-h-6 w-fit items-center text-[0.6875rem] tracking-[0.18em] text-gray-400 uppercase transition-colors hover:text-navy-700"
             href="/insights"
           >
             ← All insights
