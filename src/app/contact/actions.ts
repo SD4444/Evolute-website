@@ -54,10 +54,22 @@ async function store(env: CloudflareEnv, submission: Submission) {
 /** Email the submission on. Skipped when no provider key is configured. */
 async function notify(env: CloudflareEnv, submission: Submission) {
   const apiKey = env.RESEND_API_KEY;
-  const to = env.CONTACT_NOTIFY_TO ?? "info@evolute.partners";
   const from = env.CONTACT_NOTIFY_FROM;
 
-  if (!apiKey || !from) {
+  // CONTACT_NOTIFY_TO is a comma-separated list so recipients can be changed
+  // without a code change.
+  const to = (env.CONTACT_NOTIFY_TO ?? "info@evolute.partners")
+    .split(",")
+    .map((address) => address.trim())
+    .filter(Boolean);
+
+  // Say which piece is missing. A bare `return false` here once hid a broken
+  // notification path for hours, because storage succeeded and the visitor saw
+  // the success page either way.
+  if (!apiKey || !from || to.length === 0) {
+    console.error(
+      `contact: notification not configured (apiKey: ${apiKey ? "set" : "MISSING"}, from: ${from ? "set" : "MISSING"}, recipients: ${to.length})`,
+    );
     return false;
   }
 
@@ -83,10 +95,12 @@ async function notify(env: CloudflareEnv, submission: Submission) {
     });
 
     if (!response.ok) {
-      console.error(`contact: notification failed with ${response.status}`);
+      const detail = await response.text().catch(() => "(no body)");
+      console.error(`contact: notification failed with ${response.status}: ${detail}`);
       return false;
     }
 
+    console.log(`contact: notification sent to ${to.join(", ")}`);
     return true;
   } catch (error) {
     console.error("contact: failed to send notification", error);
