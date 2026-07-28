@@ -12,6 +12,11 @@
   "observability": {
     "enabled": true,
   },
+  // Contact form notifications. RESEND_API_KEY is a secret, set out of band with
+  // `npx wrangler secret put`. CONTACT_NOTIFY_TO defaults to info@evolute.partners.
+  "vars": {
+    "CONTACT_NOTIFY_FROM": "website@evolute.partners",
+  },
   // Contact form storage. Schema lives in migrations/; apply with:
   //   npx wrangler d1 execute evolute-contact-submissions --remote \
   //     --file migrations/0001_create_submissions.sql
