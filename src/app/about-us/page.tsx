@@ -26,12 +26,18 @@ export default function Page() {
                 Evolute explained
               </h2>
               <p className="max-w-[70ch] text-base leading-relaxed text-gray-500 md:text-lg">
-                The <strong className="font-semibold text-navy-700">evolute</strong>{" "}
-                is the locus of points that define the centers of curvature along a curve, guiding
-                design in fields like geometry and robotics. Just as an evolute reveals the
-                underlying structure of a shape, a well-crafted growth and financing strategy
-                shapes a company&rsquo;s trajectory. Inspired by this concept, we help tech
-                companies navigate key inflection points along their growth paths.
+                {/*
+                  The space belongs inside the <strong>, not after it. A space
+                  sitting between `</strong>` and the next word is dropped when
+                  the JSX compiles, and oxfmt strips the usual {" "} guard when
+                  it reflows this paragraph, so it renders as "evoluteis".
+                */}
+                The <strong className="font-semibold text-navy-700">evolute </strong>is the locus of
+                points that define the centers of curvature along a curve, guiding design in fields
+                like geometry and robotics. Just as an evolute reveals the underlying structure of a
+                shape, a well-crafted growth and financing strategy shapes a company&rsquo;s
+                trajectory. Inspired by this concept, we help tech companies navigate key inflection
+                points along their growth paths.
               </p>
             </div>
           </article>
