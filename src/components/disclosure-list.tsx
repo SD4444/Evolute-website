@@ -49,11 +49,17 @@ export function DisclosureList({
             </span>
           </summary>
           <div className="grid grid-cols-[2.5rem_minmax(0,1fr)_2rem] gap-3 pb-8 md:grid-cols-[4rem_minmax(0,1fr)_3rem] md:pb-10">
-            <div className="col-start-2 max-w-3xl text-base leading-relaxed text-navy-600 md:text-lg">
-              {item.description}
+            {/*
+              Flex column, not flow: the link is a sibling of free-form description
+              content, so letting it sit in the text flow parks it inline after the
+              last word whenever that line has room. A column keeps it on its own
+              row with the same gap in every panel.
+            */}
+            <div className="col-start-2 flex max-w-3xl flex-col items-start gap-5 text-base leading-relaxed text-navy-600 md:text-lg">
+              <div className="w-full">{item.description}</div>
               {item.href ? (
                 <Link
-                  className="mt-5 inline-flex min-h-6 w-fit items-center text-sm font-medium text-navy-700 underline-offset-4 hover:underline"
+                  className="inline-flex min-h-6 items-center text-sm font-medium text-navy-700 underline-offset-4 hover:underline"
                   href={item.href}
                 >
                   {item.linkLabel ?? `Explore ${item.title}`} →

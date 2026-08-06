@@ -86,7 +86,7 @@ export function SiteNav() {
         )}
       >
         <Link href="/" aria-label="Evolute" className="flex items-center">
-          <LogoWordmark height={38} invert={onDarkHero} />
+          <LogoWordmark height={34} invert={onDarkHero} />
         </Link>
 
         <div className="flex items-center gap-2">
